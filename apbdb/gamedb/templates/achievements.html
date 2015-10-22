@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 
 
+{% block breadcrumbs %}
+    <li><a href="/">APB:Db</a></li>
+    <li class="unavailable"><a href="#">Achievements</a></li>
+{% endblock breadcrumbs %}
+
+
 {% block content %}
 
     {% for faction in factions %}

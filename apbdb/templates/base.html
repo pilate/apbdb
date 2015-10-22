@@ -1,2 +1,82 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %}{% endblock %} - APBDb</title>
+        <link rel="stylesheet" href="{% static 'css/foundation.min.css' %}" />
+        <script src="{% static 'js/vendor/modernizr.js' %}"></script>
 
-{% block content %}{% endblock content %}
+        <style>
+            body {
+                background-color: #303636;
+                padding-top:5px;
+            }
+            .top-bar {
+                background-color: #f0f0f0;
+                background-image: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+                border-radius: 1px;
+                box-shadow: 0 1px 2px 0 #222;
+                margin-bottom: 0;
+                padding-right: 15px;
+            }
+            .content {
+                /*background: rgba(0, 0, 0, 0) url("/static/img/background.png") repeat scroll 0 0;*/
+                background-color: #fefefe;
+                border-radius: 1px;
+                box-shadow: 0 -1px 1px 0 #222;
+                padding: 15px 15px 1px;
+            }
+            ul.breadcrumbs {
+                background: #f6f6f6 none repeat scroll 0 0;
+                border: 1px solid #e9e9e9;
+                border-radius: 0;
+                display: block;
+                margin: 1px 0;
+                overflow: hidden;
+                padding: 4px 10px 4px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="row">
+            <div class="small-12 columns">
+                <img src="{% static 'img/logo.png' %}" alt="Logo" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-12 columns">
+                <div class="contain-to-grid">
+                    <nav class="top-bar" data-topbar role="navigation">
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                <ul class="breadcrumbs">
+                    {% block breadcrumbs %}{% endblock breadcrumbs %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-12 columns">
+                <div class="content">
+                    {% block content %}{% endblock content %}
+                </div>
+            </div>
+        </div>
+
+        <script src="{% static 'js/vendor/jquery.js' %}"></script>
+        <script src="{% static 'js/foundation.min.js' %}"></script>
+        <script>
+            $(document).foundation();
+        </script>
+    </body>
+</html>
