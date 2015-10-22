@@ -1,3 +1,10 @@
-{% for achievement in achievements %}
-    {{ achievement.name }} - {{ achievement.sapbdb }} <br>
-{% endfor %}
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    {% for achievement in achievements %}
+        {{ achievement.name }} - {{ achievement.sapbdb }} <br>
+    {% endfor %}
+
+{% endblock content %}

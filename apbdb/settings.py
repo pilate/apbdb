@@ -37,7 +37,7 @@ ROOT_URLCONF = 'apbdb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['apbdb/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
