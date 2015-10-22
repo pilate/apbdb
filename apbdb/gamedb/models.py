@@ -4207,6 +4207,9 @@ class Playerroles(models.Model):
     bshowtotalvalues = models.IntegerField(db_column='bShowTotalValues', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
+    def name(self):
+        return self.sdisplayname
+
     class Meta:
         managed = False
         db_table = 'PlayerRoles'
