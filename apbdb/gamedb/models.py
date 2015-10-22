@@ -1,19 +1,8 @@
-# This is an auto-generated Django model module.
-# You'll have to do the following manually to clean this up:
-#   * Rearrange models' order
-#   * Make sure each model has one field with primary_key=True
-#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
-# Feel free to rename the models, but don't rename db_table values or field names.
-#
-# Also note: You'll have to insert the output of 'django-admin sqlcustom [app_label]'
-# into your database.
-from __future__ import unicode_literals
-
 from django.db import models
 
 
 class Apbpawnconstant(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)  # Field name made lowercase.
     eapbpawnconstant = models.IntegerField(db_column='eAPBPawnConstant', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -24,7 +13,7 @@ class Apbpawnconstant(models.Model):
 
 
 class Apbsupportpages(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sbaseurl = models.TextField(db_column='sBaseURL', blank=True, null=True)  # Field name made lowercase.
     sinternalbrowsertitle = models.TextField(db_column='sInternalBrowserTitle', blank=True, null=True)  # Field name made lowercase.
     sparameters = models.TextField(db_column='sParameters', blank=True, null=True)  # Field name made lowercase.
@@ -39,7 +28,7 @@ class Apbsupportpages(models.Model):
 
 
 class Apbviewporttypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     eapbviewporttype = models.IntegerField(db_column='eAPBViewportType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -50,7 +39,7 @@ class Apbviewporttypes(models.Model):
 
 
 class Activitymessageparametertypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     slocalisationtoken = models.TextField(db_column='sLocalisationToken', blank=True, null=True)  # Field name made lowercase.
     eactivitymessageparametertype = models.IntegerField(db_column='eActivityMessageParameterType', blank=True, null=True)  # Field name made lowercase.
     ndebugparam = models.IntegerField(db_column='nDebugParam', blank=True, null=True)  # Field name made lowercase.
@@ -63,7 +52,7 @@ class Activitymessageparametertypes(models.Model):
 
 
 class Activitymessagepriorities(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eactivitymessagepriority = models.IntegerField(db_column='eActivityMessagePriority', blank=True, null=True)  # Field name made lowercase.
     fdelaymax = models.FloatField(db_column='fDelayMax', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -74,7 +63,7 @@ class Activitymessagepriorities(models.Model):
 
 
 class Activitymessages(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eactivitymessage = models.IntegerField(db_column='eActivityMessage', blank=True, null=True)  # Field name made lowercase.
     ehudmessage = models.IntegerField(db_column='eHUDMessage', blank=True, null=True)  # Field name made lowercase.
     eparamtype_0 = models.IntegerField(db_column='eParamType_0', blank=True, null=True)  # Field name made lowercase.
@@ -95,7 +84,7 @@ class Activitymessages(models.Model):
 
 
 class Ammocategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sname = models.TextField(db_column='sName', blank=True, null=True)  # Field name made lowercase.
     snameabbreviated = models.TextField(db_column='sNameAbbreviated', blank=True, null=True)  # Field name made lowercase.
@@ -121,7 +110,7 @@ class Ammocategories(models.Model):
 
 
 class AnimtreedecisionEquippeditem(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eanimtreedecision_equippeditem = models.IntegerField(db_column='eAnimTreeDecision_EquippedItem', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -131,7 +120,7 @@ class AnimtreedecisionEquippeditem(models.Model):
 
 
 class AnimtreedecisionVehicle(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eanimtreedecision_vehicle = models.IntegerField(db_column='eAnimTreeDecision_Vehicle', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -141,7 +130,7 @@ class AnimtreedecisionVehicle(models.Model):
 
 
 class Animationdescriptors(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eanimationdescriptor = models.IntegerField(db_column='eAnimationDescriptor', blank=True, null=True)  # Field name made lowercase.
     fstaminadrain = models.FloatField(db_column='fStaminaDrain', blank=True, null=True)  # Field name made lowercase.
     ercetype = models.IntegerField(db_column='eRCEType', blank=True, null=True)  # Field name made lowercase.
@@ -155,7 +144,7 @@ class Animationdescriptors(models.Model):
 
 
 class Audioamp(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saudioswitchname = models.TextField(db_column='sAudioSwitchName', blank=True, null=True)  # Field name made lowercase.
     evehicleaudiopart = models.IntegerField(db_column='eVehicleAudioPart', blank=True, null=True)  # Field name made lowercase.
     fvolume = models.FloatField(db_column='fVolume', blank=True, null=True)  # Field name made lowercase.
@@ -167,7 +156,7 @@ class Audioamp(models.Model):
 
 
 class Audiodumpvalve(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saudioeventname = models.TextField(db_column='sAudioEventName', blank=True, null=True)  # Field name made lowercase.
     evehicleaudiopart = models.IntegerField(db_column='eVehicleAudioPart', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -178,7 +167,7 @@ class Audiodumpvalve(models.Model):
 
 
 class Audioengine(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saudioeventname = models.TextField(db_column='sAudioEventName', blank=True, null=True)  # Field name made lowercase.
     ssimulationdataset = models.TextField(db_column='sSimulationDataSet', blank=True, null=True)  # Field name made lowercase.
     evehicleaudiopart = models.IntegerField(db_column='eVehicleAudioPart', blank=True, null=True)  # Field name made lowercase.
@@ -190,7 +179,7 @@ class Audioengine(models.Model):
 
 
 class Audioexhaust(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saudioeventname = models.TextField(db_column='sAudioEventName', blank=True, null=True)  # Field name made lowercase.
     evehicleaudiopart = models.IntegerField(db_column='eVehicleAudioPart', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -201,7 +190,7 @@ class Audioexhaust(models.Model):
 
 
 class Audioexhaustpops(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saudioeventname = models.TextField(db_column='sAudioEventName', blank=True, null=True)  # Field name made lowercase.
     evehicleaudiopart = models.IntegerField(db_column='eVehicleAudioPart', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -212,7 +201,7 @@ class Audioexhaustpops(models.Model):
 
 
 class Audiogearchange(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saudioeventname = models.TextField(db_column='sAudioEventName', blank=True, null=True)  # Field name made lowercase.
     evehicleaudiopart = models.IntegerField(db_column='eVehicleAudioPart', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -223,7 +212,7 @@ class Audiogearchange(models.Model):
 
 
 class Audiohorn(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saudiotype = models.TextField(db_column='sAudioType', blank=True, null=True)  # Field name made lowercase.
     evehicleaudiopart = models.IntegerField(db_column='eVehicleAudioPart', blank=True, null=True)  # Field name made lowercase.
     fpitchmodifier = models.FloatField(db_column='fPitchModifier', blank=True, null=True)  # Field name made lowercase.
@@ -235,7 +224,7 @@ class Audiohorn(models.Model):
 
 
 class Audiosiren(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saudiotype = models.TextField(db_column='sAudioType', blank=True, null=True)  # Field name made lowercase.
     evehicleaudiopart = models.IntegerField(db_column='eVehicleAudioPart', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -246,7 +235,7 @@ class Audiosiren(models.Model):
 
 
 class Audiospeaker(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     evehicleaudiopart = models.IntegerField(db_column='eVehicleAudioPart', blank=True, null=True)  # Field name made lowercase.
     feqparameter1 = models.FloatField(db_column='fEQParameter1', blank=True, null=True)  # Field name made lowercase.
     feqparameter2 = models.FloatField(db_column='fEQParameter2', blank=True, null=True)  # Field name made lowercase.
@@ -258,7 +247,7 @@ class Audiospeaker(models.Model):
 
 
 class Audiotransmission(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saudioeventname = models.TextField(db_column='sAudioEventName', blank=True, null=True)  # Field name made lowercase.
     evehicleaudiopart = models.IntegerField(db_column='eVehicleAudioPart', blank=True, null=True)  # Field name made lowercase.
     fpitchmodifier = models.FloatField(db_column='fPitchModifier', blank=True, null=True)  # Field name made lowercase.
@@ -270,7 +259,7 @@ class Audiotransmission(models.Model):
 
 
 class Audioturbo(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     smainaudioeventname = models.TextField(db_column='sMainAudioEventName', blank=True, null=True)  # Field name made lowercase.
     ssecondaudioeventname = models.TextField(db_column='sSecondAudioEventName', blank=True, null=True)  # Field name made lowercase.
     evehicleaudiopart = models.IntegerField(db_column='eVehicleAudioPart', blank=True, null=True)  # Field name made lowercase.
@@ -288,7 +277,7 @@ class Audioturbo(models.Model):
 
 
 class Awesomeplayerdetectionrules(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eawesomeplayerdetectionrules = models.IntegerField(db_column='eAwesomePlayerDetectionRules', blank=True, null=True)  # Field name made lowercase.
     ndistancesamplinginterval = models.IntegerField(db_column='nDistanceSamplingInterval', blank=True, null=True)  # Field name made lowercase.
     ndistancesamplingintervalthreshold = models.IntegerField(db_column='nDistanceSamplingIntervalThreshold', blank=True, null=True)  # Field name made lowercase.
@@ -307,7 +296,7 @@ class Awesomeplayerdetectionrules(models.Model):
 
 
 class Awesomeplayerdetectionrulesevents(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eawesomeplayerdetectionrules = models.IntegerField(db_column='eAwesomePlayerDetectionRules', blank=True, null=True)  # Field name made lowercase.
     egameplayevent = models.IntegerField(db_column='eGameplayEvent', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -318,7 +307,7 @@ class Awesomeplayerdetectionrulesevents(models.Model):
 
 
 class Bombequipmenttypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ebomblevel = models.IntegerField(db_column='eBombLevel', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -329,7 +318,7 @@ class Bombequipmenttypes(models.Model):
 
 
 class Bomblevels(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ebomblevel = models.IntegerField(db_column='eBombLevel', blank=True, null=True)  # Field name made lowercase.
     eexplosiontype = models.IntegerField(db_column='eExplosionType', blank=True, null=True)  # Field name made lowercase.
     nlevel = models.IntegerField(db_column='nLevel', blank=True, null=True)  # Field name made lowercase.
@@ -341,7 +330,7 @@ class Bomblevels(models.Model):
 
 
 class Budgettrackervalues(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sbudgetcategories = models.TextField(db_column='sBudgetCategories', blank=True, null=True)  # Field name made lowercase.
     fbudgetvalue = models.FloatField(db_column='fBudgetValue', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -352,7 +341,7 @@ class Budgettrackervalues(models.Model):
 
 
 class CcArraypurchaseelements(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sattributearray = models.TextField(db_column='sAttributeArray', blank=True, null=True)  # Field name made lowercase.
     ecc_purchaseelement = models.IntegerField(db_column='eCC_PurchaseElement', blank=True, null=True)  # Field name made lowercase.
     naddcost = models.IntegerField(db_column='nAddCost', blank=True, null=True)  # Field name made lowercase.
@@ -365,7 +354,7 @@ class CcArraypurchaseelements(models.Model):
 
 
 class CcPurchaseelement(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sattributes = models.TextField(db_column='sAttributes', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     ecc_purchaseelement = models.IntegerField(db_column='eCC_PurchaseElement', blank=True, null=True)  # Field name made lowercase.
@@ -378,7 +367,7 @@ class CcPurchaseelement(models.Model):
 
 
 class Ccameramodes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     f16_9backadjust = models.FloatField(db_column='f16_9BackAdjust', blank=True, null=True)  # Field name made lowercase.
     f16_9crouchbackadjust = models.FloatField(db_column='f16_9CrouchBackAdjust', blank=True, null=True)  # Field name made lowercase.
     f16_9crouchheightadjust = models.FloatField(db_column='f16_9CrouchHeightAdjust', blank=True, null=True)  # Field name made lowercase.
@@ -420,7 +409,7 @@ class Ccameramodes(models.Model):
 
 
 class CsaAutoroutedata(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ssocketname_0 = models.TextField(db_column='sSocketName_0', blank=True, null=True)  # Field name made lowercase.
     ssocketname_1 = models.TextField(db_column='sSocketName_1', blank=True, null=True)  # Field name made lowercase.
     ssocketname_2 = models.TextField(db_column='sSocketName_2', blank=True, null=True)  # Field name made lowercase.
@@ -440,7 +429,7 @@ class CsaAutoroutedata(models.Model):
 
 
 class CsaEatpropassociation(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eautoroutedata = models.IntegerField(db_column='eAutoRouteData', blank=True, null=True)  # Field name made lowercase.
     ecsa_eatpropassociation = models.IntegerField(db_column='eCSA_EATPropAssociation', blank=True, null=True)  # Field name made lowercase.
     eequipmentanimation = models.IntegerField(db_column='eEquipmentAnimation', blank=True, null=True)  # Field name made lowercase.
@@ -456,7 +445,7 @@ class CsaEatpropassociation(models.Model):
 
 
 class CsaEatvehicleassociation(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eequipmentanimation = models.IntegerField(db_column='eEquipmentAnimation', blank=True, null=True)  # Field name made lowercase.
     eitemassociation = models.IntegerField(db_column='eItemAssociation', blank=True, null=True)  # Field name made lowercase.
     evehicleanimationtype = models.IntegerField(db_column='eVehicleAnimationType', blank=True, null=True)  # Field name made lowercase.
@@ -468,7 +457,7 @@ class CsaEatvehicleassociation(models.Model):
 
 
 class CsaEquipmentanimationtype(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sintroanim = models.TextField(db_column='sIntroAnim', blank=True, null=True)  # Field name made lowercase.
     smainanim1 = models.TextField(db_column='sMainAnim1', blank=True, null=True)  # Field name made lowercase.
     smainanim2 = models.TextField(db_column='sMainAnim2', blank=True, null=True)  # Field name made lowercase.
@@ -488,7 +477,7 @@ class CsaEquipmentanimationtype(models.Model):
 
 
 class CsaIatstate(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nmaxconcurrentusersperactor = models.IntegerField(db_column='nMaxConcurrentUsersPerActor', blank=True, null=True)  # Field name made lowercase.
     nmaxconcurrentusersperip = models.IntegerField(db_column='nMaxConcurrentUsersPerIP', blank=True, null=True)  # Field name made lowercase.
     ecsa_iatstate = models.IntegerField(db_column='eCSA_IATState', blank=True, null=True)  # Field name made lowercase.
@@ -501,7 +490,7 @@ class CsaIatstate(models.Model):
 
 
 class CsaIatstateassociation(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ecsa_iatstateassociation = models.IntegerField(db_column='eCSA_IATStateAssociation', blank=True, null=True)  # Field name made lowercase.
     einputmapping = models.IntegerField(db_column='eInputMapping', blank=True, null=True)  # Field name made lowercase.
     fduration = models.FloatField(db_column='fDuration', blank=True, null=True)  # Field name made lowercase.
@@ -517,7 +506,7 @@ class CsaIatstateassociation(models.Model):
 
 
 class CsaInputmapping(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     skeybinding = models.TextField(db_column='sKeyBinding', blank=True, null=True)  # Field name made lowercase.
     ecsa_inputmapping = models.IntegerField(db_column='eCSA_InputMapping', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -528,7 +517,7 @@ class CsaInputmapping(models.Model):
 
 
 class CsaItemassociation(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ecsa_itemassociation = models.IntegerField(db_column='eCSA_ItemAssociation', blank=True, null=True)  # Field name made lowercase.
     edefaultequipmentanimationtype = models.IntegerField(db_column='eDefaultEquipmentAnimationType', blank=True, null=True)  # Field name made lowercase.
     eequipmenttype = models.IntegerField(db_column='eEquipmentType', blank=True, null=True)  # Field name made lowercase.
@@ -544,7 +533,7 @@ class CsaItemassociation(models.Model):
 
 
 class CsaItemassociationcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     seffect = models.TextField(db_column='sEffect', blank=True, null=True)  # Field name made lowercase.
     ecsa_itemassociationcategory = models.IntegerField(db_column='eCSA_ItemAssociationCategory', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -555,7 +544,7 @@ class CsaItemassociationcategories(models.Model):
 
 
 class CsaTaskitemanimationset(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sanimname = models.TextField(db_column='sAnimName', blank=True, null=True)  # Field name made lowercase.
     ecsa_taskitemanimationset = models.IntegerField(db_column='eCSA_TaskItemAnimationSet', blank=True, null=True)  # Field name made lowercase.
     ecsa = models.IntegerField(db_column='eCSA', blank=True, null=True)  # Field name made lowercase.
@@ -570,7 +559,7 @@ class CsaTaskitemanimationset(models.Model):
 
 
 class Cameraconstants(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)  # Field name made lowercase.
     ecameraconstant = models.IntegerField(db_column='eCameraConstant', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -581,7 +570,7 @@ class Cameraconstants(models.Model):
 
 
 class Camerahandycampresetexported(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ecamerahandycampreset = models.IntegerField(db_column='eCameraHandyCamPreset', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -591,7 +580,7 @@ class Camerahandycampresetexported(models.Model):
 
 
 class Camerahandycampresets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ecamerahandycampreset = models.IntegerField(db_column='eCameraHandyCamPreset', blank=True, null=True)  # Field name made lowercase.
     einterpolateto = models.IntegerField(db_column='eInterpolateTo', blank=True, null=True)  # Field name made lowercase.
     fchangeinmovementspeed = models.FloatField(db_column='fChangeInMovementSpeed', blank=True, null=True)  # Field name made lowercase.
@@ -615,7 +604,7 @@ class Camerahandycampresets(models.Model):
 
 
 class Cameraseatsetups(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ecameraseatsetup = models.IntegerField(db_column='eCameraSeatSetup', blank=True, null=True)  # Field name made lowercase.
     ffov = models.FloatField(db_column='fFOV', blank=True, null=True)  # Field name made lowercase.
     fideallocoffset_x = models.FloatField(db_column='fIdealLocOffset_X', blank=True, null=True)  # Field name made lowercase.
@@ -632,7 +621,7 @@ class Cameraseatsetups(models.Model):
 
 
 class Camerashakepresetexported(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ecamerashakepreset = models.IntegerField(db_column='eCameraShakePreset', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -642,7 +631,7 @@ class Camerashakepresetexported(models.Model):
 
 
 class Camerashakepresets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ecamerashakepreset = models.IntegerField(db_column='eCameraShakePreset', blank=True, null=True)  # Field name made lowercase.
     fduration = models.FloatField(db_column='fDuration', blank=True, null=True)  # Field name made lowercase.
     ffovamplitude = models.FloatField(db_column='fFOVAmplitude', blank=True, null=True)  # Field name made lowercase.
@@ -674,7 +663,7 @@ class Camerashakepresets(models.Model):
 
 
 class Capacityitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     namount = models.IntegerField(db_column='nAmount', blank=True, null=True)  # Field name made lowercase.
@@ -687,7 +676,7 @@ class Capacityitemtypes(models.Model):
 
 
 class Charactercustomisationoverrides(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sfullbodymeshoverridefemale = models.TextField(db_column='sFullBodyMeshOverrideFemale', blank=True, null=True)  # Field name made lowercase.
     sfullbodymeshoverridemale = models.TextField(db_column='sFullBodyMeshOverrideMale', blank=True, null=True)  # Field name made lowercase.
     svfxtemplatefemale = models.TextField(db_column='sVFXTemplateFemale', blank=True, null=True)  # Field name made lowercase.
@@ -701,7 +690,7 @@ class Charactercustomisationoverrides(models.Model):
 
 
 class Characterinteractionmenu(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sicon = models.TextField(db_column='sIcon', blank=True, null=True)  # Field name made lowercase.
     sid = models.TextField(db_column='sID', blank=True, null=True)  # Field name made lowercase.
     nposition = models.IntegerField(db_column='nPosition', blank=True, null=True)  # Field name made lowercase.
@@ -715,7 +704,7 @@ class Characterinteractionmenu(models.Model):
 
 
 class Charactermodifieritemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -725,7 +714,7 @@ class Charactermodifieritemtypes(models.Model):
 
 
 class Characterstatuses(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     estatusiconcombo = models.IntegerField(db_column='eStatusIconCombo', blank=True, null=True)  # Field name made lowercase.
     echaracterstatus = models.IntegerField(db_column='eCharacterStatus', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -736,7 +725,7 @@ class Characterstatuses(models.Model):
 
 
 class Charactervoipstatus(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     evoipiconcombo = models.IntegerField(db_column='eVOIPIconCombo', blank=True, null=True)  # Field name made lowercase.
     echaractervoipstatus = models.IntegerField(db_column='eCharacterVOIPStatus', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -747,7 +736,7 @@ class Charactervoipstatus(models.Model):
 
 
 class Chatconstants(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)  # Field name made lowercase.
     echatconstant = models.IntegerField(db_column='eChatConstant', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -758,7 +747,7 @@ class Chatconstants(models.Model):
 
 
 class Chatmessagecategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sfunctionname = models.TextField(db_column='sFunctionName', blank=True, null=True)  # Field name made lowercase.
     ssecondaryslashcommand = models.TextField(db_column='sSecondarySlashCommand', blank=True, null=True)  # Field name made lowercase.
@@ -781,7 +770,7 @@ class Chatmessagecategories(models.Model):
 
 
 class Chattags(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     stagtext = models.TextField(db_column='sTagText', blank=True, null=True)  # Field name made lowercase.
     etagcolour = models.IntegerField(db_column='eTagColour', blank=True, null=True)  # Field name made lowercase.
     npriority = models.IntegerField(db_column='nPriority', blank=True, null=True)  # Field name made lowercase.
@@ -796,7 +785,7 @@ class Chattags(models.Model):
 
 
 class Clanranks(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sname = models.TextField(db_column='sName', blank=True, null=True)  # Field name made lowercase.
     eicon = models.IntegerField(db_column='eIcon', blank=True, null=True)  # Field name made lowercase.
     eclanrank = models.IntegerField(db_column='eClanRank', blank=True, null=True)  # Field name made lowercase.
@@ -825,7 +814,7 @@ class Clanranks(models.Model):
 
 
 class Clothingitemcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eclothingitemcategory = models.IntegerField(db_column='eClothingItemCategory', blank=True, null=True)  # Field name made lowercase.
     einventoryiteminfracategory = models.IntegerField(db_column='eInventoryItemInfraCategory', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -836,7 +825,7 @@ class Clothingitemcategories(models.Model):
 
 
 class Clothingitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sresource = models.TextField(db_column='sResource', blank=True, null=True)  # Field name made lowercase.
     egolempart = models.IntegerField(db_column='eGolemPart', blank=True, null=True)  # Field name made lowercase.
@@ -852,7 +841,7 @@ class Clothingitemtypes(models.Model):
 
 
 class Consolecommands(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     sfunctionname = models.TextField(db_column='sFunctionName', blank=True, null=True)  # Field name made lowercase.
@@ -874,7 +863,7 @@ class Consolecommands(models.Model):
 
 
 class Contactlevels(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     srewardmailbody = models.TextField(db_column='sRewardMailBody', blank=True, null=True)  # Field name made lowercase.
     srewardmailsubject = models.TextField(db_column='sRewardMailSubject', blank=True, null=True)  # Field name made lowercase.
     econtact = models.IntegerField(db_column='eContact', blank=True, null=True)  # Field name made lowercase.
@@ -893,7 +882,7 @@ class Contactlevels(models.Model):
 
 
 class Contactreferrals(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     econtactlevel = models.IntegerField(db_column='eContactLevel', blank=True, null=True)  # Field name made lowercase.
     eunlockedcontact = models.IntegerField(db_column='eUnlockedContact', blank=True, null=True)  # Field name made lowercase.
     npartialunlockindex = models.IntegerField(db_column='nPartialUnlockIndex', blank=True, null=True)  # Field name made lowercase.
@@ -905,7 +894,7 @@ class Contactreferrals(models.Model):
 
 
 class Contactrotationanims(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sleftrotationanim = models.TextField(db_column='sLeftRotationAnim', blank=True, null=True)  # Field name made lowercase.
     srightrotationanim = models.TextField(db_column='sRightRotationAnim', blank=True, null=True)  # Field name made lowercase.
     econtactrotationanim = models.IntegerField(db_column='eContactRotationAnim', blank=True, null=True)  # Field name made lowercase.
@@ -919,7 +908,7 @@ class Contactrotationanims(models.Model):
 
 
 class Contacts(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nsecondarykey = models.TextField(db_column='nSecondaryKey', blank=True, null=True)  # Field name made lowercase.
     saudiotype = models.TextField(db_column='sAudioType', blank=True, null=True)  # Field name made lowercase.
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
@@ -951,7 +940,7 @@ class Contacts(models.Model):
 
 
 class Contextsensitiveaction(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edefaultautoroutedata = models.IntegerField(db_column='eDefaultAutoRouteData', blank=True, null=True)  # Field name made lowercase.
     faimdot = models.FloatField(db_column='fAimDot', blank=True, null=True)  # Field name made lowercase.
     fcameradirectionaimdotweightingscalar = models.FloatField(db_column='fCameraDirectionAimDotWeightingScalar', blank=True, null=True)  # Field name made lowercase.
@@ -987,7 +976,7 @@ class Contextsensitiveaction(models.Model):
 
 
 class Contextsensitiveactionbase(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     ebegincsatutorialtrigger = models.IntegerField(db_column='eBeginCSATutorialTrigger', blank=True, null=True)  # Field name made lowercase.
     eendcsatutorialtrigger = models.IntegerField(db_column='eEndCSATutorialTrigger', blank=True, null=True)  # Field name made lowercase.
@@ -1015,7 +1004,7 @@ class Contextsensitiveactionbase(models.Model):
 
 
 class Coopcheckpointmultipliers(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fmultiplier = models.FloatField(db_column='fMultiplier', blank=True, null=True)  # Field name made lowercase.
     ncoopcheckpointmultipliers = models.IntegerField(db_column='nCoopCheckpointMultipliers', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1026,7 +1015,7 @@ class Coopcheckpointmultipliers(models.Model):
 
 
 class Customisedassetpriorities(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fpriority = models.FloatField(db_column='fPriority', blank=True, null=True)  # Field name made lowercase.
     ecustomisedassetpriority = models.IntegerField(db_column='eCustomisedAssetPriority', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1037,7 +1026,7 @@ class Customisedassetpriorities(models.Model):
 
 
 class Dailyactivities(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edailyactivity = models.IntegerField(db_column='eDailyActivity', blank=True, null=True)  # Field name made lowercase.
     eprobability = models.IntegerField(db_column='eProbability', blank=True, null=True)  # Field name made lowercase.
     eredeemablereward = models.IntegerField(db_column='eRedeemableReward', blank=True, null=True)  # Field name made lowercase.
@@ -1052,7 +1041,7 @@ class Dailyactivities(models.Model):
 
 
 class Dailyactivitycontacts(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     shuddescription = models.TextField(db_column='sHUDDescription', blank=True, null=True)  # Field name made lowercase.
     slongdescription = models.TextField(db_column='sLongDescription', blank=True, null=True)  # Field name made lowercase.
     stitle = models.TextField(db_column='sTitle', blank=True, null=True)  # Field name made lowercase.
@@ -1067,7 +1056,7 @@ class Dailyactivitycontacts(models.Model):
 
 
 class Damageableattachmentvisuals(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eitemattachmentvisual = models.IntegerField(db_column='eItemAttachmentVisual', blank=True, null=True)  # Field name made lowercase.
     fcollisionarc = models.FloatField(db_column='fCollisionArc', blank=True, null=True)  # Field name made lowercase.
     fcollisioncrouchheightoffset = models.FloatField(db_column='fCollisionCrouchHeightOffset', blank=True, null=True)  # Field name made lowercase.
@@ -1082,7 +1071,7 @@ class Damageableattachmentvisuals(models.Model):
 
 
 class Defaultcustomcolours(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edefaultcustomcolour = models.IntegerField(db_column='eDefaultCustomColour', blank=True, null=True)  # Field name made lowercase.
     nhue = models.IntegerField(db_column='nHue', blank=True, null=True)  # Field name made lowercase.
     nlum = models.IntegerField(db_column='nLum', blank=True, null=True)  # Field name made lowercase.
@@ -1095,7 +1084,7 @@ class Defaultcustomcolours(models.Model):
 
 
 class Defaultoutfititems(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eclothingitemtype = models.IntegerField(db_column='eClothingItemType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -1105,7 +1094,7 @@ class Defaultoutfititems(models.Model):
 
 
 class DefaultTodBehaviours(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etod_event = models.IntegerField(db_column='eTOD_Event', blank=True, null=True)  # Field name made lowercase.
     flikelihood = models.FloatField(db_column='fLikelihood', blank=True, null=True)  # Field name made lowercase.
     ereaction = models.IntegerField(db_column='eReaction', blank=True, null=True)  # Field name made lowercase.
@@ -1117,7 +1106,7 @@ class DefaultTodBehaviours(models.Model):
 
 
 class Designerconstants(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -1127,7 +1116,7 @@ class Designerconstants(models.Model):
 
 
 class Designerconstants2(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     scomment = models.TextField(db_column='sComment', blank=True, null=True)  # Field name made lowercase.
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)  # Field name made lowercase.
     edesignerconstant2 = models.IntegerField(db_column='eDesignerConstant2', blank=True, null=True)  # Field name made lowercase.
@@ -1139,7 +1128,7 @@ class Designerconstants2(models.Model):
 
 
 class Displaypoint(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nsecondarykey = models.TextField(db_column='nSecondaryKey', blank=True, null=True)  # Field name made lowercase.
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sobtainedby = models.TextField(db_column='sObtainedBy', blank=True, null=True)  # Field name made lowercase.
@@ -1160,7 +1149,7 @@ class Displaypoint(models.Model):
 
 
 class Districtblocks(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     edistrict = models.IntegerField(db_column='eDistrict', blank=True, null=True)  # Field name made lowercase.
@@ -1182,7 +1171,7 @@ class Districtblocks(models.Model):
 
 
 class Districtinstancetype(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     edistrict = models.IntegerField(db_column='eDistrict', blank=True, null=True)  # Field name made lowercase.
@@ -1199,7 +1188,7 @@ class Districtinstancetype(models.Model):
 
 
 class Districtlanguage(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     slanguageshortname = models.TextField(db_column='sLanguageShortName', blank=True, null=True)  # Field name made lowercase.
     slocalisationini = models.TextField(db_column='sLocalisationINI', blank=True, null=True)  # Field name made lowercase.
@@ -1212,7 +1201,7 @@ class Districtlanguage(models.Model):
 
 
 class Districtrating(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edistrictrating = models.IntegerField(db_column='eDistrictRating', blank=True, null=True)  # Field name made lowercase.
     nmaxrating = models.IntegerField(db_column='nMaxRating', blank=True, null=True)  # Field name made lowercase.
     nminrating = models.IntegerField(db_column='nMinRating', blank=True, null=True)  # Field name made lowercase.
@@ -1224,7 +1213,7 @@ class Districtrating(models.Model):
 
 
 class Districtrulesets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     edistrictruleset = models.IntegerField(db_column='eDistrictRuleSet', blank=True, null=True)  # Field name made lowercase.
     emissiontypefilter_0 = models.IntegerField(db_column='eMissionTypeFilter_0', blank=True, null=True)  # Field name made lowercase.
@@ -1270,7 +1259,7 @@ class Districtrulesets(models.Model):
 
 
 class Districttypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edistricttype = models.IntegerField(db_column='eDistrictType', blank=True, null=True)  # Field name made lowercase.
     efactionallowed = models.IntegerField(db_column='eFactionAllowed', blank=True, null=True)  # Field name made lowercase.
     bissocial = models.IntegerField(db_column='bIsSocial', blank=True, null=True)  # Field name made lowercase.
@@ -1282,7 +1271,7 @@ class Districttypes(models.Model):
 
 
 class Districts(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saudiobanks = models.TextField(db_column='sAudioBanks', blank=True, null=True)  # Field name made lowercase.
     saudioreflectiondata = models.TextField(db_column='sAudioReflectionData', blank=True, null=True)  # Field name made lowercase.
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
@@ -1315,7 +1304,7 @@ class Districts(models.Model):
 
 
 class Dynamicmenuentries(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplaypicture = models.TextField(db_column='sDisplayPicture', blank=True, null=True)  # Field name made lowercase.
     sdisplaytext = models.TextField(db_column='sDisplayText', blank=True, null=True)  # Field name made lowercase.
     slistid = models.TextField(db_column='sListID', blank=True, null=True)  # Field name made lowercase.
@@ -1332,7 +1321,7 @@ class Dynamicmenuentries(models.Model):
 
 
 class Emotecommands(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     spackageref = models.TextField(db_column='sPackageRef', blank=True, null=True)  # Field name made lowercase.
     sslashcommand = models.TextField(db_column='sSlashCommand', blank=True, null=True)  # Field name made lowercase.
@@ -1346,7 +1335,7 @@ class Emotecommands(models.Model):
 
 
 class Encumbrances(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nuiencumbrancelevel = models.IntegerField(db_column='nUIEncumbranceLevel', blank=True, null=True)  # Field name made lowercase.
     eencumbrance = models.IntegerField(db_column='eEncumbrance', blank=True, null=True)  # Field name made lowercase.
     bcancrouchmove = models.IntegerField(db_column='bCanCrouchMove', blank=True, null=True)  # Field name made lowercase.
@@ -1361,7 +1350,7 @@ class Encumbrances(models.Model):
 
 
 class Equipmentcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     eequipmentcategory = models.IntegerField(db_column='eEquipmentCategory', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1372,7 +1361,7 @@ class Equipmentcategories(models.Model):
 
 
 class Equipmenttypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     eequipmentcategory = models.IntegerField(db_column='eEquipmentCategory', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
@@ -1387,7 +1376,7 @@ class Equipmenttypes(models.Model):
 
 
 class Errorcode(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ndummy = models.IntegerField(db_column='nDummy', blank=True, null=True)  # Field name made lowercase.
     eerrorcode = models.IntegerField(db_column='eErrorCode', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1398,7 +1387,7 @@ class Errorcode(models.Model):
 
 
 class Explosions(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saudiotype = models.TextField(db_column='sAudioType', blank=True, null=True)  # Field name made lowercase.
     svfxasset = models.TextField(db_column='sVFXAsset', blank=True, null=True)  # Field name made lowercase.
     svfxasset_airburst = models.TextField(db_column='sVFXAsset_Airburst', blank=True, null=True)  # Field name made lowercase.
@@ -1425,7 +1414,7 @@ class Explosions(models.Model):
 
 
 class Fxmaterialimpacts(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sexplosiveimpactvfx = models.TextField(db_column='sExplosiveImpactVFX', blank=True, null=True)  # Field name made lowercase.
     sheavyexitvfx = models.TextField(db_column='sHeavyExitVFX', blank=True, null=True)  # Field name made lowercase.
     sheavyfootfallvfx = models.TextField(db_column='sHeavyFootfallVFX', blank=True, null=True)  # Field name made lowercase.
@@ -1456,7 +1445,7 @@ class Fxmaterialimpacts(models.Model):
 
 
 class Facialhairrandomgeneration(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fprobability = models.FloatField(db_column='fProbability', blank=True, null=True)  # Field name made lowercase.
     efacialhairrandomgeneration = models.IntegerField(db_column='eFacialHairRandomGeneration', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1467,7 +1456,7 @@ class Facialhairrandomgeneration(models.Model):
 
 
 class Factionrestrictedlocations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     efactionrestrictedlocation = models.IntegerField(db_column='eFactionRestrictedLocation', blank=True, null=True)  # Field name made lowercase.
     npadding_ignore_me = models.IntegerField(db_column='nPadding_Ignore_Me', blank=True, null=True)  # Field name made lowercase.
     efaction = models.IntegerField(db_column='eFaction', blank=True, null=True)  # Field name made lowercase.
@@ -1479,7 +1468,7 @@ class Factionrestrictedlocations(models.Model):
 
 
 class Factions(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     sfactioninfodescription = models.TextField(db_column='sFactionInfoDescription', blank=True, null=True)  # Field name made lowercase.
     sfactioninfodisplayname = models.TextField(db_column='sFactionInfoDisplayName', blank=True, null=True)  # Field name made lowercase.
@@ -1495,7 +1484,7 @@ class Factions(models.Model):
 
 
 class Feedbackmessages(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sfeedbackmessage = models.TextField(db_column='sFeedbackMessage', blank=True, null=True)  # Field name made lowercase.
     nsecondarykey = models.IntegerField(db_column='nSecondaryKey', blank=True, null=True)  # Field name made lowercase.
     efeedbackmessage = models.IntegerField(db_column='eFeedbackMessage', blank=True, null=True)  # Field name made lowercase.
@@ -1507,7 +1496,7 @@ class Feedbackmessages(models.Model):
 
 
 class Fireoffsets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fforwards = models.FloatField(db_column='fForwards', blank=True, null=True)  # Field name made lowercase.
     fright = models.FloatField(db_column='fRight', blank=True, null=True)  # Field name made lowercase.
     fup = models.FloatField(db_column='fUp', blank=True, null=True)  # Field name made lowercase.
@@ -1520,7 +1509,7 @@ class Fireoffsets(models.Model):
 
 
 class Gameflowdialogs(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sbutton1label = models.TextField(db_column='sButton1Label', blank=True, null=True)  # Field name made lowercase.
     sbutton2label = models.TextField(db_column='sButton2Label', blank=True, null=True)  # Field name made lowercase.
     sbutton3label = models.TextField(db_column='sButton3Label', blank=True, null=True)  # Field name made lowercase.
@@ -1540,7 +1529,7 @@ class Gameflowdialogs(models.Model):
 
 
 class Gameplayeventcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sactivitymessageparameter4comment = models.TextField(db_column='sActivityMessageParameter4Comment', blank=True, null=True)  # Field name made lowercase.
     ndummy = models.IntegerField(db_column='nDummy', blank=True, null=True)  # Field name made lowercase.
     egameplayeventcategory = models.IntegerField(db_column='eGameplayEventCategory', blank=True, null=True)  # Field name made lowercase.
@@ -1552,7 +1541,7 @@ class Gameplayeventcategories(models.Model):
 
 
 class Gameplayeventcategories2(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sactivitymessageparameter4comment = models.TextField(db_column='sActivityMessageParameter4Comment', blank=True, null=True)  # Field name made lowercase.
     ndummy = models.IntegerField(db_column='nDummy', blank=True, null=True)  # Field name made lowercase.
     egameplayeventcategory2 = models.IntegerField(db_column='eGameplayEventCategory2', blank=True, null=True)  # Field name made lowercase.
@@ -1564,7 +1553,7 @@ class Gameplayeventcategories2(models.Model):
 
 
 class GameplayeventInventoryoperation(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     egameplayevent = models.IntegerField(db_column='eGameplayEvent', blank=True, null=True)  # Field name made lowercase.
     echildrule = models.IntegerField(db_column='eChildRule', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1575,7 +1564,7 @@ class GameplayeventInventoryoperation(models.Model):
 
 
 class GameplayeventMissions(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     echildrule = models.IntegerField(db_column='eChildRule', blank=True, null=True)  # Field name made lowercase.
     egameplayevent = models.IntegerField(db_column='eGameplayEvent', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1586,7 +1575,7 @@ class GameplayeventMissions(models.Model):
 
 
 class GameplayeventTasktargets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     egameplayevent = models.IntegerField(db_column='eGameplayEvent', blank=True, null=True)  # Field name made lowercase.
     echildrule = models.IntegerField(db_column='eChildRule', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1597,7 +1586,7 @@ class GameplayeventTasktargets(models.Model):
 
 
 class GameplayeventVehiclehealth(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     egameplayevent = models.IntegerField(db_column='eGameplayEvent', blank=True, null=True)  # Field name made lowercase.
     echildrule = models.IntegerField(db_column='eChildRule', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1608,7 +1597,7 @@ class GameplayeventVehiclehealth(models.Model):
 
 
 class Gameplayevents(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eactivitymessage_0 = models.IntegerField(db_column='eActivityMessage_0', blank=True, null=True)  # Field name made lowercase.
     eactivitymessage_1 = models.IntegerField(db_column='eActivityMessage_1', blank=True, null=True)  # Field name made lowercase.
     eactivitymessage_2 = models.IntegerField(db_column='eActivityMessage_2', blank=True, null=True)  # Field name made lowercase.
@@ -1648,7 +1637,7 @@ class Gameplayevents(models.Model):
 
 
 class GameplayeventsModetimer(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     echildrule = models.IntegerField(db_column='eChildRule', blank=True, null=True)  # Field name made lowercase.
     egameplayevent = models.IntegerField(db_column='eGameplayEvent', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1659,7 +1648,7 @@ class GameplayeventsModetimer(models.Model):
 
 
 class Gameplaymodetimertypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edistrictruleset = models.IntegerField(db_column='eDistrictRuleSet', blank=True, null=True)  # Field name made lowercase.
     egameplaymodetimertype = models.IntegerField(db_column='eGameplayModeTimerType', blank=True, null=True)  # Field name made lowercase.
     balive = models.IntegerField(db_column='bAlive', blank=True, null=True)  # Field name made lowercase.
@@ -1681,7 +1670,7 @@ class Gameplaymodetimertypes(models.Model):
 
 
 class Gameplayobjectsets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     egameplayobjectset = models.IntegerField(db_column='eGameplayObjectSet', blank=True, null=True)  # Field name made lowercase.
     ndummy = models.IntegerField(blank=True, null=True)
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1692,7 +1681,7 @@ class Gameplayobjectsets(models.Model):
 
 
 class Gameplayobjects(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     egameplayobject = models.IntegerField(db_column='eGameplayObject', blank=True, null=True)  # Field name made lowercase.
     ememberof_0 = models.IntegerField(db_column='eMemberOf_0', blank=True, null=True)  # Field name made lowercase.
     ememberof_1 = models.IntegerField(db_column='eMemberOf_1', blank=True, null=True)  # Field name made lowercase.
@@ -1706,7 +1695,7 @@ class Gameplayobjects(models.Model):
 
 
 class Gameplayobjectsfixed(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     egameplayobject = models.IntegerField(db_column='eGameplayObject', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -1716,7 +1705,7 @@ class Gameplayobjectsfixed(models.Model):
 
 
 class Gameplaystatesets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     egameplaystateset = models.IntegerField(db_column='eGameplayStateSet', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -1726,7 +1715,7 @@ class Gameplaystatesets(models.Model):
 
 
 class Gameplaystates(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ememberof_0 = models.IntegerField(db_column='eMemberOf_0', blank=True, null=True)  # Field name made lowercase.
     ememberof_1 = models.IntegerField(db_column='eMemberOf_1', blank=True, null=True)  # Field name made lowercase.
     ememberof_2 = models.IntegerField(db_column='eMemberOf_2', blank=True, null=True)  # Field name made lowercase.
@@ -1740,7 +1729,7 @@ class Gameplaystates(models.Model):
 
 
 class Gameplayvehiclehealthranges(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nhealthmax = models.IntegerField(db_column='nHealthMax', blank=True, null=True)  # Field name made lowercase.
     nhealthmin = models.IntegerField(db_column='nHealthMin', blank=True, null=True)  # Field name made lowercase.
     egameplayvehiclehealthrange = models.IntegerField(db_column='eGameplayVehicleHealthRange', blank=True, null=True)  # Field name made lowercase.
@@ -1752,7 +1741,7 @@ class Gameplayvehiclehealthranges(models.Model):
 
 
 class Golempartclasses(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     egolempartclass = models.IntegerField(db_column='eGolemPartClass', blank=True, null=True)  # Field name made lowercase.
     nsecondarykey = models.IntegerField(db_column='nSecondaryKey', blank=True, null=True)  # Field name made lowercase.
     bcoversbreasts = models.IntegerField(db_column='bCoversBreasts', blank=True, null=True)  # Field name made lowercase.
@@ -1766,7 +1755,7 @@ class Golempartclasses(models.Model):
 
 
 class Golemparts(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sgolempart = models.TextField(db_column='sGolemPart', blank=True, null=True)  # Field name made lowercase.
     susername = models.TextField(db_column='sUsername', blank=True, null=True)  # Field name made lowercase.
     eclass = models.IntegerField(db_column='eClass', blank=True, null=True)  # Field name made lowercase.
@@ -1783,7 +1772,7 @@ class Golemparts(models.Model):
 
 
 class Graffitidisplaypoint(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edisplaypoint = models.IntegerField(db_column='eDisplayPoint', blank=True, null=True)  # Field name made lowercase.
     fspraydurationoverride = models.FloatField(db_column='fSprayDurationOverride', blank=True, null=True)  # Field name made lowercase.
     einteractiontype = models.IntegerField(db_column='eInteractionType', blank=True, null=True)  # Field name made lowercase.
@@ -1795,7 +1784,7 @@ class Graffitidisplaypoint(models.Model):
 
 
 class Grenadeweapontype(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     erecoil = models.IntegerField(db_column='eRecoil', blank=True, null=True)  # Field name made lowercase.
     eweaponprojectile = models.IntegerField(db_column='eWeaponProjectile', blank=True, null=True)  # Field name made lowercase.
     eweapontype = models.IntegerField(db_column='eWeaponType', blank=True, null=True)  # Field name made lowercase.
@@ -1812,7 +1801,7 @@ class Grenadeweapontype(models.Model):
 
 
 class Hudceremonymsg(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     stitle = models.TextField(db_column='sTitle', blank=True, null=True)  # Field name made lowercase.
     ehudmessage = models.IntegerField(db_column='eHUDMessage', blank=True, null=True)  # Field name made lowercase.
     eiconfallback = models.IntegerField(db_column='eIconFallback', blank=True, null=True)  # Field name made lowercase.
@@ -1826,7 +1815,7 @@ class Hudceremonymsg(models.Model):
 
 
 class Hudcolour(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ehudcolour = models.IntegerField(db_column='eHUDColour', blank=True, null=True)  # Field name made lowercase.
     eoverridecolour = models.IntegerField(db_column='eOverrideColour', blank=True, null=True)  # Field name made lowercase.
     na = models.IntegerField(db_column='nA', blank=True, null=True)  # Field name made lowercase.
@@ -1841,7 +1830,7 @@ class Hudcolour(models.Model):
 
 
 class Hudcolourprofiles(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ehudcolourprofile = models.IntegerField(db_column='eHUDColourProfile', blank=True, null=True)  # Field name made lowercase.
     eprimarycolour = models.IntegerField(db_column='ePrimaryColour', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1852,7 +1841,7 @@ class Hudcolourprofiles(models.Model):
 
 
 class Hudcombatmessages(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sline0 = models.TextField(db_column='sLine0', blank=True, null=True)  # Field name made lowercase.
     sline1 = models.TextField(db_column='sLine1', blank=True, null=True)  # Field name made lowercase.
     sline2 = models.TextField(db_column='sLine2', blank=True, null=True)  # Field name made lowercase.
@@ -1866,7 +1855,7 @@ class Hudcombatmessages(models.Model):
 
 
 class Hudconstantbools(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     scomment = models.TextField(db_column='sComment', blank=True, null=True)  # Field name made lowercase.
     ehudconstantbool = models.IntegerField(db_column='eHUDConstantBool', blank=True, null=True)  # Field name made lowercase.
     bvalue = models.IntegerField(db_column='bValue', blank=True, null=True)  # Field name made lowercase.
@@ -1878,7 +1867,7 @@ class Hudconstantbools(models.Model):
 
 
 class Hudconstantstring(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     scomment = models.TextField(db_column='sComment', blank=True, null=True)  # Field name made lowercase.
     stext = models.TextField(db_column='sText', blank=True, null=True)  # Field name made lowercase.
     ehudconstantstring = models.IntegerField(db_column='eHUDConstantString', blank=True, null=True)  # Field name made lowercase.
@@ -1890,7 +1879,7 @@ class Hudconstantstring(models.Model):
 
 
 class Hudconstants(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     scomment = models.TextField(db_column='sComment', blank=True, null=True)  # Field name made lowercase.
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)  # Field name made lowercase.
     ehudconstant = models.IntegerField(db_column='eHUDConstant', blank=True, null=True)  # Field name made lowercase.
@@ -1902,7 +1891,7 @@ class Hudconstants(models.Model):
 
 
 class Huddistrictmapmarker(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     slegendname = models.TextField(db_column='sLegendName', blank=True, null=True)  # Field name made lowercase.
     ehuddistrictmapmarker = models.IntegerField(db_column='eHUDDistrictMapMarker', blank=True, null=True)  # Field name made lowercase.
     eiconcombo = models.IntegerField(db_column='eIconCombo', blank=True, null=True)  # Field name made lowercase.
@@ -1923,7 +1912,7 @@ class Huddistrictmapmarker(models.Model):
 
 
 class Hudeffects(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     smaterialref = models.TextField(db_column='sMaterialRef', blank=True, null=True)  # Field name made lowercase.
     ehudeffect = models.IntegerField(db_column='eHUDEffect', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1934,7 +1923,7 @@ class Hudeffects(models.Model):
 
 
 class Hudiconcombos(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ehudiconcombo = models.IntegerField(db_column='eHUDIconCombo', blank=True, null=True)  # Field name made lowercase.
     elayer1 = models.IntegerField(db_column='eLayer1', blank=True, null=True)  # Field name made lowercase.
     elayer2 = models.IntegerField(db_column='eLayer2', blank=True, null=True)  # Field name made lowercase.
@@ -1947,7 +1936,7 @@ class Hudiconcombos(models.Model):
 
 
 class Hudicons(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ehudicon = models.IntegerField(db_column='eHUDIcon', blank=True, null=True)  # Field name made lowercase.
     niconcolumn = models.IntegerField(db_column='nIconColumn', blank=True, null=True)  # Field name made lowercase.
     niconrow = models.IntegerField(db_column='nIconRow', blank=True, null=True)  # Field name made lowercase.
@@ -1959,7 +1948,7 @@ class Hudicons(models.Model):
 
 
 class Hudinfobrowsers(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spackageref = models.TextField(db_column='sPackageRef', blank=True, null=True)  # Field name made lowercase.
     ehudinfobrowser = models.IntegerField(db_column='eHUDInfoBrowser', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -1970,7 +1959,7 @@ class Hudinfobrowsers(models.Model):
 
 
 class Hudmarkeroffset(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ehudmarkeroffset = models.IntegerField(db_column='eHUDMarkerOffset', blank=True, null=True)  # Field name made lowercase.
     foffset_x = models.FloatField(db_column='fOffset_X', blank=True, null=True)  # Field name made lowercase.
     foffset_y = models.FloatField(db_column='fOffset_Y', blank=True, null=True)  # Field name made lowercase.
@@ -1983,7 +1972,7 @@ class Hudmarkeroffset(models.Model):
 
 
 class Hudmarkerstatecolours(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edefault = models.IntegerField(db_column='eDefault', blank=True, null=True)  # Field name made lowercase.
     ehudmarkerstatecolour = models.IntegerField(db_column='eHUDMarkerStateColour', blank=True, null=True)  # Field name made lowercase.
     etask_neutral = models.IntegerField(db_column='eTask_Neutral', blank=True, null=True)  # Field name made lowercase.
@@ -1999,7 +1988,7 @@ class Hudmarkerstatecolours(models.Model):
 
 
 class Hudmarkerstates(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fupdatedelay = models.FloatField(db_column='fUpdateDelay', blank=True, null=True)  # Field name made lowercase.
     ehudmarkerstate = models.IntegerField(db_column='eHUDMarkerState', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2010,7 +1999,7 @@ class Hudmarkerstates(models.Model):
 
 
 class Hudmarkervisual(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ecolourprofile = models.IntegerField(db_column='eColourProfile', blank=True, null=True)  # Field name made lowercase.
     edistrictmapmarker = models.IntegerField(db_column='eDistrictMapMarker', blank=True, null=True)  # Field name made lowercase.
     ehudmarkeroffset = models.IntegerField(db_column='eHUDMarkerOffset', blank=True, null=True)  # Field name made lowercase.
@@ -2029,7 +2018,7 @@ class Hudmarkervisual(models.Model):
 
 
 class Hudmarkervisualtext(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sneutral = models.TextField(db_column='sNeutral', blank=True, null=True)  # Field name made lowercase.
     soppositionattack = models.TextField(db_column='sOppositionAttack', blank=True, null=True)  # Field name made lowercase.
     soppositiondefend = models.TextField(db_column='sOppositionDefend', blank=True, null=True)  # Field name made lowercase.
@@ -2044,7 +2033,7 @@ class Hudmarkervisualtext(models.Model):
 
 
 class Hudmessagecategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplaytext = models.TextField(db_column='sDisplayText', blank=True, null=True)  # Field name made lowercase.
     ehudmessagecategory = models.IntegerField(db_column='eHUDMessageCategory', blank=True, null=True)  # Field name made lowercase.
     eicon = models.IntegerField(db_column='eIcon', blank=True, null=True)  # Field name made lowercase.
@@ -2057,7 +2046,7 @@ class Hudmessagecategories(models.Model):
 
 
 class Hudmessageposition(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ehudmessageposition = models.IntegerField(db_column='eHUDMessagePosition', blank=True, null=True)  # Field name made lowercase.
     fypercent = models.FloatField(db_column='fYPercent', blank=True, null=True)  # Field name made lowercase.
     nyoffset = models.IntegerField(db_column='nYOffset', blank=True, null=True)  # Field name made lowercase.
@@ -2069,7 +2058,7 @@ class Hudmessageposition(models.Model):
 
 
 class Hudmessagescenes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spackageref = models.TextField(db_column='sPackageRef', blank=True, null=True)  # Field name made lowercase.
     ehudmessagescene = models.IntegerField(db_column='eHUDMessageScene', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2080,7 +2069,7 @@ class Hudmessagescenes(models.Model):
 
 
 class Hudmessages(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saudiocue = models.TextField(db_column='sAudioCue', blank=True, null=True)  # Field name made lowercase.
     schattext = models.TextField(db_column='sChatText', blank=True, null=True)  # Field name made lowercase.
     sdisplaytext = models.TextField(db_column='sDisplayText', blank=True, null=True)  # Field name made lowercase.
@@ -2110,7 +2099,7 @@ class Hudmessages(models.Model):
 
 
 class Hudpopupmenuitems(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sconsolecommand = models.TextField(db_column='sConsoleCommand', blank=True, null=True)  # Field name made lowercase.
     skeypress = models.TextField(db_column='sKeyPress', blank=True, null=True)  # Field name made lowercase.
     slocalisationtext = models.TextField(db_column='sLocalisationText', blank=True, null=True)  # Field name made lowercase.
@@ -2127,7 +2116,7 @@ class Hudpopupmenuitems(models.Model):
 
 
 class Hudradarmarkers(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ehudradarmarker = models.IntegerField(db_column='eHUDRadarMarker', blank=True, null=True)  # Field name made lowercase.
     eicon = models.IntegerField(db_column='eIcon', blank=True, null=True)  # Field name made lowercase.
     eiconsurround = models.IntegerField(db_column='eIconSurround', blank=True, null=True)  # Field name made lowercase.
@@ -2144,7 +2133,7 @@ class Hudradarmarkers(models.Model):
 
 
 class Hudreticulehinticons(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplaytext = models.TextField(db_column='sDisplayText', blank=True, null=True)  # Field name made lowercase.
     ecolour = models.IntegerField(db_column='eColour', blank=True, null=True)  # Field name made lowercase.
     ehudreticulehinticon = models.IntegerField(db_column='eHUDReticuleHintIcon', blank=True, null=True)  # Field name made lowercase.
@@ -2158,7 +2147,7 @@ class Hudreticulehinticons(models.Model):
 
 
 class Hudreticules(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spackageref = models.TextField(db_column='sPackageRef', blank=True, null=True)  # Field name made lowercase.
     ecolourdefault = models.IntegerField(db_column='eColourDefault', blank=True, null=True)  # Field name made lowercase.
     ecolourenemy = models.IntegerField(db_column='eColourEnemy', blank=True, null=True)  # Field name made lowercase.
@@ -2172,7 +2161,7 @@ class Hudreticules(models.Model):
 
 
 class Hudscenes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdatastoretag = models.TextField(db_column='sDataStoreTag', blank=True, null=True)  # Field name made lowercase.
     spackageref = models.TextField(db_column='sPackageRef', blank=True, null=True)  # Field name made lowercase.
     ehudscenes = models.IntegerField(db_column='eHUDScenes', blank=True, null=True)  # Field name made lowercase.
@@ -2187,7 +2176,7 @@ class Hudscenes(models.Model):
 
 
 class Hudtaskmarkerscenes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spackageref = models.TextField(db_column='sPackageRef', blank=True, null=True)  # Field name made lowercase.
     ehudtaskmarkerscene = models.IntegerField(db_column='eHUDTaskMarkerScene', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2198,7 +2187,7 @@ class Hudtaskmarkerscenes(models.Model):
 
 
 class Hudtaskmarkers(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     earrowicon = models.IntegerField(db_column='eArrowIcon', blank=True, null=True)  # Field name made lowercase.
     earrowiconellipse = models.IntegerField(db_column='eArrowIconEllipse', blank=True, null=True)  # Field name made lowercase.
     earrowiconocc = models.IntegerField(db_column='eArrowIconOcc', blank=True, null=True)  # Field name made lowercase.
@@ -2226,7 +2215,7 @@ class Hudtaskmarkers(models.Model):
 
 
 class Hudtextureicons(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     siconsetname = models.TextField(db_column='sIconSetName', blank=True, null=True)  # Field name made lowercase.
     smoviename = models.TextField(db_column='sMovieName', blank=True, null=True)  # Field name made lowercase.
     spackageref = models.TextField(db_column='sPackageRef', blank=True, null=True)  # Field name made lowercase.
@@ -2241,7 +2230,7 @@ class Hudtextureicons(models.Model):
 
 
 class Hudtexturepage(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spackagename = models.TextField(db_column='sPackageName', blank=True, null=True)  # Field name made lowercase.
     ehudtexturepage = models.IntegerField(db_column='eHUDTexturePage', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2252,7 +2241,7 @@ class Hudtexturepage(models.Model):
 
 
 class Hudtexturepageicon(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ehudtexturepageicon = models.IntegerField(db_column='eHUDTexturePageIcon', blank=True, null=True)  # Field name made lowercase.
     etexturepage = models.IntegerField(db_column='eTexturePage', blank=True, null=True)  # Field name made lowercase.
     nu = models.IntegerField(db_column='nU', blank=True, null=True)  # Field name made lowercase.
@@ -2267,7 +2256,7 @@ class Hudtexturepageicon(models.Model):
 
 
 class HudusablesDisplaysettings(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eiconcolour = models.IntegerField(db_column='eIconColour', blank=True, null=True)  # Field name made lowercase.
     fbackgroundopacity = models.FloatField(db_column='fBackgroundOpacity', blank=True, null=True)  # Field name made lowercase.
     ftextbackgroundopacity = models.FloatField(db_column='fTextBackgroundOpacity', blank=True, null=True)  # Field name made lowercase.
@@ -2280,7 +2269,7 @@ class HudusablesDisplaysettings(models.Model):
 
 
 class Hudwscharinfos(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ecolourprofile = models.IntegerField(db_column='eColourProfile', blank=True, null=True)  # Field name made lowercase.
     ehudwscharinfo = models.IntegerField(db_column='eHUDWSCharInfo', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2291,7 +2280,7 @@ class Hudwscharinfos(models.Model):
 
 
 class Hudzonenotifier(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eicon = models.IntegerField(db_column='eIcon', blank=True, null=True)  # Field name made lowercase.
     ehudzonenotifier = models.IntegerField(db_column='eHUDZoneNotifier', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2302,7 +2291,7 @@ class Hudzonenotifier(models.Model):
 
 
 class Heatactionaffects(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eheatactionaffect = models.IntegerField(db_column='eHeatActionAffect', blank=True, null=True)  # Field name made lowercase.
     enotorietyeffect = models.IntegerField(db_column='eNotorietyEffect', blank=True, null=True)  # Field name made lowercase.
     eprestigeeffect = models.IntegerField(db_column='ePrestigeEffect', blank=True, null=True)  # Field name made lowercase.
@@ -2315,7 +2304,7 @@ class Heatactionaffects(models.Model):
 
 
 class Heatconstants(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     scomment = models.TextField(db_column='sComment', blank=True, null=True)  # Field name made lowercase.
     fcriminalvalue = models.FloatField(db_column='fCriminalValue', blank=True, null=True)  # Field name made lowercase.
     fenforcervalue = models.FloatField(db_column='fEnforcerValue', blank=True, null=True)  # Field name made lowercase.
@@ -2328,7 +2317,7 @@ class Heatconstants(models.Model):
 
 
 class Heatlevels(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     eheatlevel = models.IntegerField(db_column='eHeatLevel', blank=True, null=True)  # Field name made lowercase.
     ehudtexture = models.IntegerField(db_column='eHUDTexture', blank=True, null=True)  # Field name made lowercase.
@@ -2347,7 +2336,7 @@ class Heatlevels(models.Model):
 
 
 class Hostingconfigfiles(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sfilename = models.TextField(db_column='sFilename', blank=True, null=True)  # Field name made lowercase.
     npersistentid = models.IntegerField(db_column='nPersistentId', blank=True, null=True)  # Field name made lowercase.
     ehostingconfigfile = models.IntegerField(db_column='eHostingConfigFile', blank=True, null=True)  # Field name made lowercase.
@@ -2361,7 +2350,7 @@ class Hostingconfigfiles(models.Model):
 
 
 class Hudgroupstates(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sheadertext = models.TextField(db_column='sHeaderText', blank=True, null=True)  # Field name made lowercase.
     eheadercolour = models.IntegerField(db_column='eHeaderColour', blank=True, null=True)  # Field name made lowercase.
     eheadericon = models.IntegerField(db_column='eHeaderIcon', blank=True, null=True)  # Field name made lowercase.
@@ -2374,7 +2363,7 @@ class Hudgroupstates(models.Model):
 
 
 class Instrumentitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sresource = models.TextField(db_column='sResource', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2385,7 +2374,7 @@ class Instrumentitemtypes(models.Model):
 
 
 class Interactiveactortype(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     dummy = models.FloatField(db_column='Dummy', blank=True, null=True)  # Field name made lowercase.
     einteractiveactorcategory = models.IntegerField(db_column='eInteractiveActorCategory', blank=True, null=True)  # Field name made lowercase.
     einteractiveactortype = models.IntegerField(db_column='eInteractiveActorType', blank=True, null=True)  # Field name made lowercase.
@@ -2397,7 +2386,7 @@ class Interactiveactortype(models.Model):
 
 
 class Intraactivityrewards(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fpercentagelosspercapture = models.FloatField(db_column='fPercentageLossPerCapture', blank=True, null=True)  # Field name made lowercase.
     ncash_0 = models.IntegerField(db_column='nCash_0', blank=True, null=True)  # Field name made lowercase.
     ncash_1 = models.IntegerField(db_column='nCash_1', blank=True, null=True)  # Field name made lowercase.
@@ -2416,7 +2405,7 @@ class Intraactivityrewards(models.Model):
 
 
 class Inventoryitemcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     stablename = models.TextField(db_column='sTableName', blank=True, null=True)  # Field name made lowercase.
@@ -2438,7 +2427,7 @@ class Inventoryitemcategories(models.Model):
 
 
 class Inventoryitemcategorylimited(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fcustomisationreplenishperiod = models.FloatField(db_column='fCustomisationReplenishPeriod', blank=True, null=True)  # Field name made lowercase.
     ncustomisationinitialavailability = models.IntegerField(db_column='nCustomisationInitialAvailability', blank=True, null=True)  # Field name made lowercase.
     nsecondarykey = models.IntegerField(db_column='nSecondaryKey', blank=True, null=True)  # Field name made lowercase.
@@ -2451,7 +2440,7 @@ class Inventoryitemcategorylimited(models.Model):
 
 
 class Inventoryiteminfracategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     sidentifier = models.TextField(db_column='sIdentifier', blank=True, null=True)  # Field name made lowercase.
@@ -2472,7 +2461,7 @@ class Inventoryiteminfracategories(models.Model):
 
 
 class Inventoryitemleases(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     einventoryitemlease = models.IntegerField(db_column='eInventoryItemLease', blank=True, null=True)  # Field name made lowercase.
     fcostapbcashmultiplier = models.FloatField(db_column='fCostAPBCashMultiplier', blank=True, null=True)  # Field name made lowercase.
     fexpirytime = models.FloatField(db_column='fExpiryTime', blank=True, null=True)  # Field name made lowercase.
@@ -2484,7 +2473,7 @@ class Inventoryitemleases(models.Model):
 
 
 class Inventoryitemsubcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     nsecondarykey = models.IntegerField(db_column='nSecondaryKey', blank=True, null=True)  # Field name made lowercase.
@@ -2498,7 +2487,7 @@ class Inventoryitemsubcategories(models.Model):
 
 
 class Inventoryitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     screatorname = models.TextField(db_column='sCreatorName', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     ehudimage = models.IntegerField(db_column='eHUDImage', blank=True, null=True)  # Field name made lowercase.
@@ -2531,7 +2520,7 @@ class Inventoryitemtypes(models.Model):
 
 
 class Invokedcontextsensitiveaction(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fduration = models.FloatField(db_column='fDuration', blank=True, null=True)  # Field name made lowercase.
     econtextsensitiveaction = models.IntegerField(db_column='eContextSensitiveAction', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2542,7 +2531,7 @@ class Invokedcontextsensitiveaction(models.Model):
 
 
 class Itemattachmentvisual(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sanimsetasset = models.TextField(db_column='sAnimSetAsset', blank=True, null=True)  # Field name made lowercase.
     sanimtreeasset = models.TextField(db_column='sAnimTreeAsset', blank=True, null=True)  # Field name made lowercase.
     sattachmentasset = models.TextField(db_column='sAttachmentAsset', blank=True, null=True)  # Field name made lowercase.
@@ -2566,7 +2555,7 @@ class Itemattachmentvisual(models.Model):
 
 
 class Itemattachmentvisualdamagestates(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sassetname = models.TextField(db_column='sAssetName', blank=True, null=True)  # Field name made lowercase.
     sdamagesfx = models.TextField(db_column='sDamageSFX', blank=True, null=True)  # Field name made lowercase.
     sdamagevfx = models.TextField(db_column='sDamageVFX', blank=True, null=True)  # Field name made lowercase.
@@ -2581,7 +2570,7 @@ class Itemattachmentvisualdamagestates(models.Model):
 
 
 class Loadingmovieaudiobanks(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nbankend = models.IntegerField(db_column='nBankEnd', blank=True, null=True)  # Field name made lowercase.
     nbankstart = models.IntegerField(db_column='nBankStart', blank=True, null=True)  # Field name made lowercase.
     eloadingmovieaudiobanks = models.IntegerField(db_column='eLoadingMovieAudioBanks', blank=True, null=True)  # Field name made lowercase.
@@ -2593,7 +2582,7 @@ class Loadingmovieaudiobanks(models.Model):
 
 
 class Loadingmovieconfigs(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sloadingmovie = models.TextField(db_column='sLoadingMovie', blank=True, null=True)  # Field name made lowercase.
     suiscene = models.TextField(db_column='sUIScene', blank=True, null=True)  # Field name made lowercase.
     edistrict = models.IntegerField(db_column='eDistrict', blank=True, null=True)  # Field name made lowercase.
@@ -2610,7 +2599,7 @@ class Loadingmovieconfigs(models.Model):
 
 
 class Loadingmovietips(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     smessage = models.TextField(db_column='sMessage', blank=True, null=True)  # Field name made lowercase.
     eloadingmovietip = models.IntegerField(db_column='eLoadingMovieTip', blank=True, null=True)  # Field name made lowercase.
     nmaximumrating = models.IntegerField(db_column='nMaximumRating', blank=True, null=True)  # Field name made lowercase.
@@ -2625,7 +2614,7 @@ class Loadingmovietips(models.Model):
 
 
 class Localetypepriorities(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     npriority = models.IntegerField(db_column='nPriority', blank=True, null=True)  # Field name made lowercase.
     elocaletypepriority = models.IntegerField(db_column='eLocaleTypePriority', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2636,7 +2625,7 @@ class Localetypepriorities(models.Model):
 
 
 class Locationbeaconinstances(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     slocalisedname = models.TextField(db_column='sLocalisedName', blank=True, null=True)  # Field name made lowercase.
     edistrict = models.IntegerField(db_column='eDistrict', blank=True, null=True)  # Field name made lowercase.
     elocationbeaconinstance = models.IntegerField(db_column='eLocationBeaconInstance', blank=True, null=True)  # Field name made lowercase.
@@ -2648,7 +2637,7 @@ class Locationbeaconinstances(models.Model):
 
 
 class Locationbeacons(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     elocationbeacon = models.IntegerField(db_column='eLocationBeacon', blank=True, null=True)  # Field name made lowercase.
     fradius = models.FloatField(db_column='fRadius', blank=True, null=True)  # Field name made lowercase.
     nheight = models.IntegerField(db_column='nHeight', blank=True, null=True)  # Field name made lowercase.
@@ -2660,7 +2649,7 @@ class Locationbeacons(models.Model):
 
 
 class Mailconstants(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nvalue = models.IntegerField(db_column='nValue', blank=True, null=True)  # Field name made lowercase.
     emailconstant = models.IntegerField(db_column='eMailConstant', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2671,7 +2660,7 @@ class Mailconstants(models.Model):
 
 
 class Maildurations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nminutes = models.IntegerField(db_column='nMinutes', blank=True, null=True)  # Field name made lowercase.
     emailduration = models.IntegerField(db_column='eMailDuration', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2682,7 +2671,7 @@ class Maildurations(models.Model):
 
 
 class Marketplacecashtype(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sresource = models.TextField(db_column='sResource', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2693,7 +2682,7 @@ class Marketplacecashtype(models.Model):
 
 
 class Marketplaceconstants(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)  # Field name made lowercase.
     emarketplaceconstant = models.IntegerField(db_column='eMarketplaceConstant', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2704,7 +2693,7 @@ class Marketplaceconstants(models.Model):
 
 
 class Marketplacedurations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplaystring = models.TextField(db_column='sDisplayString', blank=True, null=True)  # Field name made lowercase.
     nminutes = models.IntegerField(db_column='nMinutes', blank=True, null=True)  # Field name made lowercase.
     emarketplaceduration = models.IntegerField(db_column='eMarketplaceDuration', blank=True, null=True)  # Field name made lowercase.
@@ -2716,7 +2705,7 @@ class Marketplacedurations(models.Model):
 
 
 class Marketplacetimeleft(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplaystring = models.TextField(db_column='sDisplayString', blank=True, null=True)  # Field name made lowercase.
     nminutes = models.IntegerField(db_column='nMinutes', blank=True, null=True)  # Field name made lowercase.
     emarketplacetimeleft = models.IntegerField(db_column='eMarketplaceTimeLeft', blank=True, null=True)  # Field name made lowercase.
@@ -2728,7 +2717,7 @@ class Marketplacetimeleft(models.Model):
 
 
 class Medalcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     emedalcategory = models.IntegerField(db_column='eMedalCategory', blank=True, null=True)  # Field name made lowercase.
     bexclusivemedal = models.IntegerField(db_column='bExclusiveMedal', blank=True, null=True)  # Field name made lowercase.
     bimmediateaward = models.IntegerField(db_column='bImmediateAward', blank=True, null=True)  # Field name made lowercase.
@@ -2740,7 +2729,7 @@ class Medalcategories(models.Model):
 
 
 class Medals(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     stitle = models.TextField(db_column='sTitle', blank=True, null=True)  # Field name made lowercase.
     elargemedalicon = models.IntegerField(db_column='eLargeMedalIcon', blank=True, null=True)  # Field name made lowercase.
@@ -2763,7 +2752,7 @@ class Medals(models.Model):
 
 
 class Minigameconstants(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)  # Field name made lowercase.
     eminigameconstant = models.IntegerField(db_column='eMinigameConstant', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -2774,7 +2763,7 @@ class Minigameconstants(models.Model):
 
 
 class Minigameeffects(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sparticlesystem = models.TextField(db_column='sParticleSystem', blank=True, null=True)  # Field name made lowercase.
     ssoundeffect = models.TextField(db_column='sSoundEffect', blank=True, null=True)  # Field name made lowercase.
     eminigameeffect = models.IntegerField(db_column='eMinigameEffect', blank=True, null=True)  # Field name made lowercase.
@@ -2795,7 +2784,7 @@ class Minigameeffects(models.Model):
 
 
 class MinigamegungameWeaponsetupentries(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     echaractercustomisationoverride = models.IntegerField(db_column='eCharacterCustomisationOverride', blank=True, null=True)  # Field name made lowercase.
     eminigamegungame_weaponsetup = models.IntegerField(db_column='eMinigameGunGame_WeaponSetup', blank=True, null=True)  # Field name made lowercase.
     eweaponloadout = models.IntegerField(db_column='eWeaponLoadout', blank=True, null=True)  # Field name made lowercase.
@@ -2813,7 +2802,7 @@ class MinigamegungameWeaponsetupentries(models.Model):
 
 
 class MinigamegungameWeaponsetups(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eminigamegungame_weaponsetup = models.IntegerField(db_column='eMinigameGunGame_WeaponSetup', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -2823,7 +2812,7 @@ class MinigamegungameWeaponsetups(models.Model):
 
 
 class Minigamelocations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edistrictblock = models.IntegerField(db_column='eDistrictBlock', blank=True, null=True)  # Field name made lowercase.
     edistrictruleset = models.IntegerField(db_column='eDistrictRuleSet', blank=True, null=True)  # Field name made lowercase.
     eminigame = models.IntegerField(db_column='eMinigame', blank=True, null=True)  # Field name made lowercase.
@@ -2841,7 +2830,7 @@ class Minigamelocations(models.Model):
 
 
 class Minigamerewards(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eminigame = models.IntegerField(db_column='eMinigame', blank=True, null=True)  # Field name made lowercase.
     eminigamereward = models.IntegerField(db_column='eMinigameReward', blank=True, null=True)  # Field name made lowercase.
     ereward = models.IntegerField(db_column='eReward', blank=True, null=True)  # Field name made lowercase.
@@ -2856,7 +2845,7 @@ class Minigamerewards(models.Model):
 
 
 class Minigamespawnerthemes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eminigamespawnertheme = models.IntegerField(db_column='eMinigameSpawnerTheme', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -2866,7 +2855,7 @@ class Minigamespawnerthemes(models.Model):
 
 
 class Minigames(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     steamheaders_0 = models.TextField(db_column='sTeamHeaders_0', blank=True, null=True)  # Field name made lowercase.
     steamheaders_1 = models.TextField(db_column='sTeamHeaders_1', blank=True, null=True)  # Field name made lowercase.
     steamnames_0 = models.TextField(db_column='sTeamNames_0', blank=True, null=True)  # Field name made lowercase.
@@ -2911,7 +2900,7 @@ class Minigames(models.Model):
 
 
 class MinigamesBlockfdm(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eminigame = models.IntegerField(db_column='eMinigame', blank=True, null=True)  # Field name made lowercase.
     fdeadparticipationtimer = models.FloatField(db_column='fDeadParticipationTimer', blank=True, null=True)  # Field name made lowercase.
     flowteamcountscale = models.FloatField(db_column='fLowTeamCountScale', blank=True, null=True)  # Field name made lowercase.
@@ -2947,7 +2936,7 @@ class MinigamesBlockfdm(models.Model):
 
 
 class MinigamesGoldengun(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spickupasset = models.TextField(db_column='sPickupAsset', blank=True, null=True)  # Field name made lowercase.
     spickupsfx = models.TextField(db_column='sPickupSFX', blank=True, null=True)  # Field name made lowercase.
     spickupvfx = models.TextField(db_column='sPickupVFX', blank=True, null=True)  # Field name made lowercase.
@@ -2969,7 +2958,7 @@ class MinigamesGoldengun(models.Model):
 
 
 class MinigamesGungame(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eminigame = models.IntegerField(db_column='eMinigame', blank=True, null=True)  # Field name made lowercase.
     eweaponsetup = models.IntegerField(db_column='eWeaponSetup', blank=True, null=True)  # Field name made lowercase.
     fdeadparticipationtimer = models.FloatField(db_column='fDeadParticipationTimer', blank=True, null=True)  # Field name made lowercase.
@@ -3012,7 +3001,7 @@ class MinigamesGungame(models.Model):
 
 
 class MinigamesInfection(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eendblockidentifier = models.IntegerField(db_column='eEndBlockIdentifier', blank=True, null=True)  # Field name made lowercase.
     eminigame = models.IntegerField(db_column='eMinigame', blank=True, null=True)  # Field name made lowercase.
     eprotagonistonmissionhudmarker = models.IntegerField(db_column='eProtagonistOnMissionHUDMarker', blank=True, null=True)  # Field name made lowercase.
@@ -3052,7 +3041,7 @@ class MinigamesInfection(models.Model):
 
 
 class MinigamesInfectionItemcollection(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eitemtype = models.IntegerField(db_column='eItemType', blank=True, null=True)  # Field name made lowercase.
     eminigame_infection = models.IntegerField(db_column='eMinigame_Infection', blank=True, null=True)  # Field name made lowercase.
     etaskitemoperation = models.IntegerField(db_column='eTaskItemOperation', blank=True, null=True)  # Field name made lowercase.
@@ -3082,7 +3071,7 @@ class MinigamesInfectionItemcollection(models.Model):
 
 
 class MinigamesInfectionRichfx(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sendstagemusic_start = models.TextField(db_column='sEndStageMusic_Start', blank=True, null=True)  # Field name made lowercase.
     sendstagemusic_stop = models.TextField(db_column='sEndStageMusic_Stop', blank=True, null=True)  # Field name made lowercase.
     soverrideweather = models.TextField(db_column='sOverrideWeather', blank=True, null=True)  # Field name made lowercase.
@@ -3110,7 +3099,7 @@ class MinigamesInfectionRichfx(models.Model):
 
 
 class MinigamesInfectionVip(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eminigame_infection = models.IntegerField(db_column='eMinigame_Infection', blank=True, null=True)  # Field name made lowercase.
     nlowheatgroupchance = models.IntegerField(db_column='nLowHeatGroupChance', blank=True, null=True)  # Field name made lowercase.
     nmaxheatgroupchance = models.IntegerField(db_column='nMaxHeatGroupChance', blank=True, null=True)  # Field name made lowercase.
@@ -3123,7 +3112,7 @@ class MinigamesInfectionVip(models.Model):
 
 
 class MinigamesMug(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     splayerinmugrangeaudio = models.TextField(db_column='sPlayerInMugRangeAudio', blank=True, null=True)  # Field name made lowercase.
     ecarrierhudmarker_0 = models.IntegerField(db_column='eCarrierHUDMarker_0', blank=True, null=True)  # Field name made lowercase.
     ecarrierhudmarker_1 = models.IntegerField(db_column='eCarrierHUDMarker_1', blank=True, null=True)  # Field name made lowercase.
@@ -3213,7 +3202,7 @@ class MinigamesMug(models.Model):
 
 
 class MinigamesVip(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eminigame = models.IntegerField(db_column='eMinigame', blank=True, null=True)  # Field name made lowercase.
     fvipwintime = models.FloatField(db_column='fVIPWinTime', blank=True, null=True)  # Field name made lowercase.
     nlowheatgroupchance = models.IntegerField(db_column='nLowHeatGroupChance', blank=True, null=True)  # Field name made lowercase.
@@ -3231,7 +3220,7 @@ class MinigamesVip(models.Model):
 
 
 class Missionofcriminalcontacts(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     econtact = models.IntegerField(db_column='eContact', blank=True, null=True)  # Field name made lowercase.
     emission = models.IntegerField(db_column='eMission', blank=True, null=True)  # Field name made lowercase.
     emissionofcriminalcontact = models.IntegerField(db_column='eMissionOfCriminalContact', blank=True, null=True)  # Field name made lowercase.
@@ -3246,7 +3235,7 @@ class Missionofcriminalcontacts(models.Model):
 
 
 class Missionofenforcercontacts(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     econtact = models.IntegerField(db_column='eContact', blank=True, null=True)  # Field name made lowercase.
     emission = models.IntegerField(db_column='eMission', blank=True, null=True)  # Field name made lowercase.
     emissionofenforcercontact = models.IntegerField(db_column='eMissionOfEnforcerContact', blank=True, null=True)  # Field name made lowercase.
@@ -3261,7 +3250,7 @@ class Missionofenforcercontacts(models.Model):
 
 
 class Missionresultreasons(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdrawmessage = models.TextField(db_column='sDrawMessage', blank=True, null=True)  # Field name made lowercase.
     slosemessage = models.TextField(db_column='sLoseMessage', blank=True, null=True)  # Field name made lowercase.
     swinmessage = models.TextField(db_column='sWinMessage', blank=True, null=True)  # Field name made lowercase.
@@ -3274,7 +3263,7 @@ class Missionresultreasons(models.Model):
 
 
 class Missionrewardpackages(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     emissionrewardpackage = models.IntegerField(db_column='eMissionRewardPackage', blank=True, null=True)  # Field name made lowercase.
     nbasecash_0 = models.IntegerField(db_column='nBaseCash_0', blank=True, null=True)  # Field name made lowercase.
     nbasecash_1 = models.IntegerField(db_column='nBaseCash_1', blank=True, null=True)  # Field name made lowercase.
@@ -3289,7 +3278,7 @@ class Missionrewardpackages(models.Model):
 
 
 class Missionsystemfilterentries(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     emissionsystemfilter = models.IntegerField(db_column='eMissionSystemFilter', blank=True, null=True)  # Field name made lowercase.
     emissionsystem = models.IntegerField(db_column='eMissionSystem', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3300,7 +3289,7 @@ class Missionsystemfilterentries(models.Model):
 
 
 class Missionsystemfilters(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     emissionsystemfilter = models.IntegerField(db_column='eMissionSystemFilter', blank=True, null=True)  # Field name made lowercase.
     bexclusive = models.IntegerField(db_column='bExclusive', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3311,7 +3300,7 @@ class Missionsystemfilters(models.Model):
 
 
 class Missiontakeoutlookup(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nmissiontakeoutlookup = models.IntegerField(db_column='nMissionTakeoutLookUp', blank=True, null=True)  # Field name made lowercase.
     ntakeoutlimit = models.IntegerField(db_column='nTakeoutLimit', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3322,7 +3311,7 @@ class Missiontakeoutlookup(models.Model):
 
 
 class Missiontemplateuiprofiles(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     strackedvaluedescription_0 = models.TextField(db_column='sTrackedValueDescription_0', blank=True, null=True)  # Field name made lowercase.
     strackedvaluedescription_1 = models.TextField(db_column='sTrackedValueDescription_1', blank=True, null=True)  # Field name made lowercase.
     strackedvaluedescription_2 = models.TextField(db_column='sTrackedValueDescription_2', blank=True, null=True)  # Field name made lowercase.
@@ -3408,7 +3397,7 @@ class Missiontemplateuiprofiles(models.Model):
 
 
 class Missiontemplates(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     smissiontitle = models.TextField(db_column='sMissionTitle', blank=True, null=True)  # Field name made lowercase.
     emissiontemplate = models.IntegerField(db_column='eMissionTemplate', blank=True, null=True)  # Field name made lowercase.
     emissiontypefilter = models.IntegerField(db_column='eMissionTypeFilter', blank=True, null=True)  # Field name made lowercase.
@@ -3449,7 +3438,7 @@ class Missiontemplates(models.Model):
 
 
 class Missionuisockets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     emissionuisocket = models.IntegerField(db_column='eMissionUISocket', blank=True, null=True)  # Field name made lowercase.
     nrow = models.IntegerField(db_column='nRow', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3460,7 +3449,7 @@ class Missionuisockets(models.Model):
 
 
 class Missionuitrackedstateprofile(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sarmedicon = models.TextField(db_column='sArmedIcon', blank=True, null=True)  # Field name made lowercase.
     sneutralicon = models.TextField(db_column='sNeutralIcon', blank=True, null=True)  # Field name made lowercase.
     soppositionclaimed = models.TextField(db_column='sOppositionClaimed', blank=True, null=True)  # Field name made lowercase.
@@ -3475,7 +3464,7 @@ class Missionuitrackedstateprofile(models.Model):
 
 
 class Modifiercategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     emodifiercategory = models.IntegerField(db_column='eModifierCategory', blank=True, null=True)  # Field name made lowercase.
     nselectableslot = models.IntegerField(db_column='nSelectableSlot', blank=True, null=True)  # Field name made lowercase.
     emodifierclass = models.IntegerField(db_column='eModifierClass', blank=True, null=True)  # Field name made lowercase.
@@ -3490,7 +3479,7 @@ class Modifiercategories(models.Model):
 
 
 class Modifierdeployableeffects(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     emodifieritem = models.IntegerField(db_column='eModifierItem', blank=True, null=True)  # Field name made lowercase.
     etaskitem = models.IntegerField(db_column='eTaskItem', blank=True, null=True)  # Field name made lowercase.
@@ -3503,7 +3492,7 @@ class Modifierdeployableeffects(models.Model):
 
 
 class Modifiereffects(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     emodifieritem = models.IntegerField(db_column='eModifierItem', blank=True, null=True)  # Field name made lowercase.
     faddtoresult = models.FloatField(db_column='fAddToResult', blank=True, null=True)  # Field name made lowercase.
@@ -3517,7 +3506,7 @@ class Modifiereffects(models.Model):
 
 
 class Modifieritemeffects(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     eitem = models.IntegerField(db_column='eItem', blank=True, null=True)  # Field name made lowercase.
     emodifieritem = models.IntegerField(db_column='eModifierItem', blank=True, null=True)  # Field name made lowercase.
@@ -3530,7 +3519,7 @@ class Modifieritemeffects(models.Model):
 
 
 class Modifieritemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     emodifieritem = models.IntegerField(db_column='eModifierItem', blank=True, null=True)  # Field name made lowercase.
@@ -3545,7 +3534,7 @@ class Modifieritemtypes(models.Model):
 
 
 class Modifieritems(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     striggersfx = models.TextField(db_column='sTriggerSFX', blank=True, null=True)  # Field name made lowercase.
     striggervfx = models.TextField(db_column='sTriggerVFX', blank=True, null=True)  # Field name made lowercase.
     emodifiercategory = models.IntegerField(db_column='eModifierCategory', blank=True, null=True)  # Field name made lowercase.
@@ -3570,7 +3559,7 @@ class Modifieritems(models.Model):
 
 
 class Npcanimationcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     enpcanimationcategory = models.IntegerField(db_column='eNPCAnimationCategory', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -3580,7 +3569,7 @@ class Npcanimationcategories(models.Model):
 
 
 class Npcaudiotype(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sclothingaccessoriesswitchvalue = models.TextField(db_column='sClothingAccessoriesSwitchValue', blank=True, null=True)  # Field name made lowercase.
     sclothingarmsswitchvalue = models.TextField(db_column='sClothingArmsSwitchValue', blank=True, null=True)  # Field name made lowercase.
     sclothingfootwearswitchvalue = models.TextField(db_column='sClothingFootwearSwitchValue', blank=True, null=True)  # Field name made lowercase.
@@ -3595,7 +3584,7 @@ class Npcaudiotype(models.Model):
 
 
 class Npcdrivertypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     enpcdrivertype = models.IntegerField(db_column='eNPCDriverType', blank=True, null=True)  # Field name made lowercase.
     enpctypefemale = models.IntegerField(db_column='eNPCTypeFemale', blank=True, null=True)  # Field name made lowercase.
     enpctypemale = models.IntegerField(db_column='eNPCTypeMale', blank=True, null=True)  # Field name made lowercase.
@@ -3607,7 +3596,7 @@ class Npcdrivertypes(models.Model):
 
 
 class NpceventAllowedtooverrides(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nignoreme = models.IntegerField(db_column='nIgnoreMe', blank=True, null=True)  # Field name made lowercase.
     enpcevent = models.IntegerField(db_column='eNPCEvent', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3618,7 +3607,7 @@ class NpceventAllowedtooverrides(models.Model):
 
 
 class Npcevents(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nignoreme = models.IntegerField(db_column='nIgnoreMe', blank=True, null=True)  # Field name made lowercase.
     enpcevent = models.IntegerField(db_column='eNPCEvent', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3629,7 +3618,7 @@ class Npcevents(models.Model):
 
 
 class Npcpedestriananimations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     snpcpedestriananimation = models.TextField(db_column='sNPCPedestrianAnimation', blank=True, null=True)  # Field name made lowercase.
     eanimationcategory = models.IntegerField(db_column='eAnimationCategory', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3640,7 +3629,7 @@ class Npcpedestriananimations(models.Model):
 
 
 class NpcreactionAllowedtooverrides(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     npriority = models.IntegerField(db_column='nPriority', blank=True, null=True)  # Field name made lowercase.
     enpcreaction = models.IntegerField(db_column='eNPCReaction', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3651,7 +3640,7 @@ class NpcreactionAllowedtooverrides(models.Model):
 
 
 class Npcreactions(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     npriority = models.IntegerField(db_column='nPriority', blank=True, null=True)  # Field name made lowercase.
     enpcreaction = models.IntegerField(db_column='eNPCReaction', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3662,7 +3651,7 @@ class Npcreactions(models.Model):
 
 
 class NpctypeTodDistricts(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edistrict = models.IntegerField(db_column='eDistrict', blank=True, null=True)  # Field name made lowercase.
     enpctype_tod = models.IntegerField(db_column='eNPCType_TOD', blank=True, null=True)  # Field name made lowercase.
     enpctype_tod_district = models.IntegerField(db_column='eNPCType_TOD_District', blank=True, null=True)  # Field name made lowercase.
@@ -3675,7 +3664,7 @@ class NpctypeTodDistricts(models.Model):
 
 
 class NpctypeTodInfo(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     enpctype = models.IntegerField(db_column='eNPCType', blank=True, null=True)  # Field name made lowercase.
     enpctype_tod = models.IntegerField(db_column='eNPCType_TOD', blank=True, null=True)  # Field name made lowercase.
     etod = models.IntegerField(db_column='eTOD', blank=True, null=True)  # Field name made lowercase.
@@ -3687,7 +3676,7 @@ class NpctypeTodInfo(models.Model):
 
 
 class Npctypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     enpctype = models.IntegerField(db_column='eNPCType', blank=True, null=True)  # Field name made lowercase.
     fdebugcolour_b = models.FloatField(db_column='fDebugColour_B', blank=True, null=True)  # Field name made lowercase.
     fdebugcolour_g = models.FloatField(db_column='fDebugColour_G', blank=True, null=True)  # Field name made lowercase.
@@ -3702,7 +3691,7 @@ class Npctypes(models.Model):
 
 
 class Npcvehicleanimations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     snpcvehicleanimation = models.TextField(db_column='sNPCVehicleAnimation', blank=True, null=True)  # Field name made lowercase.
     eanimationcategory = models.IntegerField(db_column='eAnimationCategory', blank=True, null=True)  # Field name made lowercase.
     evehiclenpcinsideanimationset = models.IntegerField(db_column='eVehicleNPCInsideAnimationSet', blank=True, null=True)  # Field name made lowercase.
@@ -3714,7 +3703,7 @@ class Npcvehicleanimations(models.Model):
 
 
 class Npcvehiclespeeds(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     enpcvehiclecategory = models.IntegerField(db_column='eNPCVehicleCategory', blank=True, null=True)  # Field name made lowercase.
     fmaxacceleration = models.FloatField(db_column='fMaxAcceleration', blank=True, null=True)  # Field name made lowercase.
     fmaxdeceleration = models.FloatField(db_column='fMaxDeceleration', blank=True, null=True)  # Field name made lowercase.
@@ -3730,7 +3719,7 @@ class Npcvehiclespeeds(models.Model):
 
 
 class Npcworldevents(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spedestrianaudioreason = models.TextField(db_column='sPedestrianAudioReason', blank=True, null=True)  # Field name made lowercase.
     epedestrianblastevent = models.IntegerField(db_column='ePedestrianBlastEvent', blank=True, null=True)  # Field name made lowercase.
     epedestriandangerevent = models.IntegerField(db_column='ePedestrianDangerEvent', blank=True, null=True)  # Field name made lowercase.
@@ -3751,7 +3740,7 @@ class Npcworldevents(models.Model):
 
 
 class NpcTodBehaviours(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     enpc_tod_event = models.IntegerField(db_column='eNPC_TOD_Event', blank=True, null=True)  # Field name made lowercase.
     ereaction = models.IntegerField(db_column='eReaction', blank=True, null=True)  # Field name made lowercase.
     flikelihood = models.FloatField(db_column='fLikelihood', blank=True, null=True)  # Field name made lowercase.
@@ -3763,7 +3752,7 @@ class NpcTodBehaviours(models.Model):
 
 
 class NpcTodEvent(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     enpc_tod_event = models.IntegerField(db_column='eNPC_TOD_Event', blank=True, null=True)  # Field name made lowercase.
     enpctype = models.IntegerField(db_column='eNPCType', blank=True, null=True)  # Field name made lowercase.
     etod_event = models.IntegerField(db_column='eTOD_Event', blank=True, null=True)  # Field name made lowercase.
@@ -3775,7 +3764,7 @@ class NpcTodEvent(models.Model):
 
 
 class Notorietyeffects(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eforcemaxlevel = models.IntegerField(db_column='eForceMaxLevel', blank=True, null=True)  # Field name made lowercase.
     eforceminlevel = models.IntegerField(db_column='eForceMinLevel', blank=True, null=True)  # Field name made lowercase.
     enotorietyeffect = models.IntegerField(db_column='eNotorietyEffect', blank=True, null=True)  # Field name made lowercase.
@@ -3791,7 +3780,7 @@ class Notorietyeffects(models.Model):
 
 
 class Notorietylevels(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eheatlevel = models.IntegerField(db_column='eHeatLevel', blank=True, null=True)  # Field name made lowercase.
     enotorietylevel = models.IntegerField(db_column='eNotorietyLevel', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3802,7 +3791,7 @@ class Notorietylevels(models.Model):
 
 
 class Owaitemspawnrules(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eitemmetatag_0 = models.IntegerField(db_column='eItemMetaTag_0', blank=True, null=True)  # Field name made lowercase.
     eitemmetatag_1 = models.IntegerField(db_column='eItemMetaTag_1', blank=True, null=True)  # Field name made lowercase.
     eitemmetatag_2 = models.IntegerField(db_column='eItemMetaTag_2', blank=True, null=True)  # Field name made lowercase.
@@ -3825,7 +3814,7 @@ class Owaitemspawnrules(models.Model):
 
 
 class Onfootdeathanimations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sanimname = models.TextField(db_column='sAnimName', blank=True, null=True)  # Field name made lowercase.
     eonfootdeathanimation = models.IntegerField(db_column='eOnFootDeathAnimation', blank=True, null=True)  # Field name made lowercase.
     bretainmomentum = models.IntegerField(db_column='bRetainMomentum', blank=True, null=True)  # Field name made lowercase.
@@ -3837,7 +3826,7 @@ class Onfootdeathanimations(models.Model):
 
 
 class Openworldconstant(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)  # Field name made lowercase.
     eopenworldconstant = models.IntegerField(db_column='eOpenWorldConstant', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3848,7 +3837,7 @@ class Openworldconstant(models.Model):
 
 
 class Openworlddropoffs(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ehudmarkertype = models.IntegerField(db_column='eHUDMarkerType', blank=True, null=True)  # Field name made lowercase.
     eopenworlddropoff = models.IntegerField(db_column='eOpenWorldDropOff', blank=True, null=True)  # Field name made lowercase.
     fcycledurationseconds = models.FloatField(db_column='fCycleDurationSeconds', blank=True, null=True)  # Field name made lowercase.
@@ -3868,7 +3857,7 @@ class Openworlddropoffs(models.Model):
 
 
 class Openworldoperations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     suidescription = models.TextField(db_column='sUIDescription', blank=True, null=True)  # Field name made lowercase.
     suititle = models.TextField(db_column='sUITitle', blank=True, null=True)  # Field name made lowercase.
     eopenworldoperation = models.IntegerField(db_column='eOpenWorldOperation', blank=True, null=True)  # Field name made lowercase.
@@ -3887,7 +3876,7 @@ class Openworldoperations(models.Model):
 
 
 class Openworldtargetactivities(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eopenworldoperationcriminal = models.IntegerField(db_column='eOpenWorldOperationCriminal', blank=True, null=True)  # Field name made lowercase.
     eopenworldoperationenforcer = models.IntegerField(db_column='eOpenWorldOperationEnforcer', blank=True, null=True)  # Field name made lowercase.
     eopenworldtargetactivity = models.IntegerField(db_column='eOpenWorldTargetActivity', blank=True, null=True)  # Field name made lowercase.
@@ -3899,7 +3888,7 @@ class Openworldtargetactivities(models.Model):
 
 
 class Optioncategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sname = models.TextField(db_column='sName', blank=True, null=True)  # Field name made lowercase.
     eaccessrestrictions = models.IntegerField(db_column='eAccessRestrictions', blank=True, null=True)  # Field name made lowercase.
     eoptioncategory = models.IntegerField(db_column='eOptionCategory', blank=True, null=True)  # Field name made lowercase.
@@ -3913,7 +3902,7 @@ class Optioncategories(models.Model):
 
 
 class Organisations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sname = models.TextField(db_column='sName', blank=True, null=True)  # Field name made lowercase.
     spicture = models.TextField(db_column='sPicture', blank=True, null=True)  # Field name made lowercase.
     ehudicon = models.IntegerField(db_column='eHUDIcon', blank=True, null=True)  # Field name made lowercase.
@@ -3930,7 +3919,7 @@ class Organisations(models.Model):
 
 
 class Outfititemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sresource = models.TextField(db_column='sResource', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3941,7 +3930,7 @@ class Outfititemtypes(models.Model):
 
 
 class PawnhitreactionBonelists(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     svalue_0 = models.TextField(db_column='sValue_0', blank=True, null=True)  # Field name made lowercase.
     svalue_1 = models.TextField(db_column='sValue_1', blank=True, null=True)  # Field name made lowercase.
     svalue_2 = models.TextField(db_column='sValue_2', blank=True, null=True)  # Field name made lowercase.
@@ -3958,7 +3947,7 @@ class PawnhitreactionBonelists(models.Model):
 
 
 class PawnhitreactionBoneremaptables(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sbonefrom = models.TextField(db_column='sBoneFrom', blank=True, null=True)  # Field name made lowercase.
     sboneto = models.TextField(db_column='sBoneTo', blank=True, null=True)  # Field name made lowercase.
     epawnhitreaction = models.IntegerField(db_column='ePawnHitReaction', blank=True, null=True)  # Field name made lowercase.
@@ -3970,7 +3959,7 @@ class PawnhitreactionBoneremaptables(models.Model):
 
 
 class PawnhitreactionBools(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     epawnhitreaction = models.IntegerField(db_column='ePawnHitReaction', blank=True, null=True)  # Field name made lowercase.
     bvalue = models.IntegerField(db_column='bValue', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -3981,7 +3970,7 @@ class PawnhitreactionBools(models.Model):
 
 
 class PawnhitreactionConstrainedbonelists(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     svalue_0 = models.TextField(db_column='sValue_0', blank=True, null=True)  # Field name made lowercase.
     svalue_1 = models.TextField(db_column='sValue_1', blank=True, null=True)  # Field name made lowercase.
     svalue_2 = models.TextField(db_column='sValue_2', blank=True, null=True)  # Field name made lowercase.
@@ -3995,7 +3984,7 @@ class PawnhitreactionConstrainedbonelists(models.Model):
 
 
 class PawnhitreactionFloats(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     epawnhitreaction = models.IntegerField(db_column='ePawnHitReaction', blank=True, null=True)  # Field name made lowercase.
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4006,7 +3995,7 @@ class PawnhitreactionFloats(models.Model):
 
 
 class PawnhitreactionSpringlists(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     svalue_0 = models.TextField(db_column='sValue_0', blank=True, null=True)  # Field name made lowercase.
     svalue_1 = models.TextField(db_column='sValue_1', blank=True, null=True)  # Field name made lowercase.
     epawnhitreaction = models.IntegerField(db_column='ePawnHitReaction', blank=True, null=True)  # Field name made lowercase.
@@ -4018,7 +4007,7 @@ class PawnhitreactionSpringlists(models.Model):
 
 
 class PawnhitreactionVector2Ds(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     epawnhitreaction = models.IntegerField(db_column='ePawnHitReaction', blank=True, null=True)  # Field name made lowercase.
     fx = models.FloatField(db_column='fX', blank=True, null=True)  # Field name made lowercase.
     fy = models.FloatField(db_column='fY', blank=True, null=True)  # Field name made lowercase.
@@ -4030,7 +4019,7 @@ class PawnhitreactionVector2Ds(models.Model):
 
 
 class Pawnhitreactions(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     epawnhitreaction = models.IntegerField(db_column='ePawnHitReaction', blank=True, null=True)  # Field name made lowercase.
     etype = models.IntegerField(db_column='eType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4041,7 +4030,7 @@ class Pawnhitreactions(models.Model):
 
 
 class Pedavoidanimation(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     savoidanimationleft = models.TextField(db_column='sAvoidAnimationLeft', blank=True, null=True)  # Field name made lowercase.
     savoidanimationright = models.TextField(db_column='sAvoidAnimationRight', blank=True, null=True)  # Field name made lowercase.
     eavoidanimationcategory = models.IntegerField(db_column='eAvoidAnimationCategory', blank=True, null=True)  # Field name made lowercase.
@@ -4053,7 +4042,7 @@ class Pedavoidanimation(models.Model):
 
 
 class Pedavoidanimationcategory(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     epedavoidanimationcategory = models.IntegerField(db_column='ePedAvoidAnimationCategory', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -4063,7 +4052,7 @@ class Pedavoidanimationcategory(models.Model):
 
 
 class Pedwalkandrunvariations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sanimation = models.TextField(db_column='sAnimation', blank=True, null=True)  # Field name made lowercase.
     epedavoidanimationcategory = models.IntegerField(db_column='ePedAvoidAnimationCategory', blank=True, null=True)  # Field name made lowercase.
     epedwalkandrunvariation = models.IntegerField(db_column='ePedWalkAndRunVariation', blank=True, null=True)  # Field name made lowercase.
@@ -4077,7 +4066,7 @@ class Pedwalkandrunvariations(models.Model):
 
 
 class Pedestrianassets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sasset = models.TextField(db_column='sAsset', blank=True, null=True)  # Field name made lowercase.
     eaudiotype = models.IntegerField(db_column='eAudioType', blank=True, null=True)  # Field name made lowercase.
     enpctype = models.IntegerField(db_column='eNPCType', blank=True, null=True)  # Field name made lowercase.
@@ -4096,7 +4085,7 @@ class Pedestrianassets(models.Model):
 
 
 class Pedestrianevents(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nignoreme = models.IntegerField(db_column='nIgnoreMe', blank=True, null=True)  # Field name made lowercase.
     enpcevent = models.IntegerField(db_column='eNPCEvent', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4107,7 +4096,7 @@ class Pedestrianevents(models.Model):
 
 
 class Pedestrianpalettecolours(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fblue = models.FloatField(db_column='fBlue', blank=True, null=True)  # Field name made lowercase.
     fgreen = models.FloatField(db_column='fGreen', blank=True, null=True)  # Field name made lowercase.
     fred = models.FloatField(db_column='fRed', blank=True, null=True)  # Field name made lowercase.
@@ -4121,7 +4110,7 @@ class Pedestrianpalettecolours(models.Model):
 
 
 class Pedestrianttianimationoverrides(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     snpcanimation = models.TextField(db_column='sNPCAnimation', blank=True, null=True)  # Field name made lowercase.
     enpctype = models.IntegerField(db_column='eNPCType', blank=True, null=True)  # Field name made lowercase.
     epedestrianttireaction = models.IntegerField(db_column='ePedestrianTTIReaction', blank=True, null=True)  # Field name made lowercase.
@@ -4134,7 +4123,7 @@ class Pedestrianttianimationoverrides(models.Model):
 
 
 class Pedestrianttianimations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     snpcanimation = models.TextField(db_column='sNPCAnimation', blank=True, null=True)  # Field name made lowercase.
     epedestrianttireaction = models.IntegerField(db_column='ePedestrianTTIReaction', blank=True, null=True)  # Field name made lowercase.
     eplayeranimtype = models.IntegerField(db_column='ePlayerAnimType', blank=True, null=True)  # Field name made lowercase.
@@ -4146,7 +4135,7 @@ class Pedestrianttianimations(models.Model):
 
 
 class Pedestrianttireactionoverrides(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     scancelaudioevent = models.TextField(db_column='sCancelAudioEvent', blank=True, null=True)  # Field name made lowercase.
     scompleteaudioevent = models.TextField(db_column='sCompleteAudioEvent', blank=True, null=True)  # Field name made lowercase.
     sstartaudioevent = models.TextField(db_column='sStartAudioEvent', blank=True, null=True)  # Field name made lowercase.
@@ -4162,7 +4151,7 @@ class Pedestrianttireactionoverrides(models.Model):
 
 
 class Pedestrianttireactions(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     scancelaudioevent = models.TextField(db_column='sCancelAudioEvent', blank=True, null=True)  # Field name made lowercase.
     scompleteaudioevent = models.TextField(db_column='sCompleteAudioEvent', blank=True, null=True)  # Field name made lowercase.
     sstartaudioevent = models.TextField(db_column='sStartAudioEvent', blank=True, null=True)  # Field name made lowercase.
@@ -4177,7 +4166,7 @@ class Pedestrianttireactions(models.Model):
 
 
 class Pedestriantempsetups(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     stempsetupinfo = models.TextField(db_column='sTempSetupInfo', blank=True, null=True)  # Field name made lowercase.
     epedestriantempsetup = models.IntegerField(db_column='ePedestrianTempSetup', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4188,7 +4177,7 @@ class Pedestriantempsetups(models.Model):
 
 
 class Pedestriantyperestrictions(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     enpctype = models.IntegerField(db_column='eNPCType', blank=True, null=True)  # Field name made lowercase.
     nnumconcurrentsetuptypes = models.IntegerField(db_column='nNumConcurrentSetupTypes', blank=True, null=True)  # Field name made lowercase.
     npedestriantyperestriction = models.IntegerField(db_column='nPedestrianTypeRestriction', blank=True, null=True)  # Field name made lowercase.
@@ -4200,7 +4189,7 @@ class Pedestriantyperestrictions(models.Model):
 
 
 class Playerroles(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     eactivities_0 = models.IntegerField(db_column='eActivities_0', blank=True, null=True)  # Field name made lowercase.
@@ -4224,7 +4213,7 @@ class Playerroles(models.Model):
 
 
 class Populationtotals(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edistricttype = models.IntegerField(db_column='eDistrictType', blank=True, null=True)  # Field name made lowercase.
     npopulationtotal = models.IntegerField(db_column='nPopulationTotal', blank=True, null=True)  # Field name made lowercase.
     ntotalpedestrians = models.IntegerField(db_column='nTotalPedestrians', blank=True, null=True)  # Field name made lowercase.
@@ -4238,7 +4227,7 @@ class Populationtotals(models.Model):
 
 
 class Popupdialogcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ehighlightcolour = models.IntegerField(db_column='eHighlightColour', blank=True, null=True)  # Field name made lowercase.
     epopupdialogcategory = models.IntegerField(db_column='ePopupDialogCategory', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4249,7 +4238,7 @@ class Popupdialogcategories(models.Model):
 
 
 class Popupdialogtriggersceneopen(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     seventname = models.TextField(db_column='sEventName', blank=True, null=True)  # Field name made lowercase.
     epopupdialogtrigger = models.IntegerField(db_column='ePopupDialogTrigger', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4260,7 +4249,7 @@ class Popupdialogtriggersceneopen(models.Model):
 
 
 class PopupdialogtriggerCsaBegin(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     seventname = models.TextField(db_column='sEventName', blank=True, null=True)  # Field name made lowercase.
     epopupdialogtrigger = models.IntegerField(db_column='ePopupDialogTrigger', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4271,7 +4260,7 @@ class PopupdialogtriggerCsaBegin(models.Model):
 
 
 class PopupdialogtriggerCsaEnd(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     seventname = models.TextField(db_column='sEventName', blank=True, null=True)  # Field name made lowercase.
     epopupdialogtrigger = models.IntegerField(db_column='ePopupDialogTrigger', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4282,7 +4271,7 @@ class PopupdialogtriggerCsaEnd(models.Model):
 
 
 class PopupdialogtriggerGameplayevents(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     seventname = models.TextField(db_column='sEventName', blank=True, null=True)  # Field name made lowercase.
     epopupdialogtrigger = models.IntegerField(db_column='ePopupDialogTrigger', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4293,7 +4282,7 @@ class PopupdialogtriggerGameplayevents(models.Model):
 
 
 class PopupdialogtriggerGeneric(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     seventname = models.TextField(db_column='sEventName', blank=True, null=True)  # Field name made lowercase.
     epopupdialogtrigger = models.IntegerField(db_column='ePopupDialogTrigger', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4304,7 +4293,7 @@ class PopupdialogtriggerGeneric(models.Model):
 
 
 class PopupdialogtriggerReticuleover(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     seventname = models.TextField(db_column='sEventName', blank=True, null=True)  # Field name made lowercase.
     epopupdialogtrigger = models.IntegerField(db_column='ePopupDialogTrigger', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4315,7 +4304,7 @@ class PopupdialogtriggerReticuleover(models.Model):
 
 
 class PopupdialogtriggerSceneclose(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     seventname = models.TextField(db_column='sEventName', blank=True, null=True)  # Field name made lowercase.
     epopupdialogtrigger = models.IntegerField(db_column='ePopupDialogTrigger', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4326,7 +4315,7 @@ class PopupdialogtriggerSceneclose(models.Model):
 
 
 class PopupdialogtriggerUieventPostonclick(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     seventname = models.TextField(db_column='sEventName', blank=True, null=True)  # Field name made lowercase.
     epopupdialogtrigger = models.IntegerField(db_column='ePopupDialogTrigger', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4337,7 +4326,7 @@ class PopupdialogtriggerUieventPostonclick(models.Model):
 
 
 class PopupdialogtriggerWorldspacezone(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     seventname = models.TextField(db_column='sEventName', blank=True, null=True)  # Field name made lowercase.
     epopupdialogtrigger = models.IntegerField(db_column='ePopupDialogTrigger', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4348,7 +4337,7 @@ class PopupdialogtriggerWorldspacezone(models.Model):
 
 
 class Popupdialogtriggers(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edialogshown = models.IntegerField(db_column='eDialogShown', blank=True, null=True)  # Field name made lowercase.
     epopupdialogtrigger = models.IntegerField(db_column='ePopupDialogTrigger', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4359,7 +4348,7 @@ class Popupdialogtriggers(models.Model):
 
 
 class Popupdialoguihighlightaggregation(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     swidget1 = models.TextField(db_column='sWidget1', blank=True, null=True)  # Field name made lowercase.
     swidget2 = models.TextField(db_column='sWidget2', blank=True, null=True)  # Field name made lowercase.
     swidget3 = models.TextField(db_column='sWidget3', blank=True, null=True)  # Field name made lowercase.
@@ -4374,7 +4363,7 @@ class Popupdialoguihighlightaggregation(models.Model):
 
 
 class Popupdialogs(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spopupbody = models.TextField(db_column='sPopupBody', blank=True, null=True)  # Field name made lowercase.
     echainedpopup = models.IntegerField(db_column='eChainedPopup', blank=True, null=True)  # Field name made lowercase.
     eknowledgebaseurl = models.IntegerField(db_column='eKnowledgeBaseURL', blank=True, null=True)  # Field name made lowercase.
@@ -4400,7 +4389,7 @@ class Popupdialogs(models.Model):
 
 
 class Preloadaction(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spreloadaction = models.TextField(db_column='sPreloadAction', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -4410,7 +4399,7 @@ class Preloadaction(models.Model):
 
 
 class Preloadcommon(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spreloadcommon = models.TextField(db_column='sPreloadCommon', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -4420,7 +4409,7 @@ class Preloadcommon(models.Model):
 
 
 class Preloadcustomisations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spackage = models.TextField(db_column='sPackage', blank=True, null=True)  # Field name made lowercase.
     spreloadcustomisation = models.TextField(db_column='sPreloadCustomisation', blank=True, null=True)  # Field name made lowercase.
     bcoversbreasts = models.IntegerField(db_column='bCoversBreasts', blank=True, null=True)  # Field name made lowercase.
@@ -4433,7 +4422,7 @@ class Preloadcustomisations(models.Model):
 
 
 class Preloadsocial(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spreloadsocial = models.TextField(db_column='sPreloadSocial', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -4443,7 +4432,7 @@ class Preloadsocial(models.Model):
 
 
 class Prestigeeffects(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eforcemaxlevel = models.IntegerField(db_column='eForceMaxLevel', blank=True, null=True)  # Field name made lowercase.
     eforceminlevel = models.IntegerField(db_column='eForceMinLevel', blank=True, null=True)  # Field name made lowercase.
     eprestigeeffect = models.IntegerField(db_column='ePrestigeEffect', blank=True, null=True)  # Field name made lowercase.
@@ -4457,7 +4446,7 @@ class Prestigeeffects(models.Model):
 
 
 class Prestigelevels(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eheatlevel = models.IntegerField(db_column='eHeatLevel', blank=True, null=True)  # Field name made lowercase.
     eprestigelevel = models.IntegerField(db_column='ePrestigeLevel', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4468,7 +4457,7 @@ class Prestigelevels(models.Model):
 
 
 class Primitiveentries(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     epage = models.IntegerField(db_column='ePage', blank=True, null=True)  # Field name made lowercase.
     eprimitiveentry = models.IntegerField(db_column='ePrimitiveEntry', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4479,7 +4468,7 @@ class Primitiveentries(models.Model):
 
 
 class Primitivepages(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     eprimitivepage = models.IntegerField(db_column='ePrimitivePage', blank=True, null=True)  # Field name made lowercase.
     etype = models.IntegerField(db_column='eType', blank=True, null=True)  # Field name made lowercase.
@@ -4491,7 +4480,7 @@ class Primitivepages(models.Model):
 
 
 class Primitiveunlockitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sresource = models.TextField(db_column='sResource', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     nlegacydata = models.IntegerField(db_column='nLegacyData', blank=True, null=True)  # Field name made lowercase.
@@ -4505,7 +4494,7 @@ class Primitiveunlockitemtypes(models.Model):
 
 
 class Probabilities(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eprobability = models.IntegerField(db_column='eProbability', blank=True, null=True)  # Field name made lowercase.
     fcoefficient = models.FloatField(db_column='fCoefficient', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4516,7 +4505,7 @@ class Probabilities(models.Model):
 
 
 class Profanityfilterentries(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sprofanityfilterentry = models.TextField(db_column='sProfanityFilterEntry', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -4526,7 +4515,7 @@ class Profanityfilterentries(models.Model):
 
 
 class Progressionfixups(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     nlatestversion = models.IntegerField(db_column='nLatestVersion', blank=True, null=True)  # Field name made lowercase.
     eprogressionfixup = models.IntegerField(db_column='eProgressionFixup', blank=True, null=True)  # Field name made lowercase.
@@ -4538,7 +4527,7 @@ class Progressionfixups(models.Model):
 
 
 class Provinggroundschallengemissionactivity(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     eexclude = models.IntegerField(db_column='eExclude', blank=True, null=True)  # Field name made lowercase.
     egameplayevent = models.IntegerField(db_column='eGameplayEvent', blank=True, null=True)  # Field name made lowercase.
@@ -4556,7 +4545,7 @@ class Provinggroundschallengemissionactivity(models.Model):
 
 
 class Provinggroundschallengemissiontype(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     emissiontypefilter = models.IntegerField(db_column='eMissionTypeFilter', blank=True, null=True)  # Field name made lowercase.
     eprovinggroundschallengemissiontype = models.IntegerField(db_column='eProvingGroundsChallengeMissionType', blank=True, null=True)  # Field name made lowercase.
@@ -4568,7 +4557,7 @@ class Provinggroundschallengemissiontype(models.Model):
 
 
 class Provinggroundschallengestats(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdatabasecolumn = models.TextField(db_column='sDatabaseColumn', blank=True, null=True)  # Field name made lowercase.
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
@@ -4585,7 +4574,7 @@ class Provinggroundschallengestats(models.Model):
 
 
 class Raceinfos(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eraceinfo = models.IntegerField(db_column='eRaceInfo', blank=True, null=True)  # Field name made lowercase.
     eracetype = models.IntegerField(db_column='eRaceType', blank=True, null=True)  # Field name made lowercase.
     fb = models.FloatField(db_column='fB', blank=True, null=True)  # Field name made lowercase.
@@ -4600,7 +4589,7 @@ class Raceinfos(models.Model):
 
 
 class Racetyes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sname = models.TextField(db_column='sName', blank=True, null=True)  # Field name made lowercase.
     eracetype = models.IntegerField(db_column='eRaceType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4611,7 +4600,7 @@ class Racetyes(models.Model):
 
 
 class Randomrewards(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     efirstweightedreward = models.IntegerField(db_column='eFirstWeightedReward', blank=True, null=True)  # Field name made lowercase.
     epurpose = models.IntegerField(db_column='ePurpose', blank=True, null=True)  # Field name made lowercase.
     erandomreward = models.IntegerField(db_column='eRandomReward', blank=True, null=True)  # Field name made lowercase.
@@ -4629,7 +4618,7 @@ class Randomrewards(models.Model):
 
 
 class Randomtimelimitedrewards(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edisabledrulesets = models.IntegerField(db_column='eDisabledRulesets', blank=True, null=True)  # Field name made lowercase.
     emissionsystemfilter = models.IntegerField(db_column='eMissionSystemFilter', blank=True, null=True)  # Field name made lowercase.
     erandomreward = models.IntegerField(db_column='eRandomReward', blank=True, null=True)  # Field name made lowercase.
@@ -4652,7 +4641,7 @@ class Randomtimelimitedrewards(models.Model):
 
 
 class Rangedweapontype(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eexplosiontype = models.IntegerField(db_column='eExplosionType', blank=True, null=True)  # Field name made lowercase.
     erecoil = models.IntegerField(db_column='eRecoil', blank=True, null=True)  # Field name made lowercase.
     eweapontype = models.IntegerField(db_column='eWeaponType', blank=True, null=True)  # Field name made lowercase.
@@ -4697,7 +4686,7 @@ class Rangedweapontype(models.Model):
 
 
 class Ratingbands(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fthreatincrement = models.FloatField(db_column='fThreatIncrement', blank=True, null=True)  # Field name made lowercase.
     nbegins = models.IntegerField(db_column='nBegins', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -4708,7 +4697,7 @@ class Ratingbands(models.Model):
 
 
 class Ratingtextures(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplaynamecrim = models.TextField(db_column='sDisplayNameCrim', blank=True, null=True)  # Field name made lowercase.
     sdisplaynameenf = models.TextField(db_column='sDisplayNameEnf', blank=True, null=True)  # Field name made lowercase.
     ehudiconcombocriminal_0 = models.IntegerField(db_column='eHUDIconComboCriminal_0', blank=True, null=True)  # Field name made lowercase.
@@ -4751,7 +4740,7 @@ class Ratingtextures(models.Model):
 
 
 class Redeemablerewards(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     smailbody = models.TextField(db_column='sMailBody', blank=True, null=True)  # Field name made lowercase.
     smailsubject = models.TextField(db_column='sMailSubject', blank=True, null=True)  # Field name made lowercase.
@@ -4769,7 +4758,7 @@ class Redeemablerewards(models.Model):
 
 
 class Referafriendevents(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nsecondarykey = models.IntegerField(db_column='nSecondaryKey', blank=True, null=True)  # Field name made lowercase.
     ereferafriendevent = models.IntegerField(db_column='eReferAFriendEvent', blank=True, null=True)  # Field name made lowercase.
     bunique = models.IntegerField(db_column='bUnique', blank=True, null=True)  # Field name made lowercase.
@@ -4781,7 +4770,7 @@ class Referafriendevents(models.Model):
 
 
 class Rewardpackagechildren(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     eitems_0 = models.IntegerField(db_column='eItems_0', blank=True, null=True)  # Field name made lowercase.
     eitems_1 = models.IntegerField(db_column='eItems_1', blank=True, null=True)  # Field name made lowercase.
@@ -4834,7 +4823,7 @@ class Rewardpackagechildren(models.Model):
 
 
 class Rewardpackageitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     smailbody = models.TextField(db_column='sMailBody', blank=True, null=True)  # Field name made lowercase.
     smailsubject = models.TextField(db_column='sMailSubject', blank=True, null=True)  # Field name made lowercase.
@@ -4852,7 +4841,7 @@ class Rewardpackageitemtypes(models.Model):
 
 
 class Rewardpackages(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     echildpackage = models.IntegerField(db_column='eChildPackage', blank=True, null=True)  # Field name made lowercase.
     eitems_0 = models.IntegerField(db_column='eItems_0', blank=True, null=True)  # Field name made lowercase.
@@ -4881,7 +4870,7 @@ class Rewardpackages(models.Model):
 
 
 class Rolemilestoneformulae(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     erolemilestoneformula = models.IntegerField(db_column='eRoleMilestoneFormula', blank=True, null=True)  # Field name made lowercase.
     ba_optional = models.IntegerField(db_column='bA_Optional', blank=True, null=True)  # Field name made lowercase.
     ba_required = models.IntegerField(db_column='bA_Required', blank=True, null=True)  # Field name made lowercase.
@@ -4897,7 +4886,7 @@ class Rolemilestoneformulae(models.Model):
 
 
 class Rolemilestones(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     siconoverlaytext = models.TextField(db_column='sIconOverlayText', blank=True, null=True)  # Field name made lowercase.
     srewardmailbody = models.TextField(db_column='sRewardMailBody', blank=True, null=True)  # Field name made lowercase.
     srewardmailsubject = models.TextField(db_column='sRewardMailSubject', blank=True, null=True)  # Field name made lowercase.
@@ -4918,7 +4907,7 @@ class Rolemilestones(models.Model):
 
 
 class Rulesetexclusions(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eruleset_0 = models.IntegerField(db_column='eRuleSet_0', blank=True, null=True)  # Field name made lowercase.
     eruleset_1 = models.IntegerField(db_column='eRuleSet_1', blank=True, null=True)  # Field name made lowercase.
     eruleset_2 = models.IntegerField(db_column='eRuleSet_2', blank=True, null=True)  # Field name made lowercase.
@@ -4938,7 +4927,7 @@ class Rulesetexclusions(models.Model):
 
 
 class Scaleformcriticaltimers(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sicon = models.TextField(db_column='sIcon', blank=True, null=True)  # Field name made lowercase.
     stext = models.TextField(db_column='sText', blank=True, null=True)  # Field name made lowercase.
     npriority = models.IntegerField(db_column='nPriority', blank=True, null=True)  # Field name made lowercase.
@@ -4951,7 +4940,7 @@ class Scaleformcriticaltimers(models.Model):
 
 
 class Scaleformicons(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     siconsetname = models.TextField(db_column='sIconSetName', blank=True, null=True)  # Field name made lowercase.
     smoviename = models.TextField(db_column='sMovieName', blank=True, null=True)  # Field name made lowercase.
     escaleformicon = models.IntegerField(db_column='eScaleformIcon', blank=True, null=True)  # Field name made lowercase.
@@ -4964,7 +4953,7 @@ class Scaleformicons(models.Model):
 
 
 class Scaleforminterfaces(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sscene = models.TextField(db_column='sScene', blank=True, null=True)  # Field name made lowercase.
     elayer = models.IntegerField(db_column='eLayer', blank=True, null=True)  # Field name made lowercase.
     npriority = models.IntegerField(db_column='nPriority', blank=True, null=True)  # Field name made lowercase.
@@ -4978,7 +4967,7 @@ class Scaleforminterfaces(models.Model):
 
 
 class Scaleformlayers(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     slayerbackground = models.TextField(db_column='sLayerBackground', blank=True, null=True)  # Field name made lowercase.
     escaleformlayer = models.IntegerField(db_column='eScaleformLayer', blank=True, null=True)  # Field name made lowercase.
     nsecondarykey = models.IntegerField(db_column='nSecondaryKey', blank=True, null=True)  # Field name made lowercase.
@@ -4992,7 +4981,7 @@ class Scaleformlayers(models.Model):
 
 
 class Scenelayers(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     escenelayer = models.IntegerField(db_column='eSceneLayer', blank=True, null=True)  # Field name made lowercase.
     blimitopenfrequency = models.IntegerField(db_column='bLimitOpenFrequency', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5003,7 +4992,7 @@ class Scenelayers(models.Model):
 
 
 class Scorecategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     escorecategory = models.IntegerField(db_column='eScoreCategory', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5014,7 +5003,7 @@ class Scorecategories(models.Model):
 
 
 class Scoreboarddescriptions(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplaytext = models.TextField(db_column='sDisplayText', blank=True, null=True)  # Field name made lowercase.
     escoreboarddescription = models.IntegerField(db_column='eScoreboardDescription', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5025,7 +5014,7 @@ class Scoreboarddescriptions(models.Model):
 
 
 class Securityviolations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     scategory = models.TextField(db_column='sCategory', blank=True, null=True)  # Field name made lowercase.
     skickmessage = models.TextField(db_column='sKickMessage', blank=True, null=True)  # Field name made lowercase.
     nbandurationdays = models.IntegerField(db_column='nBanDurationDays', blank=True, null=True)  # Field name made lowercase.
@@ -5040,7 +5029,7 @@ class Securityviolations(models.Model):
 
 
 class Shopuifilterrestrictions(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eiteminfracategory = models.IntegerField(db_column='eItemInfraCategory', blank=True, null=True)  # Field name made lowercase.
     eshopuifilterrestriction = models.IntegerField(db_column='eShopUIFilterRestriction', blank=True, null=True)  # Field name made lowercase.
     eunlockvehiclecomponentcategory = models.IntegerField(db_column='eUnlockVehicleComponentCategory', blank=True, null=True)  # Field name made lowercase.
@@ -5072,7 +5061,7 @@ class Shopuifilterrestrictions(models.Model):
 
 
 class Shopuifilters(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sname = models.TextField(db_column='sName', blank=True, null=True)  # Field name made lowercase.
     eenable_0 = models.IntegerField(db_column='eEnable_0', blank=True, null=True)  # Field name made lowercase.
     eenable_1 = models.IntegerField(db_column='eEnable_1', blank=True, null=True)  # Field name made lowercase.
@@ -5098,7 +5087,7 @@ class Shopuifilters(models.Model):
 
 
 class Shopuishops(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eshopuishop = models.IntegerField(db_column='eShopUIShop', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -5108,7 +5097,7 @@ class Shopuishops(models.Model):
 
 
 class Skillratingconstants(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)  # Field name made lowercase.
     eskillratingconstant = models.IntegerField(db_column='eSkillRatingConstant', blank=True, null=True)  # Field name made lowercase.
@@ -5120,7 +5109,7 @@ class Skillratingconstants(models.Model):
 
 
 class Songitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sresource = models.TextField(db_column='sResource', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5131,7 +5120,7 @@ class Songitemtypes(models.Model):
 
 
 class Spawnconstant(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)  # Field name made lowercase.
     espawnconstant = models.IntegerField(db_column='eSpawnConstant', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5142,7 +5131,7 @@ class Spawnconstant(models.Model):
 
 
 class Spawnvariables(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fspawndistanceafk = models.FloatField(db_column='fSpawnDistanceAFK', blank=True, null=True)  # Field name made lowercase.
     fspawndistanceobjectivemaximum = models.FloatField(db_column='fSpawnDistanceObjectiveMaximum', blank=True, null=True)  # Field name made lowercase.
     fspawndistanceobjectiveminimum = models.FloatField(db_column='fSpawnDistanceObjectiveMinimum', blank=True, null=True)  # Field name made lowercase.
@@ -5168,7 +5157,7 @@ class Spawnvariables(models.Model):
 
 
 class Streetname(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayedstreetname = models.TextField(db_column='sDisplayedStreetName', blank=True, null=True)  # Field name made lowercase.
     edistrict = models.IntegerField(db_column='eDistrict', blank=True, null=True)  # Field name made lowercase.
     estreetnameid = models.IntegerField(db_column='eStreetNameID', blank=True, null=True)  # Field name made lowercase.
@@ -5180,7 +5169,7 @@ class Streetname(models.Model):
 
 
 class Symboleditormenuentries(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayimage = models.TextField(db_column='sDisplayImage', blank=True, null=True)  # Field name made lowercase.
     sdisplaytext = models.TextField(db_column='sDisplayText', blank=True, null=True)  # Field name made lowercase.
     smenulevel = models.TextField(db_column='sMenuLevel', blank=True, null=True)  # Field name made lowercase.
@@ -5195,7 +5184,7 @@ class Symboleditormenuentries(models.Model):
 
 
 class Symbolitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sresource = models.TextField(db_column='sResource', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5206,7 +5195,7 @@ class Symbolitemtypes(models.Model):
 
 
 class Tesprojectioninfos(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fmaxvalueatpremiumlevel_0 = models.FloatField(db_column='fMaxValueAtPremiumLevel_0', blank=True, null=True)  # Field name made lowercase.
     fmaxvalueatpremiumlevel_1 = models.FloatField(db_column='fMaxValueAtPremiumLevel_1', blank=True, null=True)  # Field name made lowercase.
     etesprojectioninfo = models.IntegerField(db_column='eTESProjectionInfo', blank=True, null=True)  # Field name made lowercase.
@@ -5218,7 +5207,7 @@ class Tesprojectioninfos(models.Model):
 
 
 class TodEventAllowedtooverrides(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eevent_allowedtooverride = models.IntegerField(db_column='eEvent_AllowedToOverride', blank=True, null=True)  # Field name made lowercase.
     etod_event = models.IntegerField(db_column='eTOD_Event', blank=True, null=True)  # Field name made lowercase.
     etod = models.IntegerField(db_column='eTOD', blank=True, null=True)  # Field name made lowercase.
@@ -5230,7 +5219,7 @@ class TodEventAllowedtooverrides(models.Model):
 
 
 class TodEvents(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etod_event = models.IntegerField(db_column='eTOD_Event', blank=True, null=True)  # Field name made lowercase.
     eevent = models.IntegerField(db_column='eEvent', blank=True, null=True)  # Field name made lowercase.
     etod = models.IntegerField(db_column='eTOD', blank=True, null=True)  # Field name made lowercase.
@@ -5242,7 +5231,7 @@ class TodEvents(models.Model):
 
 
 class Taskitemboomboxes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     samptype = models.TextField(db_column='sAmpType', blank=True, null=True)  # Field name made lowercase.
     efriendlyhudmarker = models.IntegerField(db_column='eFriendlyHUDMarker', blank=True, null=True)  # Field name made lowercase.
     eoppositionhudmarker = models.IntegerField(db_column='eOppositionHUDMarker', blank=True, null=True)  # Field name made lowercase.
@@ -5261,7 +5250,7 @@ class Taskitemboomboxes(models.Model):
 
 
 class Taskitemcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     etaskitemcategory = models.IntegerField(db_column='eTaskItemCategory', blank=True, null=True)  # Field name made lowercase.
@@ -5273,7 +5262,7 @@ class Taskitemcategories(models.Model):
 
 
 class Taskitemdamagedpickups(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sassetname = models.TextField(db_column='sAssetName', blank=True, null=True)  # Field name made lowercase.
     sdamagesfx = models.TextField(db_column='sDamageSFX', blank=True, null=True)  # Field name made lowercase.
     sdamagevfx = models.TextField(db_column='sDamageVFX', blank=True, null=True)  # Field name made lowercase.
@@ -5289,7 +5278,7 @@ class Taskitemdamagedpickups(models.Model):
 
 
 class Taskitemeffects(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     stimedexplosivesfxend = models.TextField(db_column='sTimedExplosiveSFXEnd', blank=True, null=True)  # Field name made lowercase.
     stimedexplosivesfxstart = models.TextField(db_column='sTimedExplosiveSFXStart', blank=True, null=True)  # Field name made lowercase.
     eboombox = models.IntegerField(db_column='eBoomBox', blank=True, null=True)  # Field name made lowercase.
@@ -5314,7 +5303,7 @@ class Taskitemeffects(models.Model):
 
 
 class Taskitemgiftboxcontents(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edefaultweaponskin = models.IntegerField(db_column='eDefaultWeaponSkin', blank=True, null=True)  # Field name made lowercase.
     efnmods_0 = models.IntegerField(db_column='eFnMods_0', blank=True, null=True)  # Field name made lowercase.
     efnmods_1 = models.IntegerField(db_column='eFnMods_1', blank=True, null=True)  # Field name made lowercase.
@@ -5333,7 +5322,7 @@ class Taskitemgiftboxcontents(models.Model):
 
 
 class Taskitemgiftboxmodifierentries(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ecategory = models.IntegerField(db_column='eCategory', blank=True, null=True)  # Field name made lowercase.
     eitem = models.IntegerField(db_column='eItem', blank=True, null=True)  # Field name made lowercase.
     etaskitemgiftboxmodifier = models.IntegerField(db_column='eTaskItemGiftBoxModifier', blank=True, null=True)  # Field name made lowercase.
@@ -5347,7 +5336,7 @@ class Taskitemgiftboxmodifierentries(models.Model):
 
 
 class Taskitemgiftboxmodifiers(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskitemgiftboxmodifier = models.IntegerField(db_column='eTaskItemGiftBoxModifier', blank=True, null=True)  # Field name made lowercase.
     fchancenomod = models.FloatField(db_column='fChanceNoMod', blank=True, null=True)  # Field name made lowercase.
     fweightperlevel_0 = models.FloatField(db_column='fWeightPerLevel_0', blank=True, null=True)  # Field name made lowercase.
@@ -5362,7 +5351,7 @@ class Taskitemgiftboxmodifiers(models.Model):
 
 
 class Taskitemgiftboxes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sactivevfx = models.TextField(db_column='sActiveVFX', blank=True, null=True)  # Field name made lowercase.
     sinactivevfx = models.TextField(db_column='sInactiveVFX', blank=True, null=True)  # Field name made lowercase.
     sstartactivesfx = models.TextField(db_column='sStartActiveSFX', blank=True, null=True)  # Field name made lowercase.
@@ -5388,7 +5377,7 @@ class Taskitemgiftboxes(models.Model):
 
 
 class Taskitemsizes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     ncargopips = models.IntegerField(db_column='nCargoPips', blank=True, null=True)  # Field name made lowercase.
     eencumbrance = models.IntegerField(db_column='eEncumbrance', blank=True, null=True)  # Field name made lowercase.
@@ -5403,7 +5392,7 @@ class Taskitemsizes(models.Model):
 
 
 class Taskitemsubcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     egameplayobject = models.IntegerField(db_column='eGameplayObject', blank=True, null=True)  # Field name made lowercase.
@@ -5418,7 +5407,7 @@ class Taskitemsubcategories(models.Model):
 
 
 class Taskitemtags(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskitemtag = models.IntegerField(db_column='eTaskItemTag', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -5428,7 +5417,7 @@ class Taskitemtags(models.Model):
 
 
 class Taskitemvarieties(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     eeffect = models.IntegerField(db_column='eEffect', blank=True, null=True)  # Field name made lowercase.
@@ -5456,7 +5445,7 @@ class Taskitemvarieties(models.Model):
 
 
 class Taskitemvisuals(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spickupanimsetasset = models.TextField(db_column='sPickupAnimSetAsset', blank=True, null=True)  # Field name made lowercase.
     spickupanimtreeasset = models.TextField(db_column='sPickupAnimTreeAsset', blank=True, null=True)  # Field name made lowercase.
     spickupassetname = models.TextField(db_column='sPickupAssetName', blank=True, null=True)  # Field name made lowercase.
@@ -5475,7 +5464,7 @@ class Taskitemvisuals(models.Model):
 
 
 class Taskobjectives(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdispatchbrief = models.TextField(db_column='sDispatchBrief', blank=True, null=True)  # Field name made lowercase.
     sownerbrief = models.TextField(db_column='sOwnerBrief', blank=True, null=True)  # Field name made lowercase.
     emissiontemplate = models.IntegerField(db_column='eMissionTemplate', blank=True, null=True)  # Field name made lowercase.
@@ -5524,7 +5513,7 @@ class Taskobjectives(models.Model):
 
 
 class Taskoperationarmedguard(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     funused = models.FloatField(db_column='fUnused', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5535,7 +5524,7 @@ class Taskoperationarmedguard(models.Model):
 
 
 class Taskoperationbusts(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     nhealthpool = models.IntegerField(db_column='nHealthPool', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5546,7 +5535,7 @@ class Taskoperationbusts(models.Model):
 
 
 class Taskoperationcsis(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     fcsaduration = models.FloatField(db_column='fCSADuration', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5557,7 +5546,7 @@ class Taskoperationcsis(models.Model):
 
 
 class Taskoperationcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ereticulehint = models.IntegerField(db_column='eReticuleHint', blank=True, null=True)  # Field name made lowercase.
     fmintakeoutmultiplier = models.FloatField(db_column='fMinTakeoutMultiplier', blank=True, null=True)  # Field name made lowercase.
     etaskoperationcategory = models.IntegerField(db_column='eTaskOperationCategory', blank=True, null=True)  # Field name made lowercase.
@@ -5570,7 +5559,7 @@ class Taskoperationcategories(models.Model):
 
 
 class Taskoperationdeathmatches(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     npadding = models.IntegerField(db_column='nPadding', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5581,7 +5570,7 @@ class Taskoperationdeathmatches(models.Model):
 
 
 class Taskoperationescape(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     farrestedpenaltyseconds = models.FloatField(db_column='fArrestedPenaltySeconds', blank=True, null=True)  # Field name made lowercase.
     farrestopponentpenaltyseconds = models.FloatField(db_column='fArrestOpponentPenaltySeconds', blank=True, null=True)  # Field name made lowercase.
@@ -5598,7 +5587,7 @@ class Taskoperationescape(models.Model):
 
 
 class Taskoperationescort(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     ftriggertime = models.FloatField(db_column='fTriggerTime', blank=True, null=True)  # Field name made lowercase.
     bvipopponentcancapture = models.IntegerField(db_column='bVIPOpponentCanCapture', blank=True, null=True)  # Field name made lowercase.
@@ -5611,7 +5600,7 @@ class Taskoperationescort(models.Model):
 
 
 class Taskoperationhacking(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     fcsaduration = models.FloatField(db_column='fCSADuration', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5622,7 +5611,7 @@ class Taskoperationhacking(models.Model):
 
 
 class Taskoperationmovingtarget(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     npadding = models.IntegerField(db_column='nPadding', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5633,7 +5622,7 @@ class Taskoperationmovingtarget(models.Model):
 
 
 class Taskoperationpickups(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     npadding = models.IntegerField(db_column='nPadding', blank=True, null=True)  # Field name made lowercase.
     bisvehicledeliverable = models.IntegerField(db_column='bIsVehicleDeliverable', blank=True, null=True)  # Field name made lowercase.
@@ -5645,7 +5634,7 @@ class Taskoperationpickups(models.Model):
 
 
 class Taskoperationsabotages(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     fcsaduration = models.FloatField(db_column='fCSADuration', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5656,7 +5645,7 @@ class Taskoperationsabotages(models.Model):
 
 
 class Taskoperationsurvival(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     npadding = models.IntegerField(db_column='nPadding', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5667,7 +5656,7 @@ class Taskoperationsurvival(models.Model):
 
 
 class Taskoperationterritorycontrols(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     fcapturetime = models.FloatField(db_column='fCaptureTime', blank=True, null=True)  # Field name made lowercase.
     fresettime = models.FloatField(db_column='fResetTime', blank=True, null=True)  # Field name made lowercase.
@@ -5679,7 +5668,7 @@ class Taskoperationterritorycontrols(models.Model):
 
 
 class Taskoperationuiprofile(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     scriminalbrief = models.TextField(db_column='sCriminalBrief', blank=True, null=True)  # Field name made lowercase.
     senforcerbrief = models.TextField(db_column='sEnforcerBrief', blank=True, null=True)  # Field name made lowercase.
     sshortbrief = models.TextField(db_column='sShortBrief', blank=True, null=True)  # Field name made lowercase.
@@ -5776,7 +5765,7 @@ class Taskoperationuiprofile(models.Model):
 
 
 class Taskoperationvehiclecargos(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     fcsaduration = models.FloatField(db_column='fCSADuration', blank=True, null=True)  # Field name made lowercase.
     bisvehicledeliverable = models.IntegerField(db_column='bIsVehicleDeliverable', blank=True, null=True)  # Field name made lowercase.
@@ -5789,7 +5778,7 @@ class Taskoperationvehiclecargos(models.Model):
 
 
 class Taskoperations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     scriminalbrief = models.TextField(db_column='sCriminalBrief', blank=True, null=True)  # Field name made lowercase.
     senforcerbrief = models.TextField(db_column='sEnforcerBrief', blank=True, null=True)  # Field name made lowercase.
     suidescription = models.TextField(db_column='sUIDescription', blank=True, null=True)  # Field name made lowercase.
@@ -5825,7 +5814,7 @@ class Taskoperations(models.Model):
 
 
 class Taskoperationsarson(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     fcsaduration = models.FloatField(db_column='fCSADuration', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5836,7 +5825,7 @@ class Taskoperationsarson(models.Model):
 
 
 class Taskoperationsbombing(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ebomblevel = models.IntegerField(db_column='eBombLevel', blank=True, null=True)  # Field name made lowercase.
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     fbombdisposalguardtime = models.FloatField(db_column='fBombDisposalGuardTime', blank=True, null=True)  # Field name made lowercase.
@@ -5853,7 +5842,7 @@ class Taskoperationsbombing(models.Model):
 
 
 class Taskoperationsbuildingbreakin(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     suseactionname = models.TextField(db_column='sUseActionName', blank=True, null=True)  # Field name made lowercase.
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     fcsaduration = models.FloatField(db_column='fCSADuration', blank=True, null=True)  # Field name made lowercase.
@@ -5865,7 +5854,7 @@ class Taskoperationsbuildingbreakin(models.Model):
 
 
 class Taskoperationsgraffiti(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     nsprayduration = models.IntegerField(db_column='nSprayDuration', blank=True, null=True)  # Field name made lowercase.
     bisresprayable = models.IntegerField(db_column='bIsResprayable', blank=True, null=True)  # Field name made lowercase.
@@ -5878,7 +5867,7 @@ class Taskoperationsgraffiti(models.Model):
 
 
 class Taskoperationsitemdelivery(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     ftriggertime = models.FloatField(db_column='fTriggerTime', blank=True, null=True)  # Field name made lowercase.
     bdelivertoalltargets = models.IntegerField(db_column='bDeliverToAllTargets', blank=True, null=True)  # Field name made lowercase.
@@ -5893,7 +5882,7 @@ class Taskoperationsitemdelivery(models.Model):
 
 
 class Taskoperationsnpc(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     fcsaduration = models.FloatField(db_column='fCSADuration', blank=True, null=True)  # Field name made lowercase.
     ecsastate = models.IntegerField(db_column='eCSAState', blank=True, null=True)  # Field name made lowercase.
@@ -5905,7 +5894,7 @@ class Taskoperationsnpc(models.Model):
 
 
 class Taskoperationsramraid(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     nhealthpool = models.IntegerField(db_column='nHealthPool', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5916,7 +5905,7 @@ class Taskoperationsramraid(models.Model):
 
 
 class Taskoperationsrendezvous(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     ftriggertime = models.FloatField(db_column='fTriggerTime', blank=True, null=True)  # Field name made lowercase.
     ballsidemembers = models.IntegerField(db_column='bAllSideMembers', blank=True, null=True)  # Field name made lowercase.
@@ -5931,7 +5920,7 @@ class Taskoperationsrendezvous(models.Model):
 
 
 class Taskoperationsvandalism(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     nhealthpool = models.IntegerField(db_column='nHealthPool', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -5942,7 +5931,7 @@ class Taskoperationsvandalism(models.Model):
 
 
 class Taskoperationsvehiclelooting(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     fcsaduration = models.FloatField(db_column='fCSADuration', blank=True, null=True)  # Field name made lowercase.
     bisvehicledeliverable = models.IntegerField(db_column='bIsVehicleDeliverable', blank=True, null=True)  # Field name made lowercase.
@@ -5955,7 +5944,7 @@ class Taskoperationsvehiclelooting(models.Model):
 
 
 class Taskoperationsvehicletheft(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etaskoperation = models.IntegerField(db_column='eTaskOperation', blank=True, null=True)  # Field name made lowercase.
     fcsaduration = models.FloatField(db_column='fCSADuration', blank=True, null=True)  # Field name made lowercase.
     npointlessextrapadding = models.IntegerField(db_column='nPointlessExtraPadding', blank=True, null=True)  # Field name made lowercase.
@@ -5969,7 +5958,7 @@ class Taskoperationsvehicletheft(models.Model):
 
 
 class Tasktargetallocations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     elocationconstraint = models.IntegerField(db_column='eLocationConstraint', blank=True, null=True)  # Field name made lowercase.
     emissiontemplate = models.IntegerField(db_column='eMissionTemplate', blank=True, null=True)  # Field name made lowercase.
     etasktargetallocation = models.IntegerField(db_column='eTaskTargetAllocation', blank=True, null=True)  # Field name made lowercase.
@@ -5995,7 +5984,7 @@ class Tasktargetallocations(models.Model):
 
 
 class Tasktargetcheckpoints(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etasktargettype = models.IntegerField(db_column='eTaskTargetType', blank=True, null=True)  # Field name made lowercase.
     nmaxplayerspaces = models.IntegerField(db_column='nMaxPlayerSpaces', blank=True, null=True)  # Field name made lowercase.
     nmaxvehiclespaces = models.IntegerField(db_column='nMaxVehicleSpaces', blank=True, null=True)  # Field name made lowercase.
@@ -6008,7 +5997,7 @@ class Tasktargetcheckpoints(models.Model):
 
 
 class Tasktargetclasses(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etasktargetclass = models.IntegerField(db_column='eTaskTargetClass', blank=True, null=True)  # Field name made lowercase.
     bcanbeusedindirectedmissions = models.IntegerField(db_column='bCanBeUsedInDirectedMissions', blank=True, null=True)  # Field name made lowercase.
     blivingcity = models.IntegerField(db_column='bLivingCity', blank=True, null=True)  # Field name made lowercase.
@@ -6020,7 +6009,7 @@ class Tasktargetclasses(models.Model):
 
 
 class Tasktargetgraffiti(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etasktargettype = models.IntegerField(db_column='eTaskTargetType', blank=True, null=True)  # Field name made lowercase.
     ndummy = models.IntegerField(db_column='nDummy', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -6031,7 +6020,7 @@ class Tasktargetgraffiti(models.Model):
 
 
 class Tasktargetnpcs(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     enpctype = models.IntegerField(db_column='eNPCType', blank=True, null=True)  # Field name made lowercase.
     etasktargettype = models.IntegerField(db_column='eTaskTargetType', blank=True, null=True)  # Field name made lowercase.
     ntemplctype = models.IntegerField(db_column='nTempLCType', blank=True, null=True)  # Field name made lowercase.
@@ -6043,7 +6032,7 @@ class Tasktargetnpcs(models.Model):
 
 
 class Tasktargetprops(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spropassetname = models.TextField(db_column='sPropAssetName', blank=True, null=True)  # Field name made lowercase.
     epropcategory = models.IntegerField(db_column='ePropCategory', blank=True, null=True)  # Field name made lowercase.
     etasktargettype = models.IntegerField(db_column='eTaskTargetType', blank=True, null=True)  # Field name made lowercase.
@@ -6068,7 +6057,7 @@ class Tasktargetprops(models.Model):
 
 
 class Tasktargettypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     egameplayobject = models.IntegerField(db_column='eGameplayObject', blank=True, null=True)  # Field name made lowercase.
@@ -6089,7 +6078,7 @@ class Tasktargettypes(models.Model):
 
 
 class Themeitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sresource = models.TextField(db_column='sResource', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -6100,7 +6089,7 @@ class Themeitemtypes(models.Model):
 
 
 class Threatlevels(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     salloweddistrictthreats = models.TextField(db_column='sAllowedDistrictThreats', blank=True, null=True)  # Field name made lowercase.
     sdisplayedname = models.TextField(db_column='sDisplayedName', blank=True, null=True)  # Field name made lowercase.
     ehudtextureicon = models.IntegerField(db_column='eHUDTextureIcon', blank=True, null=True)  # Field name made lowercase.
@@ -6116,7 +6105,7 @@ class Threatlevels(models.Model):
 
 
 class Timeofdayavailabilities(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etimeofdayavailability = models.IntegerField(db_column='eTimeOfDayAvailability', blank=True, null=True)  # Field name made lowercase.
     bafternoon = models.IntegerField(db_column='bAfternoon', blank=True, null=True)  # Field name made lowercase.
     bevening = models.IntegerField(db_column='bEvening', blank=True, null=True)  # Field name made lowercase.
@@ -6130,7 +6119,7 @@ class Timeofdayavailabilities(models.Model):
 
 
 class Timeofdayperiod(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nendtimehours = models.IntegerField(db_column='nEndTimeHours', blank=True, null=True)  # Field name made lowercase.
     nendtimemins = models.IntegerField(db_column='nEndTimeMins', blank=True, null=True)  # Field name made lowercase.
     nstarttimehours = models.IntegerField(db_column='nStartTimeHours', blank=True, null=True)  # Field name made lowercase.
@@ -6144,7 +6133,7 @@ class Timeofdayperiod(models.Model):
 
 
 class Titleunlockitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     bfemale = models.IntegerField(db_column='bFemale', blank=True, null=True)  # Field name made lowercase.
     bhideuntilunlocked = models.IntegerField(db_column='bHideUntilUnlocked', blank=True, null=True)  # Field name made lowercase.
@@ -6157,7 +6146,7 @@ class Titleunlockitemtypes(models.Model):
 
 
 class Trackedactivities(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etrackedactivity = models.IntegerField(db_column='eTrackedActivity', blank=True, null=True)  # Field name made lowercase.
     eunit = models.IntegerField(db_column='eUnit', blank=True, null=True)  # Field name made lowercase.
     nmaxincrementperzone = models.IntegerField(db_column='nMaxIncrementPerZone', blank=True, null=True)  # Field name made lowercase.
@@ -6173,7 +6162,7 @@ class Trackedactivities(models.Model):
 
 
 class Trackedactivitiesderived(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     emaster_0 = models.IntegerField(db_column='eMaster_0', blank=True, null=True)  # Field name made lowercase.
     emaster_1 = models.IntegerField(db_column='eMaster_1', blank=True, null=True)  # Field name made lowercase.
     emaster_2 = models.IntegerField(db_column='eMaster_2', blank=True, null=True)  # Field name made lowercase.
@@ -6194,7 +6183,7 @@ class Trackedactivitiesderived(models.Model):
 
 
 class Trackedactivitiesfixed(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     etrackedactivity = models.IntegerField(db_column='eTrackedActivity', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -6204,7 +6193,7 @@ class Trackedactivitiesfixed(models.Model):
 
 
 class Trackedactivityunits(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sformatting = models.TextField(db_column='sFormatting', blank=True, null=True)  # Field name made lowercase.
     etrackedactivityunit = models.IntegerField(db_column='eTrackedActivityUnit', blank=True, null=True)  # Field name made lowercase.
     econversion = models.IntegerField(db_column='eConversion', blank=True, null=True)  # Field name made lowercase.
@@ -6216,7 +6205,7 @@ class Trackedactivityunits(models.Model):
 
 
 class Trafficlightdurations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     edistrict = models.IntegerField(db_column='eDistrict', blank=True, null=True)  # Field name made lowercase.
     etrafficlightduration = models.IntegerField(db_column='eTrafficLightDuration', blank=True, null=True)  # Field name made lowercase.
     fped_fourlanemax = models.FloatField(db_column='fPed_FourLaneMax', blank=True, null=True)  # Field name made lowercase.
@@ -6243,7 +6232,7 @@ class Trafficlightdurations(models.Model):
 
 
 class Tutorialcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     srewardmailbody = models.TextField(db_column='sRewardMailBody', blank=True, null=True)  # Field name made lowercase.
     srewardmailsubject = models.TextField(db_column='sRewardMailSubject', blank=True, null=True)  # Field name made lowercase.
     erewardpackage = models.IntegerField(db_column='eRewardPackage', blank=True, null=True)  # Field name made lowercase.
@@ -6257,7 +6246,7 @@ class Tutorialcategories(models.Model):
 
 
 class Tutorialevents(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     shudtext = models.TextField(db_column='sHUDText', blank=True, null=True)  # Field name made lowercase.
     egameplayevent = models.IntegerField(db_column='eGameplayEvent', blank=True, null=True)  # Field name made lowercase.
     ehudmarker = models.IntegerField(db_column='eHUDMarker', blank=True, null=True)  # Field name made lowercase.
@@ -6271,7 +6260,7 @@ class Tutorialevents(models.Model):
 
 
 class Tutorials(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sbody = models.TextField(db_column='sBody', blank=True, null=True)  # Field name made lowercase.
     sscreenshot = models.TextField(db_column='sScreenshot', blank=True, null=True)  # Field name made lowercase.
     ssubtitle = models.TextField(db_column='sSubTitle', blank=True, null=True)  # Field name made lowercase.
@@ -6288,7 +6277,7 @@ class Tutorials(models.Model):
 
 
 class Uiinteractionpoints(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sinfobrowsertext = models.TextField(db_column='sInfoBrowserText', blank=True, null=True)  # Field name made lowercase.
     ehudmarker = models.IntegerField(db_column='eHUDMarker', blank=True, null=True)  # Field name made lowercase.
     einfobrowsericon = models.IntegerField(db_column='eInfoBrowserIcon', blank=True, null=True)  # Field name made lowercase.
@@ -6302,7 +6291,7 @@ class Uiinteractionpoints(models.Model):
 
 
 class Uimeshviewersetup(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nuimeshviewersetup = models.TextField(db_column='nUIMeshViewerSetup', blank=True, null=True)  # Field name made lowercase.
     fcamerafov = models.FloatField(db_column='fCameraFOV', blank=True, null=True)  # Field name made lowercase.
     fcameraposx = models.FloatField(db_column='fCameraPosX', blank=True, null=True)  # Field name made lowercase.
@@ -6323,7 +6312,7 @@ class Uimeshviewersetup(models.Model):
 
 
 class Uuistyles(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sname = models.TextField(db_column='sName', blank=True, null=True)  # Field name made lowercase.
     euistyle = models.IntegerField(db_column='eUIStyle', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -6334,7 +6323,7 @@ class Uuistyles(models.Model):
 
 
 class Unlockiteminfracategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     egameplayevent = models.IntegerField(db_column='eGameplayEvent', blank=True, null=True)  # Field name made lowercase.
     einventoryiteminfracategory = models.IntegerField(db_column='eInventoryItemInfraCategory', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -6345,7 +6334,7 @@ class Unlockiteminfracategories(models.Model):
 
 
 class Unlockitemsubcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     egameplayevent = models.IntegerField(db_column='eGameplayEvent', blank=True, null=True)  # Field name made lowercase.
     einventoryitemsubcategory = models.IntegerField(db_column='eInventoryItemSubCategory', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -6356,7 +6345,7 @@ class Unlockitemsubcategories(models.Model):
 
 
 class Unlockitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     eunlockitem = models.IntegerField(db_column='eUnlockItem', blank=True, null=True)  # Field name made lowercase.
@@ -6369,7 +6358,7 @@ class Unlockitemtypes(models.Model):
 
 
 class Usabletokentypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     emodifieritem = models.IntegerField(db_column='eModifierItem', blank=True, null=True)  # Field name made lowercase.
@@ -6384,7 +6373,7 @@ class Usabletokentypes(models.Model):
 
 
 class Vfxassociations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     svfxprefabname = models.TextField(db_column='sVFXPrefabName', blank=True, null=True)  # Field name made lowercase.
     svfxreplacedactor = models.TextField(db_column='sVFXReplacedActor', blank=True, null=True)  # Field name made lowercase.
     evfxassociation = models.IntegerField(db_column='eVFXAssociation', blank=True, null=True)  # Field name made lowercase.
@@ -6397,7 +6386,7 @@ class Vfxassociations(models.Model):
 
 
 class Vfxtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     evfxtype = models.IntegerField(db_column='eVFXType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -6407,7 +6396,7 @@ class Vfxtypes(models.Model):
 
 
 class Vehicleaudiopart(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     evehicleaudiopart = models.IntegerField(db_column='eVehicleAudioPart', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -6417,7 +6406,7 @@ class Vehicleaudiopart(models.Model):
 
 
 class Vehicleaudiopartdefaults(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdamagetype = models.TextField(db_column='sDamageType', blank=True, null=True)  # Field name made lowercase.
     sdooreventclosefront = models.TextField(db_column='sDoorEventCloseFront', blank=True, null=True)  # Field name made lowercase.
     sdooreventcloserearback = models.TextField(db_column='sDoorEventCloseRearBack', blank=True, null=True)  # Field name made lowercase.
@@ -6445,7 +6434,7 @@ class Vehicleaudiopartdefaults(models.Model):
 
 
 class Vehiclecategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     evehiclecategory = models.IntegerField(db_column='eVehicleCategory', blank=True, null=True)  # Field name made lowercase.
     fhairsquash = models.FloatField(db_column='fHairSquash', blank=True, null=True)  # Field name made lowercase.
     fmaxheight = models.FloatField(db_column='fMaxHeight', blank=True, null=True)  # Field name made lowercase.
@@ -6459,7 +6448,7 @@ class Vehiclecategories(models.Model):
 
 
 class Vehiclecategoryrestrictions(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     evehiclecategory = models.IntegerField(db_column='eVehicleCategory', blank=True, null=True)  # Field name made lowercase.
     nnumconcurrentsetuptypes = models.IntegerField(db_column='nNumConcurrentSetupTypes', blank=True, null=True)  # Field name made lowercase.
     nvehiclecategoryrestriction = models.IntegerField(db_column='nVehicleCategoryRestriction', blank=True, null=True)  # Field name made lowercase.
@@ -6471,7 +6460,7 @@ class Vehiclecategoryrestrictions(models.Model):
 
 
 class Vehiclecolours(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fprobability = models.FloatField(db_column='fProbability', blank=True, null=True)  # Field name made lowercase.
     nbluecomponent = models.IntegerField(db_column='nBlueComponent', blank=True, null=True)  # Field name made lowercase.
     ngreencomponent = models.IntegerField(db_column='nGreenComponent', blank=True, null=True)  # Field name made lowercase.
@@ -6486,7 +6475,7 @@ class Vehiclecolours(models.Model):
 
 
 class Vehiclecomponentunlockitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     salternateresource = models.TextField(db_column='sAlternateResource', blank=True, null=True)  # Field name made lowercase.
     sresource = models.TextField(db_column='sResource', blank=True, null=True)  # Field name made lowercase.
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
@@ -6501,7 +6490,7 @@ class Vehiclecomponentunlockitemtypes(models.Model):
 
 
 class Vehiclecomponents(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     evehiclecomponent = models.IntegerField(db_column='eVehicleComponent', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -6511,7 +6500,7 @@ class Vehiclecomponents(models.Model):
 
 
 class Vehiclecritical(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ehudmessage = models.IntegerField(db_column='eHUDMessage', blank=True, null=True)  # Field name made lowercase.
     evehiclecritical = models.IntegerField(db_column='eVehicleCritical', blank=True, null=True)  # Field name made lowercase.
     fweight = models.FloatField(db_column='fWeight', blank=True, null=True)  # Field name made lowercase.
@@ -6523,7 +6512,7 @@ class Vehiclecritical(models.Model):
 
 
 class Vehicledamagehandlingeffects(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     evehicledamagehandlingeffect = models.IntegerField(db_column='eVehicleDamageHandlingEffect', blank=True, null=True)  # Field name made lowercase.
     fbrakeeffectiveness = models.FloatField(db_column='fBrakeEffectiveness', blank=True, null=True)  # Field name made lowercase.
     fenginetorquescale = models.FloatField(db_column='fEngineTorqueScale', blank=True, null=True)  # Field name made lowercase.
@@ -6541,7 +6530,7 @@ class Vehicledamagehandlingeffects(models.Model):
 
 
 class Vehicledamagelevels(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ehandlingeffect = models.IntegerField(db_column='eHandlingEffect', blank=True, null=True)  # Field name made lowercase.
     evehiclecritical = models.IntegerField(db_column='eVehicleCritical', blank=True, null=True)  # Field name made lowercase.
     evehicledamagelevel = models.IntegerField(db_column='eVehicleDamageLevel', blank=True, null=True)  # Field name made lowercase.
@@ -6554,7 +6543,7 @@ class Vehicledamagelevels(models.Model):
 
 
 class Vehicledamagevfx(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdamagestatebegin = models.TextField(db_column='sDamageStateBegin', blank=True, null=True)  # Field name made lowercase.
     sdamagestateend = models.TextField(db_column='sDamageStateEnd', blank=True, null=True)  # Field name made lowercase.
     sexplosionaudio = models.TextField(db_column='sExplosionAudio', blank=True, null=True)  # Field name made lowercase.
@@ -6570,7 +6559,7 @@ class Vehicledamagevfx(models.Model):
 
 
 class Vehicledistrict(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sheightfield = models.TextField(db_column='sHeightfield', blank=True, null=True)  # Field name made lowercase.
     fworldoffsetx = models.FloatField(db_column='fWorldOffsetX', blank=True, null=True)  # Field name made lowercase.
     fworldoffsety = models.FloatField(db_column='fWorldOffsetY', blank=True, null=True)  # Field name made lowercase.
@@ -6586,7 +6575,7 @@ class Vehicledistrict(models.Model):
 
 
 class Vehicledooranimationsets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sclosedframe = models.TextField(db_column='sClosedFrame', blank=True, null=True)  # Field name made lowercase.
     sclosefrominside = models.TextField(db_column='sCloseFromInside', blank=True, null=True)  # Field name made lowercase.
     sclosefromoutside = models.TextField(db_column='sCloseFromOutside', blank=True, null=True)  # Field name made lowercase.
@@ -6607,7 +6596,7 @@ class Vehicledooranimationsets(models.Model):
 
 
 class Vehicleevents(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     nignoreme = models.IntegerField(db_column='nIgnoreMe', blank=True, null=True)  # Field name made lowercase.
     enpcevent = models.IntegerField(db_column='eNPCEvent', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -6618,7 +6607,7 @@ class Vehicleevents(models.Model):
 
 
 class Vehiclegear(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spackageimageref = models.TextField(db_column='sPackageImageRef', blank=True, null=True)  # Field name made lowercase.
     evehiclegear = models.IntegerField(db_column='eVehicleGear', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -6629,7 +6618,7 @@ class Vehiclegear(models.Model):
 
 
 class Vehicleinteractionanimations(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     fblendintime = models.FloatField(db_column='fBlendInTime', blank=True, null=True)  # Field name made lowercase.
     fblendouttime = models.FloatField(db_column='fBlendOutTime', blank=True, null=True)  # Field name made lowercase.
     evehicleinteractionanimation = models.IntegerField(db_column='eVehicleInteractionAnimation', blank=True, null=True)  # Field name made lowercase.
@@ -6645,7 +6634,7 @@ class Vehicleinteractionanimations(models.Model):
 
 
 class Vehicleinteractionsequences(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ssequencename = models.TextField(db_column='sSequenceName', blank=True, null=True)  # Field name made lowercase.
     evehicleplayeranimationset = models.IntegerField(db_column='eVehiclePlayerAnimationSet', blank=True, null=True)  # Field name made lowercase.
     evehicleinteractionanimation = models.IntegerField(db_column='eVehicleInteractionAnimation', blank=True, null=True)  # Field name made lowercase.
@@ -6657,7 +6646,7 @@ class Vehicleinteractionsequences(models.Model):
 
 
 class Vehicleitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sresource = models.TextField(db_column='sResource', blank=True, null=True)  # Field name made lowercase.
     efnmod_0 = models.IntegerField(db_column='eFnMod_0', blank=True, null=True)  # Field name made lowercase.
@@ -6676,7 +6665,7 @@ class Vehicleitemtypes(models.Model):
 
 
 class Vehiclemenuentries(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplaypicture = models.TextField(db_column='sDisplayPicture', blank=True, null=True)  # Field name made lowercase.
     sdisplaytext = models.TextField(db_column='sDisplayText', blank=True, null=True)  # Field name made lowercase.
     smenulevel = models.TextField(db_column='sMenuLevel', blank=True, null=True)  # Field name made lowercase.
@@ -6693,7 +6682,7 @@ class Vehiclemenuentries(models.Model):
 
 
 class Vehiclemodifieritemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -6703,7 +6692,7 @@ class Vehiclemodifieritemtypes(models.Model):
 
 
 class Vehiclenpcinsideanimationsets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sejectinitialcriminal = models.TextField(db_column='sEjectInitialCriminal', blank=True, null=True)  # Field name made lowercase.
     sejectinitialenforcer = models.TextField(db_column='sEjectInitialEnforcer', blank=True, null=True)  # Field name made lowercase.
     sejectinitialfrompassengersidecriminal = models.TextField(db_column='sEjectInitialFromPassengerSideCriminal', blank=True, null=True)  # Field name made lowercase.
@@ -6725,7 +6714,7 @@ class Vehiclenpcinsideanimationsets(models.Model):
 
 
 class Vehicleplayeranimationsets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdrivesteer = models.TextField(db_column='sDriveSteer', blank=True, null=True)  # Field name made lowercase.
     spassengeridle = models.TextField(db_column='sPassengerIdle', blank=True, null=True)  # Field name made lowercase.
     eanimtreedecision = models.IntegerField(db_column='eAnimTreeDecision', blank=True, null=True)  # Field name made lowercase.
@@ -6742,7 +6731,7 @@ class Vehicleplayeranimationsets(models.Model):
 
 
 class Vehiclepositioninfo(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     evehicleanimationcategory = models.IntegerField(db_column='eVehicleAnimationCategory', blank=True, null=True)  # Field name made lowercase.
     evehicledooranimationset = models.IntegerField(db_column='eVehicleDoorAnimationSet', blank=True, null=True)  # Field name made lowercase.
     evehiclenpcinsideanimationset = models.IntegerField(db_column='eVehicleNPCInsideAnimationSet', blank=True, null=True)  # Field name made lowercase.
@@ -6758,7 +6747,7 @@ class Vehiclepositioninfo(models.Model):
 
 
 class Vehicleseatcameras(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eleanoutcamera = models.IntegerField(db_column='eLeanOutCamera', blank=True, null=True)  # Field name made lowercase.
     esittingcamera = models.IntegerField(db_column='eSittingCamera', blank=True, null=True)  # Field name made lowercase.
     evehiclepositionindex = models.IntegerField(db_column='eVehiclePositionIndex', blank=True, null=True)  # Field name made lowercase.
@@ -6771,7 +6760,7 @@ class Vehicleseatcameras(models.Model):
 
 
 class Vehiclesetuptypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     sgolemobilebase = models.TextField(db_column='sGolemobileBase', blank=True, null=True)  # Field name made lowercase.
     sphysicsasset = models.TextField(db_column='sPhysicsAsset', blank=True, null=True)  # Field name made lowercase.
@@ -6902,7 +6891,7 @@ class Vehiclesetuptypes(models.Model):
 
 
 class Vehicletempsetups(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     stempsetupinfo = models.TextField(db_column='sTempSetupInfo', blank=True, null=True)  # Field name made lowercase.
     evehicletempsetup = models.IntegerField(db_column='eVehicleTempSetup', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -6913,7 +6902,7 @@ class Vehicletempsetups(models.Model):
 
 
 class Vehicleuicameraangles(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     evehicleuicameraangle = models.IntegerField(db_column='eVehicleUICameraAngle', blank=True, null=True)  # Field name made lowercase.
     factorrotation = models.FloatField(db_column='fActorRotation', blank=True, null=True)  # Field name made lowercase.
     fcameraposition = models.FloatField(db_column='fCameraPosition', blank=True, null=True)  # Field name made lowercase.
@@ -6927,7 +6916,7 @@ class Vehicleuicameraangles(models.Model):
 
 
 class Vehicleuicategory(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     evehicleuicategory = models.IntegerField(db_column='eVehicleUICategory', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -6938,7 +6927,7 @@ class Vehicleuicategory(models.Model):
 
 
 class Vehicleuicomponentcategories(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     evehicleuicomponentcategory = models.IntegerField(db_column='eVehicleUIComponentCategory', blank=True, null=True)  # Field name made lowercase.
     nsortingpriority = models.IntegerField(db_column='nSortingPriority', blank=True, null=True)  # Field name made lowercase.
@@ -6950,7 +6939,7 @@ class Vehicleuicomponentcategories(models.Model):
 
 
 class Vehicleuicomponentinfos(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     ecameraangle = models.IntegerField(db_column='eCameraAngle', blank=True, null=True)  # Field name made lowercase.
     ecategory = models.IntegerField(db_column='eCategory', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -6961,7 +6950,7 @@ class Vehicleuicomponentinfos(models.Model):
 
 
 class Vehicleuisetups(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     facceleration = models.FloatField(db_column='fAcceleration', blank=True, null=True)  # Field name made lowercase.
     fcollisiondamage = models.FloatField(db_column='fCollisionDamage', blank=True, null=True)  # Field name made lowercase.
     fhandling = models.FloatField(db_column='fHandling', blank=True, null=True)  # Field name made lowercase.
@@ -6977,7 +6966,7 @@ class Vehicleuisetups(models.Model):
 
 
 class Videoreplayuientries(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     sdisplayname = models.TextField(db_column='sDisplayName', blank=True, null=True)  # Field name made lowercase.
     svideofilename = models.TextField(db_column='sVideoFileName', blank=True, null=True)  # Field name made lowercase.
@@ -6990,7 +6979,7 @@ class Videoreplayuientries(models.Model):
 
 
 class Vignettetypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     spackage = models.TextField(db_column='sPackage', blank=True, null=True)  # Field name made lowercase.
     evignettedescriptor = models.IntegerField(db_column='eVignetteDescriptor', blank=True, null=True)  # Field name made lowercase.
     fmaxcanceldistancefromvnode = models.FloatField(db_column='fMaxCancelDistanceFromVNode', blank=True, null=True)  # Field name made lowercase.
@@ -7002,7 +6991,7 @@ class Vignettetypes(models.Model):
 
 
 class Wardrobemenuentries(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdisplayimage = models.TextField(db_column='sDisplayImage', blank=True, null=True)  # Field name made lowercase.
     sdisplaytext = models.TextField(db_column='sDisplayText', blank=True, null=True)  # Field name made lowercase.
     smenulevel = models.TextField(db_column='sMenuLevel', blank=True, null=True)  # Field name made lowercase.
@@ -7018,7 +7007,7 @@ class Wardrobemenuentries(models.Model):
 
 
 class Warningpromptgroups(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     swarningpromptgroupname = models.TextField(db_column='sWarningPromptGroupName', blank=True, null=True)  # Field name made lowercase.
     ewarningpromptgroup = models.IntegerField(db_column='eWarningPromptGroup', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -7029,7 +7018,7 @@ class Warningpromptgroups(models.Model):
 
 
 class Weaponattachmentvisuals(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     simpactvfx = models.TextField(db_column='sImpactVFX', blank=True, null=True)  # Field name made lowercase.
     smuzzleflashvfx = models.TextField(db_column='sMuzzleFlashVFX', blank=True, null=True)  # Field name made lowercase.
     snontracershotvfx = models.TextField(db_column='sNonTracerShotVFX', blank=True, null=True)  # Field name made lowercase.
@@ -7045,7 +7034,7 @@ class Weaponattachmentvisuals(models.Model):
 
 
 class Weaponclasses(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sunrealclassname = models.TextField(db_column='sUnrealClassName', blank=True, null=True)  # Field name made lowercase.
     eweaponclass = models.IntegerField(db_column='eWeaponClass', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -7056,7 +7045,7 @@ class Weaponclasses(models.Model):
 
 
 class Weaponcurves(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     saccuracyrecovery = models.TextField(db_column='sAccuracyRecovery', blank=True, null=True)  # Field name made lowercase.
     sburstshots = models.TextField(db_column='sBurstShots', blank=True, null=True)  # Field name made lowercase.
     seffectiverange = models.TextField(db_column='sEffectiveRange', blank=True, null=True)  # Field name made lowercase.
@@ -7094,7 +7083,7 @@ class Weaponcurves(models.Model):
 
 
 class Weaponitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)  # Field name made lowercase.
     eactivitymessageicon = models.IntegerField(db_column='eActivityMessageIcon', blank=True, null=True)  # Field name made lowercase.
     efnmod_0 = models.IntegerField(db_column='eFnMod_0', blank=True, null=True)  # Field name made lowercase.
@@ -7114,7 +7103,7 @@ class Weaponitemtypes(models.Model):
 
 
 class Weaponloadouts(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eweaponloadout = models.IntegerField(db_column='eWeaponLoadout', blank=True, null=True)  # Field name made lowercase.
     eweapontocreate_0 = models.IntegerField(db_column='eWeaponToCreate_0', blank=True, null=True)  # Field name made lowercase.
     eweapontocreate_1 = models.IntegerField(db_column='eWeaponToCreate_1', blank=True, null=True)  # Field name made lowercase.
@@ -7139,7 +7128,7 @@ class Weaponloadouts(models.Model):
 
 
 class Weaponmodifieritemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
 
@@ -7149,7 +7138,7 @@ class Weaponmodifieritemtypes(models.Model):
 
 
 class Weaponprojectiles(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     sflightaudioevent = models.TextField(db_column='sFlightAudioEvent', blank=True, null=True)  # Field name made lowercase.
     smesh = models.TextField(db_column='sMesh', blank=True, null=True)  # Field name made lowercase.
     strailvfx = models.TextField(db_column='sTrailVFX', blank=True, null=True)  # Field name made lowercase.
@@ -7170,7 +7159,7 @@ class Weaponprojectiles(models.Model):
 
 
 class Weaponrecoils(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eweaponrecoil = models.IntegerField(db_column='eWeaponRecoil', blank=True, null=True)  # Field name made lowercase.
     frecoilexp = models.FloatField(db_column='fRecoilExp', blank=True, null=True)  # Field name made lowercase.
     frecoverexp = models.FloatField(db_column='fRecoverExp', blank=True, null=True)  # Field name made lowercase.
@@ -7198,7 +7187,7 @@ class Weaponrecoils(models.Model):
 
 
 class Weaponskinunlockitemtypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType', blank=True, null=True)  # Field name made lowercase.
     bhideuntilunlocked = models.IntegerField(db_column='bHideUntilUnlocked', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -7209,7 +7198,7 @@ class Weaponskinunlockitemtypes(models.Model):
 
 
 class Weaponskins(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eitemattachmentvisual = models.IntegerField(db_column='eItemAttachmentVisual', blank=True, null=True)  # Field name made lowercase.
     eunlock = models.IntegerField(db_column='eUnlock', blank=True, null=True)  # Field name made lowercase.
     eweaponskin = models.IntegerField(db_column='eWeaponSkin', blank=True, null=True)  # Field name made lowercase.
@@ -7222,7 +7211,7 @@ class Weaponskins(models.Model):
 
 
 class Weapontypelinks(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eweapontype_0 = models.IntegerField(db_column='eWeaponType_0', blank=True, null=True)  # Field name made lowercase.
     eweapontype_1 = models.IntegerField(db_column='eWeaponType_1', blank=True, null=True)  # Field name made lowercase.
     eweapontype_2 = models.IntegerField(db_column='eWeaponType_2', blank=True, null=True)  # Field name made lowercase.
@@ -7236,7 +7225,7 @@ class Weapontypelinks(models.Model):
 
 
 class Weapontypesets(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     scommandline = models.TextField(db_column='sCommandLine', blank=True, null=True)  # Field name made lowercase.
     eweapontypeset = models.IntegerField(db_column='eWeaponTypeSet', blank=True, null=True)  # Field name made lowercase.
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)  # Field name made lowercase.
@@ -7247,7 +7236,7 @@ class Weapontypesets(models.Model):
 
 
 class Weapontypes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     eammocategory = models.IntegerField(db_column='eAmmoCategory', blank=True, null=True)  # Field name made lowercase.
     edisabledrulesets = models.IntegerField(db_column='eDisabledRuleSets', blank=True, null=True)  # Field name made lowercase.
     etagger = models.IntegerField(db_column='eTagger', blank=True, null=True)  # Field name made lowercase.
@@ -7316,7 +7305,7 @@ class Weapontypes(models.Model):
 
 
 class Weightedrewards(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     srewardmailbody = models.TextField(db_column='sRewardMailBody', blank=True, null=True)  # Field name made lowercase.
     srewardmailsubject = models.TextField(db_column='sRewardMailSubject', blank=True, null=True)  # Field name made lowercase.
     ehudimage = models.IntegerField(db_column='eHUDImage', blank=True, null=True)  # Field name made lowercase.
@@ -7334,7 +7323,7 @@ class Weightedrewards(models.Model):
 
 
 class Witnessablecrimes(models.Model):
-    id = models.IntegerField(primary_key=True, blank=True, null=True)  # AutoField?
+    id = models.IntegerField(primary_key=True)  # AutoField?
     enotorietyforbeingwitnessed = models.IntegerField(db_column='eNotorietyForBeingWitnessed', blank=True, null=True)  # Field name made lowercase.
     eprestigeforwitnessing = models.IntegerField(db_column='ePrestigeForWitnessing', blank=True, null=True)  # Field name made lowercase.
     ewitnessablecrime = models.IntegerField(db_column='eWitnessableCrime', blank=True, null=True)  # Field name made lowercase.
