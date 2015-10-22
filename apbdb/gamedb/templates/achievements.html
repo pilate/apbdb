@@ -3,6 +3,10 @@
 
 {% block content %}
 
+    {% for faction in factions %}
+        {{ faction.name }} <br>
+    {% endfor %}
+
     {% for achievement in achievements %}
         {{ achievement.name }} - {{ achievement.sapbdb }} <br>
     {% endfor %}
