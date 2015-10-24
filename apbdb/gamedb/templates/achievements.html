@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% block title %}Achievements{% endblock title %}
 
 {% block breadcrumbs %}
     <li><a href="/">APB:Db</a></li>
@@ -12,33 +13,31 @@
     <div class="row">
         <div class="small-2 columns">
             <label>Faction:</label>
-            <select id="factionselect">
-                <option value="">All</option>
-                {% for xfaction in factions %}
-                    <option{% if faction == xfaction %} selected="selected"{% endif %} value="{{ xfaction.sapbdb }}">{{ xfaction.sapbdb }}</option>
+            <select class="pinput" name="faction">
+                <option value="">Any</option>
+                {% for ifaction in factions %}
+                    <option{% if faction == ifaction %} selected="selected"{% endif %} value="{{ ifaction.sapbdb }}">{{ ifaction.sapbdb }}</option>
                 {% endfor %}
             </select>
         </div>
     </div>
+
+    <hr>
 
     <div class="row">
         <div class="small-12 columns">
             <table class="sort hover full">
                 <thead>
                     <tr>
-                        <th data-sort="string-nocase">
-                            Name
-                        </th>
-                        <th data-sort="string-nocase">
-                            Description
-                        </th>
+                        <th data-sort="string-nocase">Name</th>
+                        <th data-sort="string-nocase">Description</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for achievement in achievements %}
                     <tr>
                         <td>
-                            <a href="">
+                            <a href="{% url 'gamedb-achievement-detail' achievement.sapbdb %}">
                                 {{ achievement.name }}
                             </a>
                         </td>
