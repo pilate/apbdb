@@ -1,6 +1,18 @@
 from django.db import models
 
 
+def property_cache(fn):
+    def wrapped(self, *args, **kwargs):
+        key = "_".join(["_", self.__class__.__name__, fn.__name__])
+        if hasattr(self, key):
+            return getattr(self, key)
+        value = fn(self, *args, **kwargs)
+        setattr(self, key, value)
+        return value
+
+    return wrapped
+
+
 class Apbpawnconstant(models.Model):
     id = models.IntegerField(primary_key=True)
     fvalue = models.FloatField(db_column='fValue', blank=True, null=True)
@@ -1478,6 +1490,7 @@ class Factions(models.Model):
     efaction = models.IntegerField(db_column='eFaction', blank=True, null=True)
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)
 
+    @property_cache
     def name(self):
         return self.sdisplayname
 
@@ -4210,9 +4223,11 @@ class Playerroles(models.Model):
     bshowtotalvalues = models.IntegerField(db_column='bShowTotalValues', blank=True, null=True)
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)
 
+    @property_cache
     def name(self):
         return self.sdisplayname
 
+    @property_cache
     def description(self):
         return self.sdescription
 
