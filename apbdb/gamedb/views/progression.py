@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
 
 import apbdb.gamedb.models as models
@@ -20,4 +21,13 @@ class achievement_list(TemplateView):
         else:
             context['faction'] = None
 
+        return context
+
+
+class achievement_detail(TemplateView):
+    template_name = "achievement_detail.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(achievement_detail, self).get_context_data(**kwargs)
+        context['achievement'] = get_object_or_404(models.Playerroles, sapbdb=kwargs['achievement'])
         return context
