@@ -4231,6 +4231,11 @@ class Playerroles(models.Model):
     def description(self):
         return self.sdescription
 
+    @property_cache
+    def levels(self):
+        milestones = Rolemilestones.objects.filter(pk__gte=self.efirstmilestone, pk__lt=self.efirstmilestone + self.nnummilestones)
+        return milestones
+
     class Meta:
         managed = False
         db_table = 'PlayerRoles'
