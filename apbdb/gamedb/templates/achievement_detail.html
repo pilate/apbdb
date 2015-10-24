@@ -1,13 +1,41 @@
-{% extends 'base.html' %}
+{% extends 'sidebar_base.html' %}
+
+{% load humanize %}
+
+{% block title %}{{ achievement.name }}{% endblock title %}
 
 {% block breadcrumbs %}
     <li><a href="/">APB:Db</a></li>
     <li class="unavailable"><a href="#">Achievements</a></li>
 {% endblock breadcrumbs %}
 
+{% block sidebar %}
+    <div class="row">
+        <div class="one columns centered icon_64">
+            <img width="64" height="64" alt="Role Icon" src="{{ achievement.levels.0.large_icon }}">
+        </div>
+    </div>
 
-{% block content %}
+    <table class="table-full table-condensed">
+        <thead>
+            <tr>
+                <th><span>Level</span></th>
+                <th><span>Actions Required</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for level in achievement.levels %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ level.fpassmark_0|floatformat|intcomma }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock sidebar %}
 
-    {{ achievement }}
+{% block _content %}
 
-{% endblock content %}
+    <h1>{{ achievement.name }}</h1>
+
+{% endblock _content %}
