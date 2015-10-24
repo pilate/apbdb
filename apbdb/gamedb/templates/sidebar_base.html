@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="small-3 columns sidebar">
+        {% block sidebar %}{% endblock sidebar %}
+    </div>
+
+    {% block _content %}{% endblock _content %}
+
+{% endblock content %}
