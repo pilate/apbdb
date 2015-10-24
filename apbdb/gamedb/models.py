@@ -4213,6 +4213,9 @@ class Playerroles(models.Model):
     def name(self):
         return self.sdisplayname
 
+    def description(self):
+        return self.sdescription
+
     class Meta:
         managed = False
         db_table = 'PlayerRoles'

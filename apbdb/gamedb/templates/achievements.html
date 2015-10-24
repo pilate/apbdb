@@ -9,12 +9,45 @@
 
 {% block content %}
 
-    {% for faction in factions %}
-        {{ faction.name }} <br>
-    {% endfor %}
+    <div class="row">
+        <div class="small-2 columns">
+            <label>Faction:</label>
+            <select id="factionselect">
+                <option value="">All</option>
+                {% for xfaction in factions %}
+                    <option{% if faction == xfaction %} selected="selected"{% endif %} value="{{ xfaction.sapbdb }}">{{ xfaction.sapbdb }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
 
-    {% for achievement in achievements %}
-        {{ achievement.name }} - {{ achievement.sapbdb }} <br>
-    {% endfor %}
+    <div class="row">
+        <div class="small-12 columns">
+            <table class="sort hover full">
+                <thead>
+                    <tr>
+                        <th data-sort="string-nocase">
+                            Name
+                        </th>
+                        <th data-sort="string-nocase">
+                            Description
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for achievement in achievements %}
+                    <tr>
+                        <td>
+                            <a href="">
+                                {{ achievement.name }}
+                            </a>
+                        </td>
+                        <td>{{ achievement.description }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 {% endblock content %}
