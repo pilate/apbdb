@@ -1483,7 +1483,7 @@ class Factionrestrictedlocations(models.Model):
 
 class Factions(models.Model):
     id = models.IntegerField(primary_key=True)
-    sdisplayname = models.TextField(db_column='sDisplayName')
+    name = models.TextField(db_column='sDisplayName')
     sfactioninfodescription = models.TextField(db_column='sFactionInfoDescription')
     sfactioninfodisplayname = models.TextField(db_column='sFactionInfoDisplayName')
     sskinname = models.TextField(db_column='sSkinName')
@@ -1491,10 +1491,6 @@ class Factions(models.Model):
     evolumecolour = models.IntegerField(db_column='eVolumeColour')
     efaction = models.IntegerField(db_column='eFaction')
     sapbdb = models.TextField(db_column='sAPBDB')
-
-    @property_cache
-    def name(self):
-        return self.sdisplayname
 
     class Meta:
         managed = False
@@ -2424,8 +2420,8 @@ class Intraactivityrewards(models.Model):
 
 class Inventoryitemcategories(models.Model):
     id = models.IntegerField(primary_key=True)
-    sdescription = models.TextField(db_column='sDescription')
-    sdisplayname = models.TextField(db_column='sDisplayName')
+    description = models.TextField(db_column='sDescription')
+    name = models.TextField(db_column='sDisplayName')
     stablename = models.TextField(db_column='sTableName')
     nbytesize = models.IntegerField(db_column='nByteSize')
     nbytesizeui = models.IntegerField(db_column='nByteSizeUI')
@@ -2459,8 +2455,8 @@ class Inventoryitemcategorylimited(models.Model):
 
 class Inventoryiteminfracategories(models.Model):
     id = models.IntegerField(primary_key=True)
-    sdescription = models.TextField(db_column='sDescription')
-    sdisplayname = models.TextField(db_column='sDisplayName')
+    description = models.TextField(db_column='sDescription')
+    name = models.TextField(db_column='sDisplayName')
     sidentifier = models.TextField(db_column='sIdentifier')
     ssingularname = models.TextField(db_column='sSingularName')
     einventoryiteminfracategory = models.IntegerField(db_column='eInventoryItemInfraCategory')
@@ -2492,8 +2488,8 @@ class Inventoryitemleases(models.Model):
 
 class Inventoryitemsubcategories(models.Model):
     id = models.IntegerField(primary_key=True)
-    sdescription = models.TextField(db_column='sDescription')
-    sdisplayname = models.TextField(db_column='sDisplayName')
+    description = models.TextField(db_column='sDescription')
+    name = models.TextField(db_column='sDisplayName')
     nsecondarykey = models.IntegerField(db_column='nSecondaryKey')
     ecategory = models.ForeignKey('Inventoryitemcategories', db_column='eCategory')
     einventoryitemsubcategory = models.IntegerField(db_column='eInventoryItemSubCategory')
@@ -2507,7 +2503,7 @@ class Inventoryitemsubcategories(models.Model):
 class Inventoryitemtypes(models.Model):
     id = models.IntegerField(primary_key=True)
     screatorname = models.TextField(db_column='sCreatorName')
-    sdisplayname = models.TextField(db_column='sDisplayName')
+    name = models.TextField(db_column='sDisplayName')
     ehudimage = models.ForeignKey('Hudtextureicons', db_column='eHUDImage')
     einfracategory = models.ForeignKey('Inventoryiteminfracategories', db_column='eInfraCategory')
     einventoryitemtype = models.IntegerField(db_column='eInventoryItemType')
@@ -2516,15 +2512,15 @@ class Inventoryitemtypes(models.Model):
     narmascategoryid = models.IntegerField(db_column='nArmasCategoryID')
     narmasproductid = models.IntegerField(db_column='nArmasProductID')
     narmassubcategoryid = models.IntegerField(db_column='nArmasSubcategoryID')
-    ncostapbcash = models.IntegerField(db_column='nCostAPBCash')
-    ncostrewardtokens = models.IntegerField(db_column='nCostRewardTokens')
-    nminrating = models.IntegerField(db_column='nMinRating')
+    apb_cost = models.IntegerField(db_column='nCostAPBCash')
+    joker_cost = models.IntegerField(db_column='nCostRewardTokens')
+    min_rating = models.IntegerField(db_column='nMinRating')
     nsecondarykey = models.IntegerField(db_column='nSecondaryKey')
     eorganisation = models.ForeignKey('Organisations', db_column='eOrganisation')
     etrade = models.IntegerField(db_column='eTrade')
     bcansellback = models.IntegerField(db_column='bCanSellback')
-    bcriminal = models.IntegerField(db_column='bCriminal')
-    benforcer = models.IntegerField(db_column='bEnforcer')
+    criminal = models.IntegerField(db_column='bCriminal')
+    enforcer = models.IntegerField(db_column='bEnforcer')
     bgifted = models.IntegerField(db_column='bGifted')
     bignoresddvalidation = models.IntegerField(db_column='bIgnoreSddValidation')
     bisarmas = models.IntegerField(db_column='bIsArmas')
@@ -4237,8 +4233,8 @@ class Pedestriantyperestrictions(models.Model):
 
 class Playerroles(models.Model):
     id = models.IntegerField(primary_key=True)
-    sdescription = models.TextField(db_column='sDescription')
-    sdisplayname = models.TextField(db_column='sDisplayName')
+    description = models.TextField(db_column='sDescription')
+    name = models.TextField(db_column='sDisplayName')
     eactivities_0 = models.IntegerField(db_column='eActivities_0')
     eactivities_1 = models.IntegerField(db_column='eActivities_1')
     eactivities_2 = models.IntegerField(db_column='eActivities_2')
@@ -4253,14 +4249,6 @@ class Playerroles(models.Model):
     bachievementhidden = models.IntegerField(db_column='bAchievementHidden')
     bshowtotalvalues = models.IntegerField(db_column='bShowTotalValues')
     sapbdb = models.TextField(db_column='sAPBDB')
-
-    @property_cache
-    def name(self):
-        return self.sdisplayname
-
-    @property_cache
-    def description(self):
-        return self.sdescription
 
     @property_cache
     def levels(self):
