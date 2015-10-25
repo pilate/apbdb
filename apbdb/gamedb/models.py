@@ -4236,6 +4236,13 @@ class Playerroles(models.Model):
         milestones = Rolemilestones.objects.filter(pk__gte=self.efirstmilestone, pk__lt=self.efirstmilestone + self.nnummilestones)
         return milestones
 
+    @property_cache
+    def reward_count(self):
+        count = 0
+        for level in self.levels():
+            count += len(level.items())
+        return count
+
     class Meta:
         managed = False
         db_table = 'PlayerRoles'
@@ -4801,50 +4808,65 @@ class Referafriendevents(models.Model):
 class Rewardpackagechildren(models.Model):
     id = models.IntegerField(primary_key=True)
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)
-    eitems_0 = models.IntegerField(db_column='eItems_0', blank=True, null=True)
-    eitems_1 = models.IntegerField(db_column='eItems_1', blank=True, null=True)
-    eitems_10 = models.IntegerField(db_column='eItems_10', blank=True, null=True)
-    eitems_11 = models.IntegerField(db_column='eItems_11', blank=True, null=True)
-    eitems_12 = models.IntegerField(db_column='eItems_12', blank=True, null=True)
-    eitems_13 = models.IntegerField(db_column='eItems_13', blank=True, null=True)
-    eitems_14 = models.IntegerField(db_column='eItems_14', blank=True, null=True)
-    eitems_15 = models.IntegerField(db_column='eItems_15', blank=True, null=True)
-    eitems_16 = models.IntegerField(db_column='eItems_16', blank=True, null=True)
-    eitems_17 = models.IntegerField(db_column='eItems_17', blank=True, null=True)
-    eitems_18 = models.IntegerField(db_column='eItems_18', blank=True, null=True)
-    eitems_19 = models.IntegerField(db_column='eItems_19', blank=True, null=True)
-    eitems_2 = models.IntegerField(db_column='eItems_2', blank=True, null=True)
-    eitems_20 = models.IntegerField(db_column='eItems_20', blank=True, null=True)
-    eitems_21 = models.IntegerField(db_column='eItems_21', blank=True, null=True)
-    eitems_22 = models.IntegerField(db_column='eItems_22', blank=True, null=True)
-    eitems_23 = models.IntegerField(db_column='eItems_23', blank=True, null=True)
-    eitems_24 = models.IntegerField(db_column='eItems_24', blank=True, null=True)
-    eitems_25 = models.IntegerField(db_column='eItems_25', blank=True, null=True)
-    eitems_26 = models.IntegerField(db_column='eItems_26', blank=True, null=True)
-    eitems_27 = models.IntegerField(db_column='eItems_27', blank=True, null=True)
-    eitems_28 = models.IntegerField(db_column='eItems_28', blank=True, null=True)
-    eitems_29 = models.IntegerField(db_column='eItems_29', blank=True, null=True)
-    eitems_3 = models.IntegerField(db_column='eItems_3', blank=True, null=True)
-    eitems_30 = models.IntegerField(db_column='eItems_30', blank=True, null=True)
-    eitems_31 = models.IntegerField(db_column='eItems_31', blank=True, null=True)
-    eitems_32 = models.IntegerField(db_column='eItems_32', blank=True, null=True)
-    eitems_33 = models.IntegerField(db_column='eItems_33', blank=True, null=True)
-    eitems_34 = models.IntegerField(db_column='eItems_34', blank=True, null=True)
-    eitems_35 = models.IntegerField(db_column='eItems_35', blank=True, null=True)
-    eitems_36 = models.IntegerField(db_column='eItems_36', blank=True, null=True)
-    eitems_37 = models.IntegerField(db_column='eItems_37', blank=True, null=True)
-    eitems_38 = models.IntegerField(db_column='eItems_38', blank=True, null=True)
-    eitems_39 = models.IntegerField(db_column='eItems_39', blank=True, null=True)
-    eitems_4 = models.IntegerField(db_column='eItems_4', blank=True, null=True)
-    eitems_5 = models.IntegerField(db_column='eItems_5', blank=True, null=True)
-    eitems_6 = models.IntegerField(db_column='eItems_6', blank=True, null=True)
-    eitems_7 = models.IntegerField(db_column='eItems_7', blank=True, null=True)
-    eitems_8 = models.IntegerField(db_column='eItems_8', blank=True, null=True)
-    eitems_9 = models.IntegerField(db_column='eItems_9', blank=True, null=True)
+    eitems_0 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_0', blank=True, null=True, related_name="Rewardpackagechildren_eitems_0")
+    eitems_1 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_1', blank=True, null=True, related_name="Rewardpackagechildren_eitems_1")
+    eitems_10 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_10', blank=True, null=True, related_name="Rewardpackagechildren_eitems_10")
+    eitems_11 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_11', blank=True, null=True, related_name="Rewardpackagechildren_eitems_11")
+    eitems_12 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_12', blank=True, null=True, related_name="Rewardpackagechildren_eitems_12")
+    eitems_13 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_13', blank=True, null=True, related_name="Rewardpackagechildren_eitems_13")
+    eitems_14 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_14', blank=True, null=True, related_name="Rewardpackagechildren_eitems_14")
+    eitems_15 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_15', blank=True, null=True, related_name="Rewardpackagechildren_eitems_15")
+    eitems_16 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_16', blank=True, null=True, related_name="Rewardpackagechildren_eitems_16")
+    eitems_17 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_17', blank=True, null=True, related_name="Rewardpackagechildren_eitems_17")
+    eitems_18 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_18', blank=True, null=True, related_name="Rewardpackagechildren_eitems_18")
+    eitems_19 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_19', blank=True, null=True, related_name="Rewardpackagechildren_eitems_19")
+    eitems_2 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_2', blank=True, null=True, related_name="Rewardpackagechildren_eitems_2")
+    eitems_20 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_20', blank=True, null=True, related_name="Rewardpackagechildren_eitems_20")
+    eitems_21 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_21', blank=True, null=True, related_name="Rewardpackagechildren_eitems_21")
+    eitems_22 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_22', blank=True, null=True, related_name="Rewardpackagechildren_eitems_22")
+    eitems_23 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_23', blank=True, null=True, related_name="Rewardpackagechildren_eitems_23")
+    eitems_24 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_24', blank=True, null=True, related_name="Rewardpackagechildren_eitems_24")
+    eitems_25 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_25', blank=True, null=True, related_name="Rewardpackagechildren_eitems_25")
+    eitems_26 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_26', blank=True, null=True, related_name="Rewardpackagechildren_eitems_26")
+    eitems_27 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_27', blank=True, null=True, related_name="Rewardpackagechildren_eitems_27")
+    eitems_28 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_28', blank=True, null=True, related_name="Rewardpackagechildren_eitems_28")
+    eitems_29 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_29', blank=True, null=True, related_name="Rewardpackagechildren_eitems_29")
+    eitems_3 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_3', blank=True, null=True, related_name="Rewardpackagechildren_eitems_3")
+    eitems_30 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_30', blank=True, null=True, related_name="Rewardpackagechildren_eitems_30")
+    eitems_31 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_31', blank=True, null=True, related_name="Rewardpackagechildren_eitems_31")
+    eitems_32 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_32', blank=True, null=True, related_name="Rewardpackagechildren_eitems_32")
+    eitems_33 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_33', blank=True, null=True, related_name="Rewardpackagechildren_eitems_33")
+    eitems_34 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_34', blank=True, null=True, related_name="Rewardpackagechildren_eitems_34")
+    eitems_35 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_35', blank=True, null=True, related_name="Rewardpackagechildren_eitems_35")
+    eitems_36 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_36', blank=True, null=True, related_name="Rewardpackagechildren_eitems_36")
+    eitems_37 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_37', blank=True, null=True, related_name="Rewardpackagechildren_eitems_37")
+    eitems_38 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_38', blank=True, null=True, related_name="Rewardpackagechildren_eitems_38")
+    eitems_39 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_39', blank=True, null=True, related_name="Rewardpackagechildren_eitems_39")
+    eitems_4 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_4', blank=True, null=True, related_name="Rewardpackagechildren_eitems_4")
+    eitems_5 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_5', blank=True, null=True, related_name="Rewardpackagechildren_eitems_5")
+    eitems_6 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_6', blank=True, null=True, related_name="Rewardpackagechildren_eitems_6")
+    eitems_7 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_7', blank=True, null=True, related_name="Rewardpackagechildren_eitems_7")
+    eitems_8 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_8', blank=True, null=True, related_name="Rewardpackagechildren_eitems_8")
+    eitems_9 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_9', blank=True, null=True, related_name="Rewardpackagechildren_eitems_9")
     erewardpackagechild = models.IntegerField(db_column='eRewardPackageChild', blank=True, null=True)
     nsecondarykey = models.IntegerField(db_column='nSecondaryKey', blank=True, null=True)
     bselectable = models.IntegerField(db_column='bSelectable', blank=True, null=True)
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)
+
+    @property_cache
+    def items(self):
+        items = []
+
+        # Skip item lookups for empty row
+        if self.pk is 0:
+            return items
+
+        # Get list of non-null eitems values
+        item_ids = filter(lambda i: getattr(self, 'eitems_{0}_id'.format(i)), range(10))
+        # Get list of found items
+        items = map(lambda i: getattr(self, 'eitems_{0}'.format(i)), item_ids)
+
+        return items
 
     class Meta:
         managed = False
@@ -4872,17 +4894,17 @@ class Rewardpackageitemtypes(models.Model):
 class Rewardpackages(models.Model):
     id = models.IntegerField(primary_key=True)
     sdescription = models.TextField(db_column='sDescription', blank=True, null=True)
-    echildpackage = models.IntegerField(db_column='eChildPackage', blank=True, null=True)
-    eitems_0 = models.IntegerField(db_column='eItems_0', blank=True, null=True)
-    eitems_1 = models.IntegerField(db_column='eItems_1', blank=True, null=True)
-    eitems_2 = models.IntegerField(db_column='eItems_2', blank=True, null=True)
-    eitems_3 = models.IntegerField(db_column='eItems_3', blank=True, null=True)
-    eitems_4 = models.IntegerField(db_column='eItems_4', blank=True, null=True)
-    eitems_5 = models.IntegerField(db_column='eItems_5', blank=True, null=True)
-    eitems_6 = models.IntegerField(db_column='eItems_6', blank=True, null=True)
-    eitems_7 = models.IntegerField(db_column='eItems_7', blank=True, null=True)
-    eitems_8 = models.IntegerField(db_column='eItems_8', blank=True, null=True)
-    eitems_9 = models.IntegerField(db_column='eItems_9', blank=True, null=True)
+    echildpackage = models.ForeignKey('Rewardpackagechildren', db_column=u'eChildPackage', blank=True, null=True)
+    eitems_0 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_0', blank=True, null=True, related_name="Rewardpackages_eitems_0")
+    eitems_1 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_1', blank=True, null=True, related_name="Rewardpackages_eitems_1")
+    eitems_2 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_2', blank=True, null=True, related_name="Rewardpackages_eitems_2")
+    eitems_3 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_3', blank=True, null=True, related_name="Rewardpackages_eitems_3")
+    eitems_4 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_4', blank=True, null=True, related_name="Rewardpackages_eitems_4")
+    eitems_5 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_5', blank=True, null=True, related_name="Rewardpackages_eitems_5")
+    eitems_6 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_6', blank=True, null=True, related_name="Rewardpackages_eitems_6")
+    eitems_7 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_7', blank=True, null=True, related_name="Rewardpackages_eitems_7")
+    eitems_8 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_8', blank=True, null=True, related_name="Rewardpackages_eitems_8")
+    eitems_9 = models.ForeignKey('Inventoryitemtypes', db_column='eItems_9', blank=True, null=True, related_name="Rewardpackages_eitems_9")
     erewardpackage = models.IntegerField(db_column='eRewardPackage', blank=True, null=True)
     ncash = models.IntegerField(db_column='nCash', blank=True, null=True)
     ncharges_0 = models.IntegerField(db_column='nCharges_0', blank=True, null=True)
@@ -4892,6 +4914,25 @@ class Rewardpackages(models.Model):
     nsecondarykey = models.IntegerField(db_column='nSecondaryKey', blank=True, null=True)
     bsendmail = models.IntegerField(db_column='bSendMail', blank=True, null=True)
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)
+
+    @property_cache
+    def items(self):
+        items = []
+
+        # Skip item lookups for empty row
+        if self.pk is 0:
+            return items
+
+        # Get list of non-null eitems values
+        item_ids = filter(lambda i: getattr(self, 'eitems_{0}_id'.format(i)), range(10))
+        # Get list of found items
+        items = map(lambda i: getattr(self, 'eitems_{0}'.format(i)), item_ids)
+
+        # Add child package items
+        if self.echildpackage_id != 0:
+            items += self.echildpackage.items()
+
+        return items
 
     class Meta:
         managed = False
@@ -4921,7 +4962,7 @@ class Rolemilestones(models.Model):
     srewardmailsubject = models.TextField(db_column='sRewardMailSubject', blank=True, null=True)
     stitle = models.TextField(db_column='sTitle', blank=True, null=True)
     eformula = models.IntegerField(db_column='eFormula', blank=True, null=True)
-    ereward = models.IntegerField(db_column='eReward', blank=True, null=True)
+    ereward = models.ForeignKey('Rewardpackages', db_column=u'eReward')
     eroleicon = models.IntegerField(db_column='eRoleIcon', blank=True, null=True)
     erolemilestone = models.IntegerField(db_column='eRoleMilestone', blank=True, null=True)
     fpassmark_0 = models.FloatField(db_column='fPassMark_0', blank=True, null=True)
@@ -4929,6 +4970,9 @@ class Rolemilestones(models.Model):
     fpassmark_2 = models.FloatField(db_column='fPassMark_2', blank=True, null=True)
     nsecondarykey = models.IntegerField(db_column='nSecondaryKey', blank=True, null=True)
     sapbdb = models.TextField(db_column='sAPBDB', blank=True, null=True)
+
+    def items(self):
+        return self.ereward.items()
 
     class Meta:
         managed = False
