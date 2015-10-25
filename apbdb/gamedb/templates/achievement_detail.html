@@ -6,7 +6,8 @@
 
 {% block breadcrumbs %}
     <li><a href="/">APB:Db</a></li>
-    <li class="unavailable"><a href="#">Achievements</a></li>
+    <li><a href="{% url 'gamedb-achievements' %}">Achievements</a></li>
+    <li class="unavailable"><a href="#">{{ achievement.name }}</a></li>
 {% endblock breadcrumbs %}
 
 {% block sidebar %}
@@ -20,7 +21,7 @@
         <thead>
             <tr>
                 <th><span>Level</span></th>
-                <th><span>Actions Required</span></th>
+                <th><span>Actions</span></th>
             </tr>
         </thead>
         <tbody>
