@@ -1,6 +1,8 @@
 from django.db import models
 
 
+LocalModels = vars()
+
 def property_cache(fn):
     def wrapped(self, *args, **kwargs):
         key = '_'.join(['_', self.__class__.__name__, fn.__name__])
@@ -2529,6 +2531,35 @@ class Inventoryitemtypes(models.Model):
     bispublished = models.IntegerField(db_column='bIsPublished')
     bnodelete = models.IntegerField(db_column='bNoDelete')
     sapbdb = models.TextField(db_column='sAPBDB')
+
+    @property_cache
+    def category(self):
+        return self.einfracategory.esubcategory.ecategory
+
+    @property_cache
+    def type(self):
+        table_prefix = self.category().stablename
+        table_prefix = table_prefix.replace('Packate', 'Package')
+        table_name = table_prefix.lower().capitalize()+'s'
+
+        if table_name not in LocalModels:
+            return None
+
+        _table = LocalModels[table_name]
+        _type = _table.objects.get(einventoryitemtype=self)
+
+        return _type
+
+    @property_cache
+    def unlocked(self):
+        item = self
+
+        if self.category().sapbdb == 'Unlock':
+            item = self.type().eunlockitem
+            if item.pk == 0:
+                item = self
+
+        return item
 
     class Meta:
         managed = False
