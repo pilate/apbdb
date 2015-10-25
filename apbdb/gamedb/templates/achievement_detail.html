@@ -11,12 +11,12 @@
 
 {% block sidebar %}
     <div class="row">
-        <div class="one columns centered icon_64">
-            <img width="64" height="64" alt="Role Icon" src="{{ achievement.levels.0.large_icon }}">
+        <div class="small-1 small-centered columns">
+           Icon
         </div>
     </div>
 
-    <table class="table-full table-condensed">
+    <table class="full">
         <thead>
             <tr>
                 <th><span>Level</span></th>
@@ -25,10 +25,10 @@
         </thead>
         <tbody>
             {% for level in achievement.levels %}
-            <tr>
-                <td>{{ forloop.counter }}</td>
-                <td>{{ level.fpassmark_0|floatformat|intcomma }}</td>
-            </tr>
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ level.fpassmark_0|floatformat|intcomma }}</td>
+                </tr>
             {% endfor %}
         </tbody>
     </table>
@@ -37,5 +37,20 @@
 {% block _content %}
 
     <h1>{{ achievement.name }}</h1>
+
+    <hr>
+
+    {{ achievement.description }}
+
+    {% if achievement.reward_count %}
+        <ul class="tabs clear" data-tab role="tablist">
+            <li class="tab-title active" role="presentation"><a href="#unlocks" role="tab" tabindex="0" aria-selected="true" aria-controls="unlocks">Unlocks</a></li>
+        </ul>
+        <div class="tabs-content">
+            <section role="tabpanel" aria-hidden="false" class="content active" id="unlocks">
+                {% include "items/progression_items.html" with levels=achievement.levels show_factions=False show_real_items=1 %}
+            </section>
+        </div>
+    {% endif %}
 
 {% endblock _content %}

@@ -1,0 +1,43 @@
+{% load humanize %}
+
+<table class="full sort hover">
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th data-sort="int">Level</th>
+            <th data-sort="string-nocase">Name</th>
+            <th data-sort="string-nocase">Category</th>
+            <th data-sort="int">Cost</th>
+            <th data-sort="int">Rating</th>
+            {% if show_factions %}<th>Faction</th>{% endif %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for level in levels %}
+            {% for item in level.items %}
+                <tr>
+                    <td>
+                        <a href="{% url 'gamedb-items-detail' item.unlocked.sapbdb %}">
+                            Icon
+                        </a>
+                    </td>
+                    <td>{{ forloop.parentloop.counter }}</td>
+                    <td><a href="{% url 'gamedb-items-detail' item.unlocked.sapbdb %}">{{ item.unlocked.name }}</a></td>
+                    <td>{{ item.unlocked.category.name }}</td>
+                    <td data-sort-value="{{ item.unlocked.apb_cost }}">${{ item.unlocked.apb_cost|intcomma }}{% if item.unlocked.joker_cost %} / J{{ item.unlocked.joker_cost|intcomma }}{% endif %}</td>
+                    <td>{{ item.unlocked.min_rating }}</td>
+                    {% if show_factions %}
+                        <td>
+                            {% if item.unlocked.enforcer %}
+                                E
+                            {% endif %}
+                            {% if item.unlocked.criminal %}
+                                C
+                            {% endif %}
+                        </td>
+                    {% endif %}
+                </tr> 
+            {% endfor %}
+        {% endfor %}
+    </tbody>
+</table>
