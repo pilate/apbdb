@@ -12,7 +12,7 @@ class achievement_list(TemplateView):
 
         faction_arg = self.request.GET.get("faction", None)
 
-        context['achievements'] = models.Playerroles.objects.filter(bachievement=1).order_by('sdisplayname')
+        context['achievements'] = models.Playerroles.objects.filter(bachievement=1).order_by('name')
         context['factions'] = models.Factions.objects.exclude(espawnzonemarker=0)
 
         if faction_arg:
